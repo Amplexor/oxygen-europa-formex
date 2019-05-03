@@ -1,0 +1,2108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--version 01.15-20121231
+MARC_VARFIELD_ID=655,940,973 added
+-->
+<!--version 01.13-20111020
+addition of NO_OFF_ISSN_PRINT and NO_OFF_ISSN_ELECTRONIC
+addition of COMPOSE_GR into OJ_SOM
+-->
+<!--version 01.13-20110922 addition of Norwegian language (TIT_NO and  NOMUSUEL_NO elements) -->
+<!--version 01.13-20110502 addition of OJ_ENTRY_DOCUMENT_DATE-->
+<!--version 01.12-20101222 support of ID_COM_NAT for citizen summaries 
+modification list of values for MARC_ENCLVL-->
+<!--version 01.11-20101122 support of croatian and icelandic -->
+<!--version 01.10-20100907
+empty value for t_lng allowed, alphanumeric values added to support opoce internal language codes (0[A-Z])
+allows T_PROCAT only,
+adds PROCAT_KEY and DISPLAY,  optional
+MARC_FIXFIELD_ID=001,003 added
+MARC_ENCLV=e,P,p added
+MARC_VARFIELD_ID=086,089,090,301,380,490,522,699,760,762,810,830,914,946,948,949 added
+MARC_LEVEL=value empty is permitted, set also to optional
+MARC_VARFIELD_I1 pattern corrected (value n added)
+value d, p added in MARC_STATUS
+blank + empty value added in LRRQRD
+CATFORM set to optional
+pattern for ID_PUB extented (PER_* and SET_*
+Order of the elements in VOLET_EUROVOC  extended, EUROVOC_PROP_CODE  set to optional
+maxOccurs set to unbounded for COLL in VOLET_ID_PRIM
+ajout VOLET_JUR_NAT
+-->
+<!--version 01.09-20090203
+allows T_DORIS and T_PROCAT,
+CATFORM=#
+ENCLVL=#,1,2,3,u,z
+MARC_VARFIELD_ID=997,039,935,939,001,003,909,901,902,999
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:complexType name="t_btx" mixed="true">
+		<xs:sequence>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="DATE"/>
+				<xs:element ref="FT"/>
+				<xs:element ref="LIST"/>
+				<xs:element ref="NOTE"/>
+				<xs:element ref="P"/>
+				<xs:element ref="QT"/>
+				<xs:element ref="REF.DOC.OJ"/>
+				<xs:element ref="VL"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="t_procat">
+		<xs:choice maxOccurs="unbounded">
+			<xs:element name="VOLET_ID_BIB" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="PD" type="xs:string"/>
+							<xs:element name="OJ_VOL" type="xs:string"/>
+							<xs:element name="OJ_SOM">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="OJ_AGE" type="xs:string"/>
+										<xs:element name="ID_PRT" type="xs:string"/>
+										<xs:element name="CONTENTS">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="CONTENTS_PAGE_FIRST" type="xs:string"/>
+													<xs:element name="CONTENTS_PAGE_LAST" type="xs:string"/>
+													<xs:element name="CONTENTS_PAGE_TOTAL" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element name="COMPOSE_GR" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="COMPOSE" type="xs:string" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="NO_OFF_GRVL">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="NO_OFF_VL" type="t_vl"/>
+										<xs:element name="NO_OFF_CATN" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[A-Z0-9\-]*"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="NO_OFF_ISSN" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[0-9]{4}-?[0-9]{3}[0-9X]"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="NO_OFF_ISSN_PRINT" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[0-9]{4}-?[0-9]{3}[0-9X]"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="NO_OFF_ISSN_ELECTRONIC" minOccurs="0">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:pattern value="[0-9]{4}-?[0-9]{3}[0-9X]"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="NO_OFF_OTHA" type="xs:string" minOccurs="0"/>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="OJ_PUB">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="COLL_OJ" type="xs:string"/>
+										<xs:element name="NO_OJ" type="xs:string"/>
+										<xs:element name="NO_OJ_CLASS" type="xs:string"/>
+										<xs:element name="YEAR_OJ" type="xs:string"/>
+										<xs:element name="NO_SEQ" type="xs:string" minOccurs="0"/>
+										<xs:element name="PAGE_FIRST" type="xs:string"/>
+										<xs:element name="SEQ_PAGE" type="xs:string" minOccurs="0"/>
+										<xs:element name="PAGE_LAST" type="xs:string" minOccurs="0"/>
+										<xs:element name="PAGE_TOTAL" type="xs:string" minOccurs="0"/>
+										<xs:element name="COMPOSE_GR" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="COMPOSE" type="xs:string" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+						<xs:element name="ED_SPEC" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ED_SPEC_LG" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>FD_Table_499 (code contatenated with code for special edition (eg. ED_SPEC_LG + ".ES"), + code transformation (eg. DK->DA)</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="ED_SPEC_SR1" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_SR2" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_CH" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_T" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_V" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_P" type="xs:string"/>
+									<xs:element name="ED_SPEC_PGLAST" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_PGTOTAL" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ED_SPEC_SOM" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="ED_SPEC_LG" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>FD_Table_499 (code contatenated with code for special edition (eg. ED_SPEC_LG + ".ES"), + code transformation (eg. DK->DA)</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="ED_SPEC_SR1" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_SR2" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_CH" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_T" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_V" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_P" type="xs:string"/>
+									<xs:element name="ED_SPEC_PGLAST" type="xs:string" minOccurs="0"/>
+									<xs:element name="ED_SPEC_PGTOTAL" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="RECUEIL_REF_PUB" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RECUEIL_PUB" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>FD_Table_499</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="RECUEIL_ANNEE" type="xs:string" minOccurs="0"/>
+									<xs:element name="RECUEIL_PAGES_GR" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="RECUEIL_PAGES" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="RECUEIL_PARTIE" type="xs:string" minOccurs="0"/>
+															<xs:element name="RECUEIL_PAGE_DEB" type="xs:string"/>
+															<xs:element name="RECUEIL_PAGE_FIN" type="xs:string" minOccurs="0"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="RECUEIL_SPEC" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RECUEIL_SPEC_LG" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>FD_Table_499 (code contatenated with code for court report (eg. ED_SPEC_LG + ".RJ"), + code transformation (eg. DK->DA)</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="RECUEIL_SPEC_ANNEE" type="xs:string" minOccurs="0"/>
+									<xs:element name="RECUEIL_SPEC_PAGES_GR" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="RECUEIL_SPEC_PAGES" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="RECUEIL_SPEC_PARTIE" type="xs:string" minOccurs="0"/>
+															<xs:element name="RECUEIL_SPEC_PAGE_DEB" type="xs:string"/>
+															<xs:element name="RECUEIL_SPEC_PAGE_FIN" type="xs:string" minOccurs="0"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="DEBAT_NON_PUB" type="xs:string" minOccurs="0"/>
+						<xs:element name="DEBAT_PUB" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="DEBAT_PUB_LG" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>FD_Table_499 (code contatenated with code for debate (eg. ED_SPEC_LG + ".DE")</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="DEBAT_PUB_NO" type="xs:string"/>
+									<xs:element name="DEBAT_PUB_PG" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="OTHER_PUB" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>FD_Table_499</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CONSLEG" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="CONSLEG_REFER" type="xs:string"/>
+									<xs:element name="CONSLEG_DATE" type="xs:string"/>
+									<xs:element name="CONSLEG_COUCHE" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="PUB_GRVL" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="PUB_VL" type="t_vl" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_ID_PRIM" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="COLL" type="xs:string" maxOccurs="unbounded"/>
+						<xs:element name="CELEX" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="DN" type="xs:string"/>
+									<xs:element name="DN2" type="xs:string"/>
+									<xs:element name="DT_SEC" type="xs:string"/>
+									<xs:element name="DT_ANN" type="xs:string"/>
+									<xs:element name="DT_TYP" type="xs:string"/>
+									<xs:element name="DT_NUM" type="xs:string" minOccurs="0"/>
+									<xs:element name="DT_SEQUENCE" type="xs:string" minOccurs="0"/>
+									<xs:element name="DT_CORR" type="xs:string" minOccurs="0"/>
+									<xs:element name="DT_CORR_SEQ" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_TIT" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TITRE" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="TIT_QUAL" type="xs:string"/>
+									<xs:choice>
+										<xs:element name="TIT_ES">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_DA">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_DE">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_EL">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_EN">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_FR">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_IT">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_NL">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_PT">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_FI">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_SV">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_GA">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_CS">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_ET">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_LV">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_LT">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_HU">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_MT">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_PL">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_SK">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_SL">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_BG">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_RO">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_HR">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_IS">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="TIT_NO">
+											<xs:simpleType>
+												<xs:restriction base="xs:string">
+													<xs:maxLength value="3500"/>
+													<xs:pattern value="(.)+"/>
+												</xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:choice>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_OJ" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="OJ_SECTION" type="xs:string" minOccurs="0"/>
+						<xs:element name="OJ_DURAB" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="DUR"/>
+									<xs:enumeration value="EPH"/>
+									<xs:enumeration value="NA"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="OJ_CORR">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="O"/>
+									<xs:enumeration value="C"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="OJ_TYPEDOC" type="xs:string" minOccurs="0"/>
+						<xs:element name="OJ_AUTHOR" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:choice minOccurs="0" maxOccurs="unbounded">
+							<xs:element name="OJ_DOC_NO">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="OJ_DOC_NO_FORMAT" type="xs:string"/>
+										<xs:element name="OJ_DOC_NO_CUR" type="xs:string" minOccurs="0"/>
+										<xs:element name="OJ_DOC_NO_YEAR" type="xs:string" minOccurs="0"/>
+										<xs:element name="OJ_DOC_NO_COM_GR" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="OJ_DOC_NO_COM" type="xs:string" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="OJ_DOCSEQ" type="xs:string"/>
+							<xs:element name="OJ_NUM_INF" type="xs:string"/>
+							<xs:element name="OJ_OFFSET_PG" type="xs:string"/>
+							<xs:element name="OJ_ENTRY">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="OJ_ENTRY_SEQ" type="xs:string"/>
+										<xs:element name="OJ_ENTRY_DOCUMENT_DATE" type="xs:string" minOccurs="0"/>
+										<xs:element name="OJ_ENTRY_PGFIRST" type="xs:string"/>
+										<xs:element name="OJ_ENTRY_PGLAST" type="xs:string"/>
+										<xs:element name="OJ_ENTRY_GRVL" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="OJ_ENTRY_VL" type="xs:string"/>
+													<xs:element name="OJ_ENTRY_TITRE" type="t_btx"/>
+													<!--20051214 t_btx defined for OJ_ENTRY_TITRE-->
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:choice>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_PDF" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="PDF_ENTRY" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="PDF_ENTRY_SEQ" type="xs:string" minOccurs="0"/>
+									<xs:element name="PDF_ENTRY_GRVL" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="PDF_ENTRY_VL" type="xs:string"/>
+												<xs:element name="PDF_ENTRY_REF_DOC" type="xs:string"/>
+												<xs:element name="PDF_ENTRY_TITRE" type="xs:string" minOccurs="0"/>
+												<xs:element name="PDF_ENTRY_DOI" type="xs:string" minOccurs="0"/>
+												<xs:element name="PDF_ENTRY_ARCHIVE_DATE" type="xs:string" minOccurs="0"/>
+												<xs:element name="PDF_ENTRY_SIGNATURE_REF_DOC" type="xs:string" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_FORMEX" minOccurs="0">
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+						<xs:sequence>
+							<xs:element name="FORMEX_DOCSEQ" type="xs:string"/>
+							<xs:element name="FORMEX_PART" minOccurs="0" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="FORMEX_PART_NO_SEQ" type="xs:string"/>
+										<xs:element name="FORMEX_PART_TYPEPAR" type="xs:string" minOccurs="0"/>
+										<xs:element name="FORMEX_PART_PARDOC" type="xs:string" minOccurs="0"/>
+										<xs:element name="FORMEX_PART_PARSEQ" type="xs:string" minOccurs="0"/>
+										<xs:element name="FORMEX_PART_PARPUBSEQ" type="xs:string" minOccurs="0"/>
+										<xs:element name="FORMEX_PART_PGFIRST" type="xs:string"/>
+										<xs:element name="FORMEX_PART_PHYSPGFIRST" type="xs:string"/>
+										<xs:element name="FORMEX_PART_PGLAST" type="xs:string"/>
+										<xs:element name="FORMEX_PART_PHYSPGLAST" type="xs:string"/>
+										<xs:element name="FORMEX_PART_PGTOTAL" type="xs:string" minOccurs="0"/>
+										<xs:element name="FORMEX_PART_SEQINPG" type="xs:string" minOccurs="0"/>
+										<xs:element name="FORMEX_PART_GRVL" maxOccurs="unbounded">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="FORMEX_PART_VL" type="xs:string"/>
+													<xs:element name="FORMEX_PART_TITRE" type="t_btx" minOccurs="0"/>
+													<xs:element name="FORMEX_PART_REF_DOC" type="xs:string" minOccurs="0"/>
+													<xs:element name="FORMEX_PART_ARCHIVE_DATE" type="xs:string" minOccurs="0"/>
+													<!--20050106 content of FORMEX_PART_TITRE changed into t_btx-->
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+						<xs:element name="FORMEX_CONSLEG_GRVL" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="FORMEX_CONSLEG_VL" type="xs:string"/>
+									<xs:element name="FORMEX_CONSLEG_PRODSEQ" type="xs:string"/>
+									<xs:element name="FORMEX_CONSLEG_REF_DOC" type="xs:string"/>
+									<xs:element name="FORMEX_CONSLEG_TITRE" type="xs:string"/>
+									<xs:element name="FORMEX_CONSLEG_ARCHIVE_DATE" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_TIFF" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="TIFF_VOL_GRVL" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="TIFF_VOL_VL" type="xs:string"/>
+									<xs:element name="TIFF_VOL_ID" type="xs:string"/>
+									<xs:element name="TIFF_VOL_SEQ" type="xs:string" minOccurs="0"/>
+									<xs:element name="TIFF_VOL_NBPG" type="xs:string" minOccurs="0"/>
+									<xs:element name="TIFF_VOL_PGLIST" type="xs:string" minOccurs="0"/>
+									<xs:element name="TIFF_VOL_PGLOG" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="TIFF_STATUS" type="xs:string" minOccurs="0"/>
+						<xs:element name="TIFF_DOCSEQ" type="xs:string" minOccurs="0"/>
+						<xs:element name="TIFF_PART" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="TIFF_PART_NO_SEQ" type="xs:string"/>
+									<xs:element name="TIFF_PART_PGFIRST" type="xs:string" minOccurs="0"/>
+									<xs:element name="TIFF_PART_PGLAST" type="xs:string" minOccurs="0"/>
+									<xs:element name="TIFF_PART_PGLIST" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="TIFF_PG_PHYS" type="xs:string"/>
+												<xs:element name="TIFF_PG_ID" type="xs:string"/>
+												<xs:element name="TIFF_PG_ALIAS" type="xs:string" minOccurs="0"/>
+												<xs:element name="TIFF_PG_OLD" type="xs:string" minOccurs="0"/>
+												<xs:element name="TIFF_TP_PAGE" type="xs:string" minOccurs="0"/>
+												<xs:element name="TIFF_PG_VL" type="xs:string" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="TIFF_PART_ARCHIVE_DATE" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_DOC_BIB" minOccurs="0">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="AD1" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_050</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="AD2" type="xs:string"/>
+						<xs:element name="DP" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_040</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CC" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_555</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CT" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_070</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="RI" type="xs:string"/>
+						<xs:element name="LF" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_060</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TOC" type="xs:string"/>
+						<xs:element name="LG" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_285</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="AF_GRP" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_290</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="AF_NAT" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_290</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="NF" type="xs:string"/>
+						<xs:element name="VO" type="xs:string"/>
+						<xs:element name="DD">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="DD_DATE">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="\d{8}"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="DD_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_365</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="DH">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="DH_DATE" type="xs:string"/>
+									<xs:element name="DH_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_340</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="LO">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="LO_DATE" type="xs:string"/>
+									<xs:element name="LO_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_305</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="SG">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="SG_DATE" type="xs:string"/>
+									<xs:element name="SG_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_325</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="TP">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="TP_DATE" type="xs:string"/>
+									<xs:element name="TP_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_361</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="DB">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="DB_DATE" type="xs:string"/>
+									<xs:element name="DB_SESS" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_345</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="RP">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="RP_DATE" type="xs:string"/>
+									<xs:element name="RP_TYPE" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_350</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="RP_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_350</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="DN_OLD" type="xs:string"/>
+						<xs:element name="DN_OLD_DATE" type="xs:string"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_DOC_LNK" minOccurs="0">
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element name="LNK_CELEX_DN" type="xs:string"/>
+						<xs:element name="LNK_OJ_PUB">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="LNK_COLL_OJ" type="xs:string"/>
+									<xs:element name="LNK_NO_OJ" type="xs:string"/>
+									<xs:element name="LNK_NO_OJ_CLASS" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_PD_OJ" type="xs:string"/>
+									<xs:element name="LNK_PAGE_FIRST" type="xs:string"/>
+									<xs:element name="LNK_PAGE_LAST" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_COMPOSE_GR" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="LNK_COMPOSE" type="xs:string" maxOccurs="unbounded"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="LNK_CONSLEG">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="LNK_CONSLEG_REFER" type="xs:string"/>
+									<xs:element name="LNK_CONSLEG_DATE" type="xs:string"/>
+									<xs:element name="LNK_CONSLEG_PAGES" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="LNK_COM" type="xs:string"/>
+						<xs:element name="LNK_CES" type="xs:string"/>
+						<xs:element name="LNK_CDR" type="xs:string"/>
+						<xs:element name="LNK_JO" type="xs:string"/>
+						<xs:element name="LNK_MTF" type="xs:string"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_JUR" minOccurs="0">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="AU" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_010, FD_Table_013, FD_Table_014</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="FM" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_030</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="TT" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_020</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="REP" type="xs:string"/>
+						<xs:element name="RS" type="xs:string"/>
+						<xs:element name="AS" type="xs:string"/>
+						<xs:element name="IC" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_301</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="IF">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="IF_DATE" type="xs:string"/>
+									<xs:element name="IF_TYPE" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_335</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="IF_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_335</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="DL">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="DL_DATE" type="xs:string"/>
+									<xs:element name="DL_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_335</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="EV">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="EV_DATE">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="\d{8}"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="EV_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_330</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="EV_VV" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="LB">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="LB_DNPLUS">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="[A-Z0-9()/]+(-.+)?"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="LB_DN_COMMENT" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_370</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="CI" type="xs:string"/>
+						<xs:element name="PP">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="PP_PP" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="PP_TYPE" type="xs:string">
+													<xs:annotation>
+														<xs:documentation>FD_Table_080</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="PP_ORGANE" type="xs:string" minOccurs="0">
+													<xs:annotation>
+														<xs:documentation>FD_Table_380</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="PP_COMMENT" type="xs:string" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>FD_Table_380</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="MI" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_400</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CM" type="xs:string"/>
+						<xs:element name="BF_NAT" type="xs:string"/>
+						<xs:element name="BF" type="xs:string"/>
+						<xs:element name="LE" type="xs:string"/>
+						<xs:element name="TM" type="xs:string"/>
+						<xs:element name="PROC_GR">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="PROC_TYP" type="xs:string"/>
+									<xs:element name="PROC_ANN" type="xs:string"/>
+									<xs:element name="PROC_NUM" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="REP_DD" type="xs:string"/>
+						<xs:element name="REP_DG" type="xs:string"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_JUR_LNK" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="LNK" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="LNK_TYPE_LIEN" type="xs:string"/>
+									<xs:element name="LNK_NUMDOC_A" type="xs:string"/>
+									<xs:element name="LNK_NUMDOC_P" type="xs:string"/>
+									<xs:element name="LNK_ROLE1" type="xs:string">
+										<xs:annotation>
+											<xs:documentation>FD_Table_395 (AJ), FD_Table_396 (CD), FD_Table_274 (MS,EA), FD_Table_271 (MD,SP)</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="LNK_ROLE2" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_375 (MS-MD-EA-SP)</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="LNK_PLACE_A" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_PLACE_P" type="xs:string" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>FD_Table_370</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="LNK_CONTENU" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_DD_EV" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_DD_MA" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_DF_EV" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_DF_MA" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_LG" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_PAYS" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_COM_INT" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_COM_EXT" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_PROC" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_VOIR_AVT" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_FAMILLE" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_VOIR_APR" type="xs:string" minOccurs="0"/>
+									<xs:element name="LNK_CONS_1" minOccurs="0">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="LNK_CONSREF" maxOccurs="unbounded">
+													<xs:complexType>
+														<xs:sequence>
+															<xs:element name="LNK_CONSNUM" type="xs:string"/>
+															<xs:element name="LNK_CONSDATE" type="xs:string"/>
+															<xs:element name="LNK_CONSPAGE" type="xs:string" minOccurs="0"/>
+														</xs:sequence>
+													</xs:complexType>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="LNK_CONS_COM" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_EUROVOC" minOccurs="0">
+				<xs:complexType>
+					<xs:choice maxOccurs="unbounded">
+						<xs:element name="EUROVOC" type="xs:string" maxOccurs="unbounded">
+							<xs:annotation>
+								<xs:documentation>FD_Table_300, use of FD_Trans_301, FD_Trans_302, FD_Table_535 and FD_Table_537 for the top terms, the microthesauri and the domains</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="EUROVOC_PROP" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="EUROVOC_PROP_CODE" type="xs:string" minOccurs="0"/>
+									<xs:element name="EUROVOC_PROP_TERM" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="EUROVOC_OLD" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="EUROVOC_OLD_CODE" type="xs:string"/>
+									<xs:element name="EUROVOC_OLD_TERM" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_CDJ" minOccurs="0">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="AG" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_130</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="JR" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_130</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="AP" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_110</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="DF" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_120</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="OB" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_160</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="NA" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_140</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="ET" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_140</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="PR" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_100</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="NC" type="xs:string"/>
+						<xs:element name="NO" type="xs:string"/>
+						<xs:element name="RJ" type="xs:string">
+							<xs:annotation>
+								<xs:documentation>FD_Table_577</xs:documentation>
+							</xs:annotation>
+						</xs:element>
+						<xs:element name="CJ">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="CJ_DNPLUS" type="xs:string"/>
+									<xs:element name="CJ_NOPAR" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="NOMUSUEL">
+							<xs:complexType>
+								<xs:choice minOccurs="0" maxOccurs="unbounded">
+									<xs:element name="NOMUSUEL_BG" type="xs:string"/>
+									<xs:element name="NOMUSUEL_CS" type="xs:string"/>
+									<xs:element name="NOMUSUEL_DA" type="xs:string"/>
+									<xs:element name="NOMUSUEL_DE" type="xs:string"/>
+									<xs:element name="NOMUSUEL_EL" type="xs:string"/>
+									<xs:element name="NOMUSUEL_EN" type="xs:string"/>
+									<xs:element name="NOMUSUEL_ES" type="xs:string"/>
+									<xs:element name="NOMUSUEL_ET" type="xs:string"/>
+									<xs:element name="NOMUSUEL_FI" type="xs:string"/>
+									<xs:element name="NOMUSUEL_FR" type="xs:string"/>
+									<xs:element name="NOMUSUEL_GA" type="xs:string"/>
+									<xs:element name="NOMUSUEL_HU" type="xs:string"/>
+									<xs:element name="NOMUSUEL_IT" type="xs:string"/>
+									<xs:element name="NOMUSUEL_LT" type="xs:string"/>
+									<xs:element name="NOMUSUEL_LV" type="xs:string"/>
+									<xs:element name="NOMUSUEL_MT" type="xs:string"/>
+									<xs:element name="NOMUSUEL_NL" type="xs:string"/>
+									<xs:element name="NOMUSUEL_PL" type="xs:string"/>
+									<xs:element name="NOMUSUEL_PT" type="xs:string"/>
+									<xs:element name="NOMUSUEL_RO" type="xs:string"/>
+									<xs:element name="NOMUSUEL_SK" type="xs:string"/>
+									<xs:element name="NOMUSUEL_SL" type="xs:string"/>
+									<xs:element name="NOMUSUEL_SV" type="xs:string"/>
+									<xs:element name="NOMUSUEL_HR" type="xs:string"/>
+									<xs:element name="NOMUSUEL_IS" type="xs:string"/>
+									<xs:element name="NOMUSUEL_NO" type="xs:string"/>
+								</xs:choice>
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_MNE" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>FD_Table_010 contains the list of the countries, with some mappings, FD_Table_401 contains some terms used to describe the contents of the fields</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="BE" type="xs:string"/>
+						<xs:element name="DK" type="xs:string"/>
+						<xs:element name="DE" type="xs:string"/>
+						<xs:element name="GR" type="xs:string"/>
+						<xs:element name="ES" type="xs:string"/>
+						<xs:element name="FR" type="xs:string"/>
+						<xs:element name="IR" type="xs:string"/>
+						<xs:element name="IT" type="xs:string"/>
+						<xs:element name="LU" type="xs:string"/>
+						<xs:element name="NL" type="xs:string"/>
+						<xs:element name="PT" type="xs:string"/>
+						<xs:element name="UK" type="xs:string"/>
+						<xs:element name="AT" type="xs:string"/>
+						<xs:element name="FI" type="xs:string"/>
+						<xs:element name="SV" type="xs:string"/>
+						<xs:element name="CY" type="xs:string"/>
+						<xs:element name="EE" type="xs:string"/>
+						<xs:element name="HU" type="xs:string"/>
+						<xs:element name="LV" type="xs:string"/>
+						<xs:element name="LT" type="xs:string"/>
+						<xs:element name="MT" type="xs:string"/>
+						<xs:element name="PL" type="xs:string"/>
+						<xs:element name="CZ" type="xs:string"/>
+						<xs:element name="SK" type="xs:string"/>
+						<xs:element name="SI" type="xs:string"/>
+						<xs:element name="BG" type="xs:string"/>
+						<xs:element name="RO" type="xs:string"/>
+						<xs:element name="HR" type="xs:string"/>
+						<xs:element name="IS" type="xs:string"/>
+						<xs:element name="NO" type="xs:string"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_MARC" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="MARC_STATUS">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="a"/>
+									<xs:enumeration value="c"/>
+									<xs:enumeration value="d"/>
+									<xs:enumeration value="n"/>
+									<xs:enumeration value="p"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="MARC_TYPE">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="a"/>
+									<xs:enumeration value="c"/>
+									<xs:enumeration value="d"/>
+									<xs:enumeration value="e"/>
+									<xs:enumeration value="f"/>
+									<xs:enumeration value="g"/>
+									<xs:enumeration value="i"/>
+									<xs:enumeration value="j"/>
+									<xs:enumeration value="k"/>
+									<xs:enumeration value="m"/>
+									<xs:enumeration value="o"/>
+									<xs:enumeration value="p"/>
+									<xs:enumeration value="r"/>
+									<xs:enumeration value="t"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="MARC_LEVEL" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="a"/>
+									<xs:enumeration value="b"/>
+									<xs:enumeration value="c"/>
+									<xs:enumeration value="d"/>
+									<xs:enumeration value="i"/>
+									<xs:enumeration value="m"/>
+									<xs:enumeration value="s"/>
+									<xs:enumeration value=""/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="MARC_CTLTYPE" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="a"/>
+									<xs:enumeration value=" "/>
+									<xs:enumeration value=""/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="MARC_CHARENC" type="xs:string" minOccurs="0"/>
+						<xs:element name="MARC_ENCLVL">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="0"/>
+									<xs:enumeration value="1"/>
+									<xs:enumeration value="2"/>
+									<xs:enumeration value="3"/>
+									<xs:enumeration value="4"/>
+									<xs:enumeration value="5"/>
+									<xs:enumeration value="7"/>
+									<xs:enumeration value="8"/>
+									<xs:enumeration value="u"/>
+									<xs:enumeration value="z"/>
+									<!--	<xs:enumeration value="#"/>-->
+									<!--									<xs:enumeration value="9"/>
+									<xs:enumeration value="b"/>
+									<xs:enumeration value="c"/>
+									<xs:enumeration value="d"/>
+									<xs:enumeration value="e"/>
+									<xs:enumeration value="f"/>
+									<xs:enumeration value="l"/>
+									<xs:enumeration value="r"/>
+									<xs:enumeration value="s"/>-->
+									<!--<xs:enumeration value="y"/>-->
+									<!--<xs:enumeration value="O"/>
+									<xs:enumeration value="P"/>
+									<xs:enumeration value="H"/>
+									<xs:enumeration value="p"/>-->
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="MARC_CATFORM" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="i"/>
+									<xs:enumeration value="u"/>
+									<xs:enumeration value=" "/>
+									<xs:enumeration value="#"/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="MARC_LRRQRD" minOccurs="0">
+							<xs:simpleType>
+								<xs:restriction base="xs:string">
+									<xs:enumeration value="r"/>
+									<xs:enumeration value=" "/>
+								</xs:restriction>
+							</xs:simpleType>
+						</xs:element>
+						<xs:element name="MARC_FIXFIELD_GR" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="MARC_FIXFIELD_ID">
+										<xs:simpleType>
+											<xs:restriction base="xs:byte">
+												<xs:enumeration value="001"/>
+												<xs:enumeration value="003"/>
+												<xs:enumeration value="005"/>
+												<xs:enumeration value="006"/>
+												<xs:enumeration value="007"/>
+												<xs:enumeration value="008"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="MARC_FIXFIELD" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="MARC_VARFIELD_GR" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="MARC_VARFIELD_ID" type="t_zone"/>
+									<xs:element name="MARC_VARFIELD_I1" minOccurs="0">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="[0-9]"/>
+												<xs:pattern value="n"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="MARC_VARFIELD_I2" minOccurs="0">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="[0-9]"/>
+												<xs:pattern value="n"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="MARC_VARFIELD" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="MARC_SUBFIELD_LABEL" type="t_label"/>
+												<xs:element name="MARC_SUBFIELD_VL" type="t_lng" minOccurs="0"/>
+												<xs:element name="MARC_SUBFIELD" type="xs:string"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_INDEX_MARC" minOccurs="0">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="M_020" type="xs:string"/>
+						<xs:element name="M_022" type="xs:string"/>
+						<xs:element name="M_024" type="xs:string"/>
+						<xs:element name="M_035_a" type="xs:string"/>
+						<xs:element name="M_041" type="xs:string"/>
+						<xs:element name="M_084_a" type="xs:string"/>
+						<xs:element name="M_090_a" type="xs:string"/>
+						<xs:element name="M_110" type="xs:string"/>
+						<xs:element name="M_210" type="xs:string"/>
+						<xs:element name="M_222" type="xs:string"/>
+						<xs:element name="M_247_x" type="xs:string"/>
+						<xs:element name="M_260" type="xs:string"/>
+						<xs:element name="M_263" type="xs:string"/>
+						<xs:element name="M_270" type="xs:string"/>
+						<xs:element name="M_300_5" type="xs:string"/>
+						<xs:element name="M_310_a" type="xs:string"/>
+						<xs:element name="M_340" type="xs:string"/>
+						<xs:element name="M_440" type="xs:string"/>
+						<xs:element name="M_505_a" type="xs:string"/>
+						<xs:element name="M_520_a" type="xs:string"/>
+						<xs:element name="M_521_a" type="xs:string"/>
+						<xs:element name="M_700" type="xs:string"/>
+						<xs:element name="M_710" type="xs:string"/>
+						<xs:element name="M_711" type="xs:string"/>
+						<xs:element name="M_910" type="xs:string"/>
+						<xs:element name="M_245_FR" type="xs:string"/>
+						<xs:element name="M_245_EN" type="xs:string"/>
+						<xs:element name="M_246_FR" type="xs:string"/>
+						<xs:element name="M_246_EN" type="xs:string"/>
+						<xs:element name="M_247_FR" type="xs:string"/>
+						<xs:element name="M_247_EN" type="xs:string"/>
+						<xs:element name="M_249_FR" type="xs:string"/>
+						<xs:element name="M_249_EN" type="xs:string"/>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_OLD" minOccurs="0">
+				<xs:complexType>
+					<xs:choice minOccurs="0" maxOccurs="unbounded">
+						<xs:element name="OLD_CELEX">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="OLD_IM" type="xs:string" minOccurs="0"/>
+									<xs:element name="OLD_EM" type="xs:string" minOccurs="0"/>
+									<xs:element name="OLD_NP" type="xs:string" minOccurs="0"/>
+									<xs:element name="OLD_AB" type="xs:string" minOccurs="0"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="OLD_CREJO">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="OLD_CREJO_ID" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="OLD_CREDOC">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="OLD_CREDOC_ID" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="OLD_CREPUB">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="OLD_CREPUB_ID" type="xs:string"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:choice>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_CONSLEG" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>
+						<xs:documentation>informations provenant de la consolidation</xs:documentation>
+					</xs:documentation>
+				</xs:annotation>
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="CONSOLID_FICHE" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+						<xs:element name="CONSOLID_GR" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="CONSOLID_SEQ" minOccurs="0">
+										<xs:annotation>
+											<xs:documentation>
+												<xs:documentation>sequence dans la liste</xs:documentation>
+											</xs:documentation>
+										</xs:annotation>
+									</xs:element>
+									<xs:element name="CONSOLID_ACT" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>
+												<xs:documentation>si acte modificateur</xs:documentation>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="CONSOLID_DN">
+													<xs:annotation>
+														<xs:documentation>
+															<xs:documentation>numdoc de l_acte modificateur</xs:documentation>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="CONSOLID_ROLE">
+													<xs:annotation>
+														<xs:documentation>
+															<xs:documentation>IN ou OUT suivant prise en compte dans consolidation</xs:documentation>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+									<xs:element name="CONSOLID_CONSLEG" minOccurs="0" maxOccurs="unbounded">
+										<xs:annotation>
+											<xs:documentation>
+												<xs:documentation>si acte consolide</xs:documentation>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="CONSOLID_FAMILY">
+													<xs:annotation>
+														<xs:documentation>
+															<xs:documentation>reference consleg</xs:documentation>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="CONSOLID_START">
+													<xs:annotation>
+														<xs:documentation>
+															<xs:documentation>date de debut de validite</xs:documentation>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="CONSOLID_END">
+													<xs:annotation>
+														<xs:documentation>
+															<xs:documentation>date de fin de validite</xs:documentation>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+												<xs:element name="CONSOLID_COUCHE">
+													<xs:annotation>
+														<xs:documentation>
+															<xs:documentation>numero de la couche</xs:documentation>
+														</xs:documentation>
+													</xs:annotation>
+												</xs:element>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_WORD" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="WORD_ENTRY" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="WORD_ENTRY_SEQ" type="xs:string" minOccurs="0"/>
+									<xs:element name="WORD_ENTRY_GRVL" maxOccurs="unbounded">
+										<xs:complexType>
+											<xs:sequence>
+												<xs:element name="WORD_ENTRY_VL" type="xs:string"/>
+												<xs:element name="WORD_ENTRY_REF_DOC" type="xs:string"/>
+												<xs:element name="WORD_ENTRY_TITRE" type="xs:string" minOccurs="0"/>
+												<xs:element name="WORD_ENTRY_ARCHIVE_DATE" type="xs:string" minOccurs="0"/>
+											</xs:sequence>
+										</xs:complexType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<xs:element name="VOLET_JUR_NAT" minOccurs="0">
+				<xs:complexType>
+					<xs:sequence>
+						<xs:element name="ARRET_COUR" type="xs:string"/>
+						<xs:element name="CONCLUSIONS" type="xs:string" maxOccurs="unbounded"/>
+						<xs:element name="DESCRIPTEURS_GR" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="DESCRIPTEURS_VL" type="t_vl"/>
+									<xs:element name="DESCRIPTEURS" type="xs:string" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="NUM_AFFAIRE" minOccurs="0">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="NUM_AFFAIRE_JURIDICTION">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="C"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="NUM_AFFAIRE_YEAR">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="\d{4}"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="NUM_AFFAIRE_NUMBER">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:pattern value="\d{4}"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+									<xs:element name="NUM_AFFAIRE_TYPE">
+										<xs:simpleType>
+											<xs:restriction base="xs:string">
+												<xs:enumeration value="J"/>
+												<xs:enumeration value="O"/>
+												<xs:enumeration value="P"/>
+												<xs:enumeration value="R"/>
+											</xs:restriction>
+										</xs:simpleType>
+									</xs:element>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="PUBLICATION" type="xs:string" maxOccurs="unbounded"/>
+						<xs:element name="SUIVI_TEXTE_GR" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="SUIVI_TEXTE_VL" type="t_vl"/>
+									<xs:element name="SUIVI_TEXTE" type="xs:string" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="ANT_LITIGE" type="xs:string" maxOccurs="unbounded"/>
+						<xs:element name="ULT_LITIGE" type="xs:string" maxOccurs="unbounded"/>
+						<xs:element name="INT_DISPOSIT_GR" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="INT_DISPOSIT_VL" type="t_vl"/>
+									<xs:element name="INT_DISPOSIT" type="xs:string" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="NAT_DISPOSIT_GR" minOccurs="0" maxOccurs="unbounded">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="NAT_DISPOSIT_VL" type="t_vl"/>
+									<xs:element name="NAT_DISPOSIT" type="xs:string" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:sequence>
+				</xs:complexType>
+			</xs:element>
+			<!--<xs:element name="VOLET_ID_PRIM" minOccurs="0">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="COLL" type="xs:string"/>
+													<xs:element name="CELEX" minOccurs="0">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="DN" type="xs:string"/>
+																<xs:element name="DN2" type="xs:string"/>
+																<xs:element name="DT_SEC" type="xs:string"/>
+																<xs:element name="DT_ANN" type="xs:string"/>
+																<xs:element name="DT_TYP" type="xs:string"/>
+																<xs:element name="DT_NUM" type="xs:string"/>
+																<xs:element name="DT_SEQUENCE" type="xs:string"/>
+																<xs:element name="DT_CORR" type="xs:string"/>
+																<xs:element name="DT_CORR_SEQ" type="xs:string"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										-->
+		</xs:choice>
+	</xs:complexType>
+	<xs:element name="DATE">
+		<xs:complexType mixed="true">
+			<xs:complexContent mixed="true">
+				<xs:extension base="t_btx">
+					<xs:attribute name="ISO" type="t_date" use="required"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FT">
+		<xs:complexType mixed="true">
+			<xs:complexContent mixed="true">
+				<xs:extension base="t_btx">
+					<xs:attribute name="TYPE">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="REFOJ"/>
+								<xs:enumeration value="REF"/>
+								<xs:enumeration value="SUP"/>
+								<xs:enumeration value="SUB"/>
+								<xs:enumeration value="NUM"/>
+								<xs:enumeration value="CN"/>
+								<xs:enumeration value="TARIC"/>
+								<xs:enumeration value="DEL"/>
+								<xs:enumeration value="INS"/>
+								<xs:enumeration value="UC"/>
+								<xs:enumeration value="BOLD"/>
+								<xs:enumeration value="ITALIC"/>
+								<xs:enumeration value="NORMAL"/>
+								<xs:enumeration value="BOX"/>
+								<xs:enumeration value="EXPANDED"/>
+								<xs:enumeration value="UNDERLINE"/>
+								<xs:enumeration value="CODE"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LIST">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="INT.LI" type="t_btx" minOccurs="0"/>
+				<xs:element name="ITEM" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="SYMBOL" type="t_btx" minOccurs="0"/>
+							<xs:element ref="P" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="CLOSE.LI" type="t_btx" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="TYPE" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="UC"/>
+						<xs:enumeration value="LC"/>
+						<xs:enumeration value="ARAB"/>
+						<xs:enumeration value="BULLET"/>
+						<xs:enumeration value="DASH"/>
+						<xs:enumeration value="NONE"/>
+						<xs:enumeration value="OTHER"/>
+						<xs:enumeration value="ROMUC"/>
+						<xs:enumeration value="ROMLC"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NOTE">
+		<xs:complexType mixed="true">
+			<xs:complexContent mixed="true">
+				<xs:extension base="t_btx">
+					<xs:attribute name="TYPE" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="NUM"/>
+								<xs:enumeration value="ALPHA"/>
+								<xs:enumeration value="AST"/>
+								<xs:enumeration value="OTHER"/>
+								<xs:enumeration value="NO.CALL"/>
+								<xs:enumeration value="ROMAN"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="P" type="t_btx"/>
+	<xs:element name="QT" type="t_btx"/>
+	<xs:element name="REF.DOC.OJ">
+		<xs:complexType mixed="true">
+			<xs:complexContent mixed="true">
+				<xs:extension base="t_btx">
+					<xs:attribute name="COLL" type="t_collection" use="required"/>
+					<xs:attribute name="NO.OJ" type="t_no.oj" use="required"/>
+					<xs:attribute name="DATE.PUB" type="t_date.publication" use="required"/>
+					<xs:attribute name="PAGE.FIRST" type="t_page"/>
+					<xs:attribute name="PAGE.SEQ" type="t_page.sequence"/>
+					<xs:attribute name="PAGE.LAST" type="t_page"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VL">
+		<xs:complexType mixed="true">
+			<xs:complexContent mixed="true">
+				<xs:extension base="t_btx">
+					<xs:attribute name="LG.EU" type="t_lng"/>
+					<xs:attribute name="LG.OTH" type="t_lng"/>
+				</xs:extension>
+			</xs:complexContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:simpleType name="t_date">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{8}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_date.publication">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{4}(\d{4})?"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_year">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_collection">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="A"/>
+			<xs:enumeration value="C"/>
+			<xs:enumeration value="L"/>
+			<xs:enumeration value="P"/>
+			<xs:enumeration value="S"/>
+			<xs:enumeration value="X"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_page">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="([ces]{0,1}\d{1,4}[a-z]?(/\d{2})?)|((l((x((x((x((vi{0,3})|(i(x|v|i{1,2})?))?)|(vi{0,3})|(i(x|v|i{1,2})?))?)|(vi{0,3})|(i(x|v|i{1,2})?))?)|(vi{0,3})|(i(x|v|i{1,2})?))?)|(x((l((vi{0,3})|(i(x|v|i{1,2})?))?)|(x((x((vi{0,3})|(i(x|v|i{1,2})?))?)|(vi{0,3})|(i(x|v|i{1,2})?))?)|(vi{0,3})|(i(x|v|i{1,2})?))?)|(vi{0,3})|(i(x|v|i{1,2})?))"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_page.sequence">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[1-9][0-9]?"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_no.oj">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{3}[AEM]?"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_lng">
+		<xs:annotation>
+			<xs:documentation>
+				<xs:documentation>based on ISO 639/2</xs:documentation>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{2}"/>
+			<xs:pattern value=""/>
+			<xs:pattern value="0[A-Z]"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_vl">
+		<xs:annotation>
+			<xs:documentation>
+				<xs:documentation>based on ISO 639/2 plus specific multilingual codes</xs:documentation>
+				<xs:documentation>09/09/2003 : add \d{2} to patterns</xs:documentation>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="[A-Z]{2}|[A-Z]\d|\d[A-Z]|\d{2}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_zone">
+		<xs:annotation>
+			<xs:documentation>
+				<xs:documentation>MARC field number 000-999</xs:documentation>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="001"/>
+			<xs:enumeration value="003"/>
+			<xs:enumeration value="017"/>
+			<xs:enumeration value="020"/>
+			<xs:enumeration value="022"/>
+			<xs:enumeration value="024"/>
+			<xs:enumeration value="028"/>
+			<xs:enumeration value="029"/>
+			<xs:enumeration value="030"/>
+			<xs:enumeration value="034"/>
+			<xs:enumeration value="035"/>
+			<xs:enumeration value="038"/>
+			<xs:enumeration value="039"/>
+			<xs:enumeration value="040"/>
+			<xs:enumeration value="041"/>
+			<xs:enumeration value="044"/>
+			<xs:enumeration value="080"/>
+			<xs:enumeration value="084"/>
+			<xs:enumeration value="085"/>
+			<xs:enumeration value="086"/>
+			<xs:enumeration value="089"/>
+			<xs:enumeration value="090"/>
+			<xs:enumeration value="099"/>
+			<xs:enumeration value="110"/>
+			<xs:enumeration value="130"/>
+			<xs:enumeration value="210"/>
+			<xs:enumeration value="222"/>
+			<xs:enumeration value="240"/>
+			<xs:enumeration value="245"/>
+			<xs:enumeration value="246"/>
+			<xs:enumeration value="247"/>
+			<xs:enumeration value="249"/>
+			<xs:enumeration value="250"/>
+			<xs:enumeration value="255"/>
+			<xs:enumeration value="256"/>
+			<xs:enumeration value="260"/>
+			<xs:enumeration value="263"/>
+			<xs:enumeration value="300"/>
+			<xs:enumeration value="301"/>
+			<xs:enumeration value="306"/>
+			<xs:enumeration value="307"/>
+			<xs:enumeration value="310"/>
+			<xs:enumeration value="321"/>
+			<xs:enumeration value="340"/>
+			<xs:enumeration value="352"/>
+			<xs:enumeration value="355"/>
+			<xs:enumeration value="362"/>
+			<xs:enumeration value="380"/>
+			<xs:enumeration value="440"/>
+			<xs:enumeration value="490"/>
+			<xs:enumeration value="499"/>
+			<xs:enumeration value="500"/>
+			<xs:enumeration value="504"/>
+			<xs:enumeration value="505"/>
+			<xs:enumeration value="506"/>
+			<xs:enumeration value="510"/>
+			<xs:enumeration value="515"/>
+			<xs:enumeration value="520"/>
+			<xs:enumeration value="522"/>
+			<xs:enumeration value="530"/>
+			<xs:enumeration value="538"/>
+			<xs:enumeration value="540"/>
+			<xs:enumeration value="546"/>
+			<xs:enumeration value="580"/>
+			<xs:enumeration value="648"/>
+			<xs:enumeration value="650"/>
+			<xs:enumeration value="651"/>
+			<xs:enumeration value="653"/>
+			<xs:enumeration value="655"/>
+			<xs:enumeration value="690"/>
+			<xs:enumeration value="699"/>
+			<xs:enumeration value="700"/>
+			<xs:enumeration value="710"/>
+			<xs:enumeration value="711"/>
+			<xs:enumeration value="730"/>
+			<xs:enumeration value="740"/>
+			<xs:enumeration value="753"/>
+			<xs:enumeration value="760"/>
+			<xs:enumeration value="762"/>
+			<xs:enumeration value="765"/>
+			<xs:enumeration value="767"/>
+			<xs:enumeration value="770"/>
+			<xs:enumeration value="772"/>
+			<xs:enumeration value="773"/>
+			<xs:enumeration value="774"/>
+			<xs:enumeration value="775"/>
+			<xs:enumeration value="776"/>
+			<xs:enumeration value="777"/>
+			<xs:enumeration value="780"/>
+			<xs:enumeration value="785"/>
+			<xs:enumeration value="787"/>
+			<xs:enumeration value="810"/>
+			<xs:enumeration value="830"/>
+			<xs:enumeration value="845"/>
+			<xs:enumeration value="856"/>
+			<xs:enumeration value="863"/>
+			<xs:enumeration value="880"/>
+			<xs:enumeration value="899"/>
+			<xs:enumeration value="901"/>
+			<xs:enumeration value="902"/>
+			<xs:enumeration value="909"/>
+			<xs:enumeration value="910"/>
+			<xs:enumeration value="911"/>
+			<xs:enumeration value="914"/>
+			<xs:enumeration value="920"/>
+			<xs:enumeration value="921"/>
+			<xs:enumeration value="924"/>
+			<xs:enumeration value="935"/>
+			<xs:enumeration value="939"/>
+			<xs:enumeration value="940"/>
+			<xs:enumeration value="945"/>
+			<xs:enumeration value="946"/>
+			<xs:enumeration value="948"/>
+			<xs:enumeration value="949"/>
+			<xs:enumeration value="970"/>
+			<xs:enumeration value="973"/>
+			<xs:enumeration value="987"/>
+			<xs:enumeration value="997"/>
+			<xs:enumeration value="998"/>
+			<xs:enumeration value="999"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_label">
+		<xs:annotation>
+			<xs:documentation>
+				<xs:documentation>MARC subfield</xs:documentation>
+			</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="2"/>
+			<xs:enumeration value="3"/>
+			<xs:enumeration value="4"/>
+			<xs:enumeration value="5"/>
+			<xs:enumeration value="6"/>
+			<xs:enumeration value="7"/>
+			<xs:enumeration value="8"/>
+			<xs:enumeration value="9"/>
+			<xs:enumeration value="a"/>
+			<xs:enumeration value="b"/>
+			<xs:enumeration value="c"/>
+			<xs:enumeration value="d"/>
+			<xs:enumeration value="e"/>
+			<xs:enumeration value="f"/>
+			<xs:enumeration value="g"/>
+			<xs:enumeration value="h"/>
+			<xs:enumeration value="i"/>
+			<xs:enumeration value="j"/>
+			<xs:enumeration value="k"/>
+			<xs:enumeration value="l"/>
+			<xs:enumeration value="m"/>
+			<xs:enumeration value="n"/>
+			<xs:enumeration value="o"/>
+			<xs:enumeration value="p"/>
+			<xs:enumeration value="q"/>
+			<xs:enumeration value="r"/>
+			<xs:enumeration value="s"/>
+			<xs:enumeration value="t"/>
+			<xs:enumeration value="u"/>
+			<xs:enumeration value="v"/>
+			<xs:enumeration value="w"/>
+			<xs:enumeration value="x"/>
+			<xs:enumeration value="y"/>
+			<xs:enumeration value="z"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="CHARGEMENT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NOTICES" minOccurs="0" maxOccurs="unbounded">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:choice maxOccurs="unbounded">
+								<xs:element name="ID_CELEX" type="xs:string"/>
+								<xs:element name="ID_JO" type="xs:string"/>
+								<xs:element name="ID_COM" type="xs:string"/>
+								<xs:element name="ID_COM_NAT" type="xs:string"/>
+								<xs:element name="ID_CES" type="xs:string"/>
+								<xs:element name="ID_CDR" type="xs:string"/>
+								<xs:element name="ID_PE" type="xs:string"/>
+								<xs:element name="ID_DD" type="xs:string"/>
+								<xs:element name="ID_MTF" type="xs:string"/>
+								<xs:element name="ID_CONSLEG" type="xs:string"/>
+								<xs:element name="ID_CONSEILADD" type="xs:string"/>
+								<xs:element name="ID_CONSEILREL" type="xs:string"/>
+								<xs:element name="ID_EUROSTAT" type="xs:string"/>
+								<xs:element name="ID_RECUEIL" type="xs:string"/>
+								<xs:element name="ID_PUB">
+									<xs:simpleType>
+										<xs:annotation>
+											<xs:documentation>
+												<xs:documentation>PER a existé avec une structure différente mais n'est  plus utilisé maintenant</xs:documentation>
+											</xs:documentation>
+										</xs:annotation>
+										<xs:restriction base="xs:string">
+											<xs:pattern value="PER_.*"/>
+											<xs:pattern value="PUB_[A-Z0-9\-]{12}"/>
+											<xs:pattern value="SER_[A-Z0-9\-_]{12}"/>
+											<xs:pattern value="SET_[A-Z0-9\-_]{12}"/>
+											<xs:pattern value="SET_.*"/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:element>
+							</xs:choice>
+							<xs:element name="PROCAT_KEY" type="xs:string" minOccurs="0"/>
+							<xs:element name="DISPLAY" type="xs:string" minOccurs="0"/>
+							<xs:choice>
+								<xs:element name="T_PROCAT" type="t_procat"/>
+							</xs:choice>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="NAME" type="xs:string"/>
+			<xs:attribute name="ORIGINE" type="xs:string"/>
+			<xs:attribute name="DATE" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

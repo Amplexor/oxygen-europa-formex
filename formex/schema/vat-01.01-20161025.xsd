@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+	<xs:simpleType name="status.code">
+		<xs:restriction base="xs:string">
+		<xs:whiteSpace value="collapse"/>
+		<xs:enumeration value="_to_be_done_"/>
+		<xs:enumeration value="SD01"/>
+		<xs:enumeration value="SD02"/>
+		<xs:enumeration value="ED01"/>
+		<xs:enumeration value="ED02"/>
+		<xs:enumeration value="ED03"/>
+		<xs:enumeration value="ED99"/>
+		<xs:enumeration value="SR01"/>
+		<xs:enumeration value="SR02"/>
+		<xs:enumeration value="ER01"/>
+		<xs:enumeration value="ER99"/>
+	</xs:restriction>
+	</xs:simpleType>
+	<xs:element name="CLASS_ERROR">
+		<xs:complexType>
+			<xs:attribute name="COUNT" type="xs:int" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CLASS_WARNING">
+		<xs:complexType>
+			<xs:attribute name="COUNT" type="xs:int" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DESCRIPTION" type="xs:string"/>
+	<xs:element name="CONTENT" type="xs:string"/>
+	<xs:element name="STATUS" type="status.code"/>
+	<xs:element name="ERROR">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DESCRIPTION"/>
+				<xs:element ref="XPATH"/>
+				<xs:element ref="CONTENT"/>
+				<xs:element ref="STATUS"/>
+			</xs:sequence>
+			<xs:attribute name="CLASS" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:NMTOKEN">
+						<xs:enumeration value="ERROR"/>
+						<xs:enumeration value="WARNING"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="CODE" type="xs:string" use="required"/>
+			<xs:attribute name="DATE" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="\d{8}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="TIME" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="\d{6}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PHASE_REPORT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ERROR" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="PHASE" type="xs:string" use="required"/>
+			<xs:attribute name="FILE" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PHASE_SUMMARY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="CLASS_ERROR"/>
+				<xs:element ref="CLASS_WARNING"/>
+			</xs:sequence>
+			<xs:attribute name="PHASE" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="SUMMARY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PHASE_SUMMARY" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="VAL.REPORT">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="PHASE_REPORT" maxOccurs="unbounded"/>
+				<xs:element ref="SUMMARY"/>
+			</xs:sequence>
+			<xs:attribute name="OBJ" type="xs:string" use="required"/>
+			<xs:attribute name="DATE" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="\d{8}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="TIME" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:pattern value="\d{6}"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="XPATH" type="xs:string"/>
+</xs:schema>

@@ -1,0 +1,497 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<!--
+=====================================================================================
+= Manual Validation: Schema for exchange of messages
+= Version: 	1.2 (2011-03-22)
+= Author:	Dr. Holger Bagola (OP - C1.002)
+= Comment:
+= 		The schema is built on the DTD msg.dtd from 2002. It is enriched for further validation purposes.
+= History:
+=		2010-07-02: 	conversion of DTD, integration of JUREL validation specialties, harmonisation of element
+=							naming (HB)
+=		2010-07-08:	updating value lists (HB)
+=		2010-09-22:   updating value lists, correction of model (HB)
+=		2011-03-14	code 1x0 added to languages (22 languages) (HB
+=	    2011-03-22    correction of t_instance (HB)
+=====================================================================================
+-->
+<!-- 
+=====================================================================================
+= Type definitions
+=====================================================================================
+-->
+	<xs:simpleType name="t_classoj">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="REGULAR"/>
+			<xs:enumeration value="ANNEX"/>
+			<xs:enumeration value="ELECTRONIC"/>
+			<xs:enumeration value="SPECIAL"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_compression">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="TARGZ"/>
+			<xs:enumeration value="ZIP"/>
+			<xs:enumeration value="NONE"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_instance">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="CJ"/>
+			<xs:enumeration value="F1"/>
+			<xs:enumeration value="F2"/>
+			<xs:enumeration value="T1"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_language">
+		<xs:annotation>
+			<xs:documentation>based on ISO 639-3</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="1x0"/>
+			<xs:enumeration value="bul"/>
+			<xs:enumeration value="ces"/>
+			<xs:enumeration value="dan"/>
+			<xs:enumeration value="deu"/>
+			<xs:enumeration value="ell"/>
+			<xs:enumeration value="eng"/>
+			<xs:enumeration value="est"/>
+			<xs:enumeration value="fin"/>
+			<xs:enumeration value="fra"/>
+			<xs:enumeration value="gle"/>
+			<xs:enumeration value="hun"/>
+			<xs:enumeration value="ita"/>
+			<xs:enumeration value="lav"/>
+			<xs:enumeration value="lit"/>
+			<xs:enumeration value="mlt"/>
+			<xs:enumeration value="mul"/>
+			<xs:enumeration value="nld"/>
+			<xs:enumeration value="pol"/>
+			<xs:enumeration value="por"/>
+			<xs:enumeration value="ron"/>
+			<xs:enumeration value="slk"/>
+			<xs:enumeration value="slv"/>
+			<xs:enumeration value="spa"/>
+			<xs:enumeration value="swe"/>
+			<xs:enumeration value="hrv"/>
+			<xs:enumeration value="isl"/>
+			<xs:enumeration value="mkd"/>
+			<xs:enumeration value="srp"/>
+			<xs:enumeration value="tur"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_msgtype">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="ACK_FMX_DELIVERY_VM"/>
+			<xs:enumeration value="ACK_FMX_REPLY_VM"/>
+			<xs:enumeration value="ACK_FMX_REQUEST_VM"/>
+			<xs:enumeration value="ACK_FMX_QUESTION_VM"/>
+			<xs:enumeration value="ACK_FMX_VALIDATION_VM"/>
+			<xs:enumeration value="ACK_FMX_VALIDATION_REPORT_REJECT_VM"/>
+			<xs:enumeration value="ACK_TOC_DELIVERY_VM"/>
+			<xs:enumeration value="ACK_TOC_REQUEST_VM"/>
+			<xs:enumeration value="FMX_DELIVERY_VM"/>
+			<xs:enumeration value="FMX_QUESTION_VM"/>
+			<xs:enumeration value="FMX_REPLY_VM"/>
+			<xs:enumeration value="FMX_REQUEST_VM"/>
+			<xs:enumeration value="FMX_VALIDATION_VM"/>
+			<xs:enumeration value="FMX_VALIDATION_REPORT_REJECT_VM"/>
+			<xs:enumeration value="TOC_DELIVERY_VM"/>
+			<xs:enumeration value="TOC_REQUEST_VM"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_nature">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ANSWER"/>
+			<xs:enumeration value="AUTO_VALID_REPORT"/>
+			<xs:enumeration value="CJFMX"/>
+			<xs:enumeration value="CJPUB"/>
+			<xs:enumeration value="COMPARISON_REPORT"/>
+			<xs:enumeration value="FMX_ANOMALY_VM_REPORT"/>
+			<xs:enumeration value="FMX_DELIVERY_CORRECTED_VM"/>
+			<xs:enumeration value="FMX_DELIVERY_REJECT_VM"/>
+			<xs:enumeration value="FMX_DELIVERY_VM_REPORT"/>
+			<xs:enumeration value="FMX_FOLLOWUP_VM_REPORT"/>
+			<xs:enumeration value="FMX_OJ"/>
+			<xs:enumeration value="FMX_REMARK_VM"/>
+			<xs:enumeration value="FMX_REQUEST_REJECT_VM"/>
+			<xs:enumeration value="FOLLOWUP_VM_REPORT"/>
+			<xs:enumeration value="INVOICE"/>
+			<xs:enumeration value="JUSTIFICATION"/>
+			<xs:enumeration value="PILOTEFMX"/>
+			<xs:enumeration value="PUB_OJ"/>
+			<xs:enumeration value="QUESTION"/>
+			<xs:enumeration value="TOC_DELIVERY_REJECT_VM"/>
+			<xs:enumeration value="TOC_DELIVERY_VM_REPORT"/>
+			<xs:enumeration value="TOC_FOLLOWUP_VM_REPORT"/>
+			<xs:enumeration value="TOC_OJ"/>
+			<xs:enumeration value="TOC_REMARK_VM"/>
+			<xs:enumeration value="VALIDATION_VM_REPORT"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_oknok">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="NOK"/>
+			<xs:enumeration value="OK"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_scope">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="BM-VAL"/>
+			<xs:enumeration value="COR-NO_LIMIT"/>
+			<xs:enumeration value="ECR-VAL"/>
+			<xs:enumeration value="ERR-CORR"/>
+			<xs:enumeration value="FOR-REPLY"/>
+			<xs:enumeration value="LG-SYNC"/>
+			<xs:enumeration value="META-VAL"/>
+			<xs:enumeration value="PUB-VAL"/>
+			<xs:enumeration value="STR-COR"/>
+			<xs:enumeration value="STR-VER"/>
+			<xs:enumeration value="STRUCT-VAL"/>
+			<xs:enumeration value="STRUCT-VER"/>
+			<xs:enumeration value="TO-ACCEPT"/>
+			<xs:enumeration value="TO-BE-SOLVED"/>
+			<xs:enumeration value="TO-REJECT"/>
+			<xs:enumeration value="TOC-ADD"/>
+			<xs:enumeration value="TOC-COR"/>
+			<xs:enumeration value="TOC-CRE"/>
+			<xs:enumeration value="TOC-VAL"/>
+			<xs:enumeration value="TOC-VER"/>
+			<xs:enumeration value="TXT-COR"/>
+			<xs:enumeration value="TXT-VAL"/>
+			<xs:enumeration value="TXT-VER"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_sender">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="OP"/>
+			<xs:enumeration value="DI"/>
+			<xs:enumeration value="EU"/>
+			<xs:enumeration value="IC"/>
+			<xs:enumeration value="JO"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_year">
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{4}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="t_yesno">
+		<xs:restriction base="xs:NMTOKEN">
+			<xs:enumeration value="YES"/>
+			<xs:enumeration value="NO"/>
+		</xs:restriction>
+	</xs:simpleType>
+<!--
+=====================================================================================
+= Element definitions
+=====================================================================================
+-->
+	<xs:element name="ACK">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="RECEIVED.MSG"/>
+				<xs:element ref="ERROR.CODE" minOccurs="0"/>
+				<xs:element ref="ERROR.LABEL" minOccurs="0"/>
+				<xs:element ref="OBSERVATIONS" minOccurs="0"/>
+				<xs:element ref="GR.ATTACH" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:attribute name="VALUE" type="t_oknok"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ANOMALY">
+		<xs:complexType>
+			<xs:attribute name="LG" use="required" type="t_language"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ATTACH">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LINK.ATTACH"/>
+				<xs:element ref="FORMAT.ATTACH"/>
+			</xs:sequence>
+			<xs:attribute name="LG" type="t_language"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CHAP.SE" type="xs:string"/>
+	<xs:element name="CHECK.PROOF">
+		<xs:complexType>
+			<xs:attribute name="VALUE" type="t_yesno"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CHECK.SYNOPTISM">
+		<xs:complexType>
+			<xs:attribute name="VALUE" type="t_yesno"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="COLL.OJ" type="xs:string"/>
+	<xs:element name="DATE.PUB" type="xs:string"/>
+	<xs:element name="DATE.TIME.DELIVERY" type="xs:string"/>
+	<xs:element name="DATE.TIME.RECEIPT" type="xs:string"/>
+	<xs:element name="DATE.TIME.REQUEST" type="xs:string"/>
+	<xs:element name="DATE.TIME.SEND" type="xs:string"/>
+	<xs:element name="PERIOD.DELIVERY" type="xs:string"/>
+	<xs:element name="DESCR.CONTENT.DD">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="NO.CELEX" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="TOME.SE" minOccurs="0"/>
+				<xs:element ref="CHAP.SE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DESCR.CONTENT.OJ">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="REF.OJ" minOccurs="0"/>
+				<xs:element ref="PROPOSAL.REF" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DESCR.CONTENT.JUR">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="REF.FASCICLE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="ERROR.CODE" type="xs:string"/>
+	<xs:element name="ERROR.LABEL" type="xs:string"/>
+	<xs:element name="EXISTING.COMPOSITION">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="REF.OJ"/>
+			</xs:sequence>
+			<xs:attribute name="VALUE" type="t_yesno"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EXISTING.PAPER.VERSION">
+		<xs:complexType>
+			<xs:attribute name="VALUE" use="required" type="t_yesno"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="EXISTING.TEMPLATE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="REF.OJ"/>
+			</xs:sequence>
+			<xs:attribute name="VALUE" type="t_yesno"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="FORMAT.ATTACH" type="xs:string"/>
+	<xs:element name="FORMAT.STAMP" type="xs:string"/>
+	<xs:element name="FROM.MSG" type="t_sender"/>
+	<xs:element name="GR.ANOMALY">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="ANOMALY" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="GR.ATTACH">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LINK.GR.ATTACH" minOccurs="0"/>
+				<xs:element ref="GR.ATTACH" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="ATTACH" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="OBSERVATIONS" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="NATURE.ATTACH" use="required" type="t_nature"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INFO">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="REPOSITORY.DATA" minOccurs="0"/>
+				<xs:element ref="INSTRUCTION.SEQ" minOccurs="0"/>
+				<xs:element ref="CHECK.PROOF" minOccurs="0"/>
+				<xs:element ref="EXISTING.COMPOSITION" minOccurs="0"/>
+				<xs:element ref="MANUSCRIPT.READING" minOccurs="0"/>
+				<xs:element ref="INSTRUCTION.SCOPE" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="EXISTING.TEMPLATE" minOccurs="0"/>
+				<xs:element ref="PROOF.READING" minOccurs="0"/>
+				<xs:element ref="CHECK.SYNOPTISM" minOccurs="0"/>
+				<xs:element ref="DATE.TIME.REQUEST" minOccurs="0"/>
+				<xs:element ref="DATE.TIME.DELIVERY" minOccurs="0"/>
+				<xs:element ref="PERIOD.DELIVERY" minOccurs="0"/>
+				<xs:element ref="PROVIDER.CONTACT" minOccurs="0"/>
+				<xs:element ref="OP.CONTACT" minOccurs="0"/>
+				<xs:element ref="NO.REQUEST" minOccurs="0"/>
+				<xs:element ref="NO.LOT" minOccurs="0"/>
+				<xs:element ref="ORDER.FORMS" minOccurs="0"/>
+				<xs:element ref="EXISTING.PAPER.VERSION" minOccurs="0"/>
+				<xs:choice minOccurs="0">
+					<xs:element ref="DESCR.CONTENT.DD"/>
+					<xs:element ref="DESCR.CONTENT.OJ"/>
+					<xs:element ref="DESCR.CONTENT.JUR"/>
+				</xs:choice>
+				<xs:element ref="PAGE.TOTAL.MANUSCRIPT" minOccurs="0"/>
+				<xs:element ref="PAGE.TOTAL" minOccurs="0"/>
+				<xs:element ref="QUESTION.TYPE" minOccurs="0"/>
+				<xs:element ref="GR.ANOMALY" minOccurs="0"/>
+				<xs:element ref="RECEIVED.MSG" minOccurs="0" maxOccurs="unbounded"/>
+				<xs:element ref="OBSERVATIONS" minOccurs="0"/>
+				<xs:element ref="GR.ATTACH" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INSTANCE" type="t_instance">
+	</xs:element>
+	<xs:element name="INSTRUCTION.SCOPE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCOPE" maxOccurs="unbounded"/>
+				<xs:sequence minOccurs="0">
+					<xs:element ref="PAGE.FROM"/>
+					<xs:element ref="PAGE.TO"/>
+				</xs:sequence>
+				<xs:element ref="OBSERVATIONS" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="LG" type="t_language"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="INSTRUCTION.SEQ" type="xs:string"/>
+	<xs:element name="LINK.ATTACH">
+		<xs:complexType mixed="true">
+			<xs:attribute name="COMPRESSION" type="t_compression" default="NONE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LINK.GR.ATTACH">
+		<xs:complexType mixed="true">
+			<xs:attribute name="COMPRESSION" type="t_compression" default="NONE"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="LINK.STAMP" type="xs:string"/>
+	<xs:element name="MANUSCRIPT.READING">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="OBSERVATIONS" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="VALUE" type="t_yesno"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="MSG">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="FROM.MSG"/>
+				<xs:element ref="TO.MSG"/>
+				<xs:element ref="DATE.TIME.SEND"/>
+				<xs:element ref="STAMP" minOccurs="0"/>
+				<xs:element ref="INFO"/>
+				<xs:element ref="ACK" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="ID.MSG" use="required" type="xs:string"/>
+			<xs:attribute name="TYPE" use="required" type="t_msgtype"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NO.CELEX" type="xs:string"/>
+	<xs:element name="NO.FASCICLE">
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="\d{1,2}"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<xs:element name="NO.LOT" type="xs:string"/>
+	<xs:element name="NO.OJ">
+		<xs:complexType mixed="true">
+			<xs:attribute name="CLASS" type="t_classoj" default="REGULAR"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NO.ORDER.FORM" type="xs:string"/>
+	<xs:element name="NO.REQUEST" type="xs:string"/>
+	<xs:element name="NO.SEQ" type="xs:string"/>
+	<xs:element name="OBSERVATIONS">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="P" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="OP.CONTACT" type="xs:string"/>
+	<xs:element name="ORDER.FORMS">
+		<xs:complexType>
+			<xs:sequence maxOccurs="unbounded">
+				<xs:element ref="NO.ORDER.FORM"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="P" type="xs:string"/>
+	<xs:element name="PAGE.FIRST" type="xs:string"/>
+	<xs:element name="PAGE.FROM" type="xs:string"/>
+	<xs:element name="PAGE.TO" type="xs:string"/>
+	<xs:element name="PAGE.TOTAL" type="xs:string"/>
+	<xs:element name="PAGE.TOTAL.MANUSCRIPT" type="xs:string"/>
+	<xs:element name="PROOF.READING">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="OBSERVATIONS" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="VALUE" type="t_yesno"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="PROPOSAL.REF" type="xs:string"/>
+	<xs:element name="PROVIDER.CONTACT" type="xs:string"/>
+	<xs:element name="QUESTION.TYPE" type="xs:string"/>
+	<xs:element name="RECEIVED.MSG">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="DATE.TIME.RECEIPT"/>
+			</xs:sequence>
+			<xs:attribute name="ID.MSG" use="required" type="xs:string"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REF.FASCICLE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="YEAR.FASCICLE"/>
+				<xs:element ref="NO.FASCICLE"/>
+				<xs:element ref="INSTANCE"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REF.OJ">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="COLL.OJ" minOccurs="0"/>
+				<xs:element ref="NO.OJ" minOccurs="0"/>
+				<xs:element ref="YEAR.OJ" minOccurs="0"/>
+				<xs:element ref="DATE.PUB" minOccurs="0"/>
+				<xs:element ref="NO.SEQ" minOccurs="0"/>
+				<xs:element ref="PAGE.FIRST" minOccurs="0"/>
+				<xs:element ref="SEQ.PAGE" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REJECT.SCOPE">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="SCOPE" maxOccurs="unbounded"/>
+				<xs:sequence minOccurs="0">
+					<xs:element ref="PAGE.FROM"/>
+					<xs:element ref="PAGE.TO"/>
+				</xs:sequence>
+				<xs:element ref="OBSERVATIONS" minOccurs="0"/>
+			</xs:sequence>
+			<xs:attribute name="LG" type="t_language"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="REPOSITORY.DATA">
+		<xs:complexType/>
+	</xs:element>
+	<xs:element name="SCOPE" type="t_scope"/>
+	<xs:element name="SEQ.PAGE" type="xs:string"/>
+	<xs:element name="STAMP">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="LINK.STAMP"/>
+				<xs:element ref="FORMAT.STAMP"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="TO.MSG" type="t_sender"/>
+	<xs:element name="TOME.SE" type="xs:string"/>
+	<xs:element name="YEAR.FASCICLE" type="t_year"/>
+	<xs:element name="YEAR.OJ" type="t_year"/>
+</xs:schema>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONS.LIST xmlns:fmx="http://opoce" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://formex.publications.europa.eu/schema/formex-05.59-20170418.xd">
+    <FAM.COMP.CL>
+        <BIB.DATA.CL>
+            <NO.CELEX></NO.CELEX>
+        </BIB.DATA.CL>
+    </FAM.COMP.CL>
+    <JOB.CONSLEG>
+        <INFO.CONSLEG.CL LG.EXISTS="" DATE.LAST.MOD="" PROD.SEQ="" START.DATE="" END=""/>
+        <INFO.PROD.CL PRODUCER="" PROD.SYSTEM="" LG.EXISTS="" BASED.ON="" GRAMMAR.VERSION="" GRAMMAR.DATE=""/>
+    </JOB.CONSLEG>
+</CONS.LIST>

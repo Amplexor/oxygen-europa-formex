@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CJT xmlns:fmx="http://opoce" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://formex.publications.europa.eu/schema/formex-05.59-20170418.xd">
+    <BIB.INSTANCE>
+        <DOCUMENT.REF FILE=""></DOCUMENT.REF>
+        <DATE ISO=""></DATE>
+        <LG.DOC></LG.DOC>
+        <PAGE.FIRST></PAGE.FIRST>
+        <PAGE.SEQ></PAGE.SEQ>
+        <PAGE.LAST></PAGE.LAST>
+        <PAGE.TOTAL></PAGE.TOTAL>
+    </BIB.INSTANCE>
+    <TI.CJT>
+        <TITLE></TITLE>
+        <NO.DOC.C></NO.DOC.C>
+        <LG.PROC></LG.PROC>
+        <TRANS.REF></TRANS.REF>
+    </TI.CJT>
+    <CONTENTS></CONTENTS>
+</CJT>

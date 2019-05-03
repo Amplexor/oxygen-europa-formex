@@ -1,0 +1,372 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:annotation>
+		<xs:documentation>Version: 1.00</xs:documentation>
+		<xs:documentation>All defined elements start with the prefix efog which stands for European Forum of Official Gazettes.</xs:documentation>
+		<xs:documentation>Naming convention for element names</xs:documentation>
+		<xs:documentation>elementName  ::= "efog." localName</xs:documentation>
+		<xs:documentation>localName    ::= ((a-z)|"-")+</xs:documentation>
+	</xs:annotation>
+	<!--
+	T y p e   d e f i n i t i o n s
+	-->
+	<xs:complexType name="t_efog">
+		<xs:annotation>
+			<xs:documentation>Definition of complex type for integration into local schema</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element ref="efog.abbreviation" 						minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="efog.abrogation" 							minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="efog.act-number" 						minOccurs="0"/>
+			<xs:element ref="efog.applicability" 						minOccurs="0"/>
+			<xs:element ref="efog.authority" 								minOccurs="0"/>
+			<xs:element ref="efog.bibliographic-citation" 		minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="efog.date-enter-into-force"		minOccurs="0"/>
+			<xs:element ref="efog.date-passing" 						minOccurs="0"/>
+			<xs:element ref="efog.date-publication"/>
+			<xs:element ref="efog.date-signature" 					minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="efog.document-type"/>
+			<xs:element ref="efog.eurovoc" 								minOccurs="0"/>
+			<xs:element ref="efog.index" 									minOccurs="0"/>
+			<xs:element ref="efog.nickname" 							minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="efog.reference-corrigendum" 	minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="efog.reference-eu" 						minOccurs="0"/>
+			<xs:element ref="efog.reference-oj" 						minOccurs="0"/>
+			<xs:element ref="efog.registration" 						minOccurs="0"/>
+			<xs:element ref="efog.signatory" 							minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="efog.title" 										maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- .......................................................................................... -->
+	<xs:simpleType name="t_date">
+		<xs:annotation>
+			<xs:documentation>A date is supposed to be encoded according to the model yyyymmdd (y: year, m: month, d: day)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:pattern value="\d{8}"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!--
+	E l e m e n t   d e f i n i t i o n s
+	-->
+	<!--
+	.. super-container for metadata information
+	-->
+	<xs:element name="efog" type="t_efog">
+		<xs:annotation>
+			<xs:documentation>Definition of generic container for metadata</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!--
+	.. Metadata information
+	-->
+	<xs:element name="efog.abbreviation">
+		<xs:annotation>
+			<xs:documentation>official: abbreviation prescribed in the act; other: abbreviation currently used in the spoken language</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:attribute name="type" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="official"/>
+						<xs:enumeration value="other"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.abrogation">
+		<xs:annotation>
+			<xs:documentation>information on abrogation of an act or a fragment</xs:documentation>
+			<xs:documentation>specification of the date (mandatory), the target (optional) and the originator (law, jurisdiction, etc.) (optional)</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="efog.date-abrogation"/>
+				<xs:element ref="efog.target" minOccurs="0"/>
+				<xs:element ref="efog.originator" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.act-number" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>official number of an act, identification</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.applicability">
+		<xs:annotation>
+			<xs:documentation>specification of the applicability of an act, optional specification of reasons or conditions</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="efog.date-start"/>
+				<xs:element ref="efog.date-end" minOccurs="0"/>
+				<xs:element ref="efog.condition" minOccurs="0"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.authority" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>competent body</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.bibliographic-citation">
+		<xs:annotation>
+			<xs:documentation>reference to another act</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="efog.uri"/>
+				<xs:sequence>
+					<xs:element ref="efog.series" minOccurs="0"/>
+					<xs:element ref="efog.ojno" minOccurs="0"/>
+					<xs:element ref="efog.date-publication"/>
+					<xs:element ref="efog.page" minOccurs="0"/>
+				</xs:sequence>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.celex">
+		<xs:annotation>
+			<xs:documentation>Celex number; attention: the pattern only covers directives and their corrigenda</xs:documentation>
+		</xs:annotation>
+		<xs:simpleType>
+			<xs:restriction base="xs:string">
+				<xs:pattern value="(\d|E)\d{4}(A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|X)(((/(A|B|C|D|E|F|G|H|I|J|K|L|M|N|O|P|Q|R|S|T|U|V|W|X|Y|Z){3})+ (/\d{2}))|(\d{4}(\(\d{2}\))?(R\(\d{2}\))*))"/>
+			</xs:restriction>
+		</xs:simpleType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.condition">
+		<xs:annotation>
+			<xs:documentation>expression of reason or condition in the context of the applicability of an act</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="efog.p" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.date-abrogation" type="t_date">
+		<xs:annotation>
+			<xs:documentation>date of abrogation of an act or a part of it</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.date-end" type="t_date">
+		<xs:annotation>
+			<xs:documentation>date of the end of applicability</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.date-enter-into-force" type="t_date">
+		<xs:annotation>
+			<xs:documentation>date of entering into the legal systems</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.date-passing" type="t_date">
+		<xs:annotation>
+			<xs:documentation>final acceptance by the Parliament</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.date-publication" type="t_date">
+		<xs:annotation>
+			<xs:documentation>date of publication in the official medium</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.date-signature">
+		<xs:annotation>
+			<xs:documentation>signature of the act</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="t_date">
+					<xs:attribute name="quality" type="xs:string" use="optional"/>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.date-start" type="t_date">
+		<xs:annotation>
+			<xs:documentation>date of start of applicability</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.document-type" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>specification of type of document such as regulation, directive, decision etc.</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.eurovoc">
+		<xs:annotation>
+			<xs:documentation>container for Eurovoc descriptors</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="efog.keyword" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.index">
+		<xs:annotation>
+			<xs:documentation>container for descriptors of a local indexation system</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="efog.keyword" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.keyword" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>descriptor from Eurovoc or a local indexation system</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.nickname" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>title currently used in the spoken language</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.ojno" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>number of the official journal/gazette referred to</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.originator" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>originator of the limitation of applicability of an act</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.p" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>container for any information which has to be kept together</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.page" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>first page of a document within a oj reference</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.reference-corrigendum">
+		<xs:annotation>
+			<xs:documentation>reference to a corrigendum</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+				<xs:element ref="efog.uri"/>
+				<xs:sequence>
+					<xs:element ref="efog.series" minOccurs="0"/>
+					<xs:element ref="efog.ojno" minOccurs="0"/>
+					<xs:element ref="efog.date-publication"/>
+					<xs:element ref="efog.page" minOccurs="0"/>
+				</xs:sequence>
+			</xs:choice>
+			<xs:attribute name="roll" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="active"/>
+						<xs:enumeration value="passive"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.reference-eu">
+		<xs:annotation>
+			<xs:documentation>container for the reference to a European directive with the Celex number as identifier and the bibliographic location</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="efog.celex" minOccurs="0"/>
+				<xs:element ref="efog.reference-oj"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.reference-oj">
+		<xs:annotation>
+			<xs:documentation>reference to the official publication of a legal act</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:choice>
+			<xs:choice>
+				<xs:element ref="efog.uri"/>
+				<xs:sequence>
+					<xs:element ref="efog.series" minOccurs="0"/>
+					<xs:element ref="efog.ojno" minOccurs="0"/>
+					<xs:element ref="efog.date-publication"/>
+					<xs:element ref="efog.page" minOccurs="0"/>
+				</xs:sequence>
+			</xs:choice>
+			</xs:choice>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.registration" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>information on the local registration</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.series" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>series of official journal/gazette</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.signatory" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>name(s) of person(s) empowered by a competent body to sign an act</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.target" type="xs:string">
+		<xs:annotation>
+			<xs:documentation>definition of the target of the limitation of applicability</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.title">
+		<xs:annotation>
+			<xs:documentation>official: name given to the resource; short: citation title prescribed in the act</xs:documentation>
+		</xs:annotation>
+		<xs:complexType mixed="true">
+			<xs:attribute name="type">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="official"/>
+						<xs:enumeration value="short"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<!-- .......................................................................................... -->
+	<xs:element name="efog.uri" type="xs:anyURI">
+		<xs:annotation>
+			<xs:documentation>electronic address</xs:documentation>
+		</xs:annotation>
+	</xs:element>
+	<!-- .......................................................................................... -->
+</xs:schema>

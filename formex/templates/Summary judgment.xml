@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SUMMARY.JUDGMENT xmlns:fmx="http://opoce" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://formex.publications.europa.eu/schema/formex-05.59-20170418.xd">
+    <BIB.SUMMARY>
+        <REF.CASE FILE=""></REF.CASE>
+        <NO.SEQ></NO.SEQ>
+        <PAGE.FIRST></PAGE.FIRST>
+        <PAGE.SEQ></PAGE.SEQ>
+        <PAGE.LAST></PAGE.LAST>
+        <PAGE.TOTAL></PAGE.TOTAL>
+        <AUTHOR></AUTHOR>
+    </BIB.SUMMARY>
+    <CURR.TITLE>
+        <PAGE.HEADER>
+            <P></P>
+            <P></P>
+        </PAGE.HEADER>
+    </CURR.TITLE>
+    
+</SUMMARY.JUDGMENT>

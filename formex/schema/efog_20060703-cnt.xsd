@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns="efog">
+	<xs:annotation>
+		<xs:documentation>Version 1.00</xs:documentation>
+		<xs:documentation>Container which includes the original schema and has to be referred to in the case of namespace import</xs:documentation>
+	</xs:annotation>
+	<xs:include schemaLocation="efog_20060703.xsd"/>
+</xs:schema>

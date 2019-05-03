@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.anninter.com/" targetNamespace="http://www.anninter.com/" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<!-- 	
+			Version: 2011-02-21: schema moved to internet, no structural changes made in this version
+				- schema name changed
+				- definition of textLines moved to anninter_country_lang_1.1_20110221.xsd
+			Version: 2009-03-30
+				languageCode MT corrected (was M)
+			Version: 2009-03-04
+				languageElements type = "textLines"
+			Version: 2008-09-23
+				All the entities that contain changing object like country or language codes are
+				described in this document. So the main XSD file does not change when new 
+				countries or languages are added -->
+	<!-- 	All possible country codes. 
+			used in elements: countryOfOrigin and address -->
+	<xs:simpleType name="countryCode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="AT"/>
+			<xs:enumeration value="BE"/>
+			<xs:enumeration value="BE2"/>
+			<xs:enumeration value="BG"/>
+			<xs:enumeration value="CY"/>
+			<xs:enumeration value="CY1"/>
+			<xs:enumeration value="CZ"/>
+			<xs:enumeration value="DE"/>
+			<xs:enumeration value="DK"/>
+			<xs:enumeration value="EE"/>
+			<xs:enumeration value="ES"/>
+			<xs:enumeration value="FI"/>
+			<xs:enumeration value="FR"/>
+			<xs:enumeration value="GB"/>
+			<xs:enumeration value="GR"/>
+			<xs:enumeration value="HU"/>
+			<xs:enumeration value="IE"/>
+			<xs:enumeration value="IT"/>
+			<xs:enumeration value="LT"/>
+			<xs:enumeration value="LU"/>
+			<xs:enumeration value="LV"/>
+			<xs:enumeration value="MT"/>
+			<xs:enumeration value="NI"/>
+			<xs:enumeration value="NL"/>
+			<xs:enumeration value="PL"/>
+			<xs:enumeration value="PT"/>
+			<xs:enumeration value="RO"/>
+			<xs:enumeration value="SE"/>
+			<xs:enumeration value="SI"/>
+			<xs:enumeration value="SK"/>
+			<xs:enumeration value="UK"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 	languageCode for all official languages
+			used in elements: languageRef -->
+	<xs:simpleType name="languageCode">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="ALL"/>
+			<xs:enumeration value="BG"/>
+			<xs:enumeration value="CS"/>
+			<xs:enumeration value="DA"/>
+			<xs:enumeration value="DE"/>
+			<xs:enumeration value="ET"/>
+			<xs:enumeration value="EL"/>
+			<xs:enumeration value="EN"/>
+			<xs:enumeration value="ES"/>
+			<xs:enumeration value="FR"/>
+			<xs:enumeration value="GA"/>
+			<xs:enumeration value="IT"/>
+			<xs:enumeration value="LV"/>
+			<xs:enumeration value="LT"/>
+			<xs:enumeration value="HU"/>
+			<xs:enumeration value="MT"/>
+			<xs:enumeration value="NL"/>
+			<xs:enumeration value="PL"/>
+			<xs:enumeration value="PT"/>
+			<xs:enumeration value="RO"/>
+			<xs:enumeration value="SK"/>
+			<xs:enumeration value="SL"/>
+			<xs:enumeration value="FI"/>
+			<xs:enumeration value="SV"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<!-- 	languageElements (tags) for all official languages, used for label translations.
+			used in elements: function/male, function/female, civility/names and items/entity/names
+	-->
+	<xs:complexType name="languageElements">
+		<xs:all>
+			<xs:element name="BG" type="textLines" minOccurs="0"/>
+			<xs:element name="CS" type="textLines" minOccurs="0"/>
+			<xs:element name="DA" type="textLines" minOccurs="0"/>
+			<xs:element name="DE" type="textLines" minOccurs="0"/>
+			<xs:element name="ET" type="textLines" minOccurs="0"/>
+			<xs:element name="EL" type="textLines" minOccurs="0"/>
+			<xs:element name="EN" type="textLines" minOccurs="0"/>
+			<xs:element name="ES" type="textLines" minOccurs="0"/>
+			<xs:element name="FR" type="textLines" minOccurs="0"/>
+			<xs:element name="GA" type="textLines" minOccurs="0"/>
+			<xs:element name="IT" type="textLines" minOccurs="0"/>
+			<xs:element name="LV" type="textLines" minOccurs="0"/>
+			<xs:element name="LT" type="textLines" minOccurs="0"/>
+			<xs:element name="HU" type="textLines" minOccurs="0"/>
+			<xs:element name="MT" type="textLines" minOccurs="0"/>
+			<xs:element name="NL" type="textLines" minOccurs="0"/>
+			<xs:element name="PL" type="textLines" minOccurs="0"/>
+			<xs:element name="PT" type="textLines" minOccurs="0"/>
+			<xs:element name="RO" type="textLines" minOccurs="0"/>
+			<xs:element name="SK" type="textLines" minOccurs="0"/>
+			<xs:element name="SL" type="textLines" minOccurs="0"/>
+			<xs:element name="FI" type="textLines" minOccurs="0"/>
+			<xs:element name="SV" type="textLines" minOccurs="0"/>
+		</xs:all>
+	</xs:complexType>
+	<!-- 	phoneCategory type used in category element for phone numbers -->
+	<xs:simpleType name="phoneCategory">
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Ath"/>
+			<xs:enumeration value="Ber"/>
+			<xs:enumeration value="Bru"/>
+			<xs:enumeration value="Lah"/>
+			<xs:enumeration value="Lis"/>
+			<xs:enumeration value="Lon"/>
+			<xs:enumeration value="Lux"/>
+			<xs:enumeration value="Mad"/>
+			<xs:enumeration value="Par"/>
+			<xs:enumeration value="Rom"/>
+			<xs:enumeration value="Rot"/>
+			<xs:enumeration value="Sto"/>
+			<xs:enumeration value="Str"/>
+			<xs:enumeration value="BRU"/>
+			<xs:enumeration value="STR"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="textLines" mixed="true">
+		<xs:sequence>
+			<xs:element name="BR" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+</xs:schema>

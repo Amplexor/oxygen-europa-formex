@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE catalog PUBLIC "-//OASIS//DTD XML Catalogs V1.1//EN" "http://www.oasis-open.org/committees/entity/release/1.1/catalog.dtd">
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    
+    <rewriteURI uriStartString="http://formex.publications.europa.eu/schema/" rewritePrefix="./"/>
+    <rewriteSystem systemIdStartString="http://formex.publications.europa.eu/schema/" rewritePrefix="./"/>
+    
+    <systemSuffix systemIdSuffix="formex-05.59-20170418.xd" uri="./formex-05.59-20170418.xd"/>
+    
+</catalog>

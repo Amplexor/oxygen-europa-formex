@@ -1,0 +1,228 @@
+
+
+@namespace oxy url('http://www.oxygenxml.com/extensions/author');
+
+
+:root {
+  padding-top: 2em;
+  padding-right: 1em;
+  padding-left: 2em;
+  padding-bottom: 5em;
+}
+@media oxygen AND (min-width: 25cm) {
+  /* A gray background */
+  oxy|document {
+    background-color: #fbfbfb;
+  }
+  /* The white page.*/
+  :root {
+    /* White page */
+    border: 1px solid #c6c6c6;
+    background-color: white;
+    /* Centered*/
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0.25in;
+    margin-bottom: 0.25in;
+    /* Letter */
+    width: 21.59cm;
+    min-height: 10cm;
+    /*27.94cm; would be the letter, but a smaller size avoids large caret jumps*/
+  }
+}
+
+/* oxy|document {*/
+ACT, AGR, ANNEX, GENERAL, CASE, CONCLUSION, OPINION, JUDGMENT, JUDGMENT\.NP, LSEU, RULING, ECR, DECISION\.ECR, CORRIGENDUM\.ECR4, CONS\.ACT, CONS\.LIST, ORDER, ORDER\.NP, PUBLICATION, COMPETITION, DOC { 
+    display: block !important;
+    padding: 0.5cm;
+    font-family: arial, helvetica, sans-serif !important;
+}
+
+oxy|comment, oxy|processing-instruction {
+    display: none!important;
+}
+
+
+
+BIB\.INSTANCE:before {
+    content: "References of the publication";
+}
+
+
+CONTENTS {
+    
+}
+
+TOC, TOC\.BLK, TOC\.ITEM {
+    display: block;
+    margin-left: 0.5cm;
+}
+
+DIVISION, PREAMBLE, ARTICLE, GR\.SEQ, GR\.CONSID, DIV\.CONSID {
+    display: block;
+    margin-bottom: 0.5cm;
+}
+GR\.SEQ GR\.SEQ {
+    margin-left: 1cm;
+}
+/* Titles */
+CURR\.TITLE, TITLE {
+    font-weight: bold;
+    text-decoration: underline;
+    display: block;
+}
+
+DIVISION > TITLE {
+    text-align: center;
+}
+
+TI\.ART {
+    font-weight: bold;
+}
+STI\.ART:before {
+    content: " : ";
+}
+STI\.ART {
+    font-style: italic;
+}
+
+
+LIST {
+    display: block;
+}
+
+LIST[TYPE='DASH'] > ITEM:before {
+    content: " - ";
+}
+ITEM > P:first-child {
+    display: inline;
+}
+ITEM {
+    display: block;
+}
+
+
+
+
+NP, P, PARAG, ALINEA, VISA {
+    display: block;
+}
+
+PARAG > ALINEA {
+    margin-left: 1cm;
+}
+PARAG > ALINEA:first-of-type {
+    display: inline-block;
+    margin-left: 0cm;
+}
+
+
+NOTE:before {
+    content: " [Note: ";
+    font-weight: bold;
+}
+NOTE {
+    display: inline;
+    font-size: 0.8em;
+    background-color: lime;
+    /*margin-left: 1cm;*/
+}
+NOTE:after {
+    content : "]";
+}
+NOTE > P {
+    display: inline;
+}
+
+
+QUOT\.START {
+    content: "« ";
+}
+
+QUOT\.END {
+    content: " »";
+}
+QUOT\.S {
+    display: block;
+    border-left: 2pt solid #AAAAAA;
+    padding-left: 0.5cm;
+}
+
+
+FINAL {
+    display: block;
+}
+SIGNATURE {
+    
+}
+
+/* HIGHLIGHTS */
+/*
+ * TODO
+ * SC
+ * UC
+ * BOX
+ * EXPANDED
+ * 
+ */
+HT[TYPE='ITALIC'] {
+    font-style: italic;
+}
+
+HT[TYPE='BOLD'] {
+    font-weight: bold;
+}
+HT[TYPE='UNDERLINE'] {
+    text-decoration: underline;
+}
+HT[TYPE='BOLD'] {
+    font-weight: bold;
+}
+HT[TYPE='STROKE'] {
+    text-decoration:line-through;
+}
+
+HT[TYPE='SUP'] {
+    font-size: 0.8em;
+    vertical-align: super;
+}
+HT[TYPE='SUB'] {
+    font-size: 0.8em;
+    vertical-align: sub;
+}
+
+NO\.P, NO\.PARAG {
+    width: 1cm;
+}
+
+
+/* Links  */
+DOCUMENT\.REF:before, REF\.PHYS:before, PUBLICATION\.REF:before {
+    content: attr(FILE);
+}
+
+
+
+/* TABLES */
+
+TBL {
+    display: table;
+}
+CORPUS {
+    display: table-row-group
+}
+ROW[TYPE="HEADER"] {
+    font-weight: bold;
+    background-color: gray;
+}
+
+ROW {
+    display: table-row;
+}
+CELL {
+    display: table-cell;
+}
+
+CN, DLIST {
+    display: table;
+}

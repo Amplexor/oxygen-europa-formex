@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ORDER xmlns:fmx="http://opoce" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://formex.publications.europa.eu/schema/formex-05.59-20170418.xd">
+    <BIB.ORDER>
+        <REF.CASE FILE=""></REF.CASE>
+        <NO.SEQ></NO.SEQ>
+        <PAGE.FIRST.ECR></PAGE.FIRST.ECR>
+        <PAGE.SEQ></PAGE.SEQ>
+        <PAGE.LAST.ECR></PAGE.LAST.ECR>
+        <PAGE.TOTAL></PAGE.TOTAL>
+        <AUTHOR></AUTHOR>
+    </BIB.ORDER>
+    <TITLE></TITLE>
+    <ORDER.INIT></ORDER.INIT>
+    <CONTENTS.ORDER>
+        <GR.SEQ></GR.SEQ>
+        <JURISDICTION>
+            <INTRO></INTRO>
+            <LIST TYPE=""></LIST>
+            <P></P>
+        </JURISDICTION>
+    </CONTENTS.ORDER>
+</ORDER>
