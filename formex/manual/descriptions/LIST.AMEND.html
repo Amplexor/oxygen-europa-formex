@@ -1,0 +1,179 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">LIST.AMEND</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">List of amendments</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The LIST.AMEND element is used to mark up a series of amendments. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">This involves a tabular structure in the form of two columns. The first column gives the original text, or part of this text
+         and the second one gives the amended proposal.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">LIST.AMEND</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">HEADER.LIST.AMEND</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.AMEND</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">t_btx t_btx.ecr t_btx.struct GR.SEQ QUOT.S </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The LIST.AMEND element is divided into two parts:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">the definition of the header (<a href="#HEADER.LIST.AMEND">HEADER.LIST.AMEND</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">followed by one or more group of amendments (<a href="#GR.AMEND">GR.AMEND</a>).
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;LIST.AMEND&gt;</span>
+                        <br/>  <span style="color: blue">&lt;HEADER.LIST.AMEND&gt;</span>
+                        <br/>    <span style="color: blue">&lt;HEADER.OLD&gt;</span>Texte du Traité sur l'Union<span style="color: blue">&lt;/HEADER.OLD&gt;<br/>
+                        </span>    <span style="color: blue">&lt;HEADER.NEW&gt;</span>Proposition du CES<span style="color: blue">&lt;/HEADER.NEW&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/HEADER.LIST.AMEND&gt;<br/>
+                        </span>  <span style="color: blue">&lt;GR.AMEND&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>Le Comité économique et social<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;AMEND&gt;</span>
+                        <br/>      <span style="color: blue">&lt;OLD&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>(1)<br/>          <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>Article 198, premier paragraphe<span style="color: blue">&lt;/HT&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/OLD&gt;<br/>
+                        </span>      <span style="color: blue">&lt;NEW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>
+                        <br/>          <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>Article 198, premier paragraphe<span style="color: blue">&lt;/HT&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/NEW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/AMEND&gt;<br/>
+                        </span>    <span style="color: blue">&lt;AMEND&gt;</span>
+                        <br/>      <span style="color: blue">&lt;OLD&gt;</span>
+                        <br/>        <span style="color: blue">&lt;ALINEA&gt;</span>Le Comité est obligatoirement consulté par le Conseil ou par la Commission dans les cas prévus au présent traité. Il 	peut
+                     	être 		consulté 	par ces institutions dans tous les cas où elles le jugent opportun. Il peut prendre l'initiative d'émettre
+                     un avis dans les cas où il le 	juge 	opportun.		<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/OLD&gt;<br/>
+                        </span>      <span style="color: blue">&lt;NEW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;ALINEA&gt;</span>Le Comité est obligatoirement consulté par le Conseil ou par la Commission dans les cas prévus au présent traité. Il peut
+                     être consulté par ces institutions dans tous les cas où elles le jugent opportun. Il peut prendre l'initiative d'émettre un
+                     avis dans les cas où il le juge opportun. <br/>          <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>La Commission, avant de prendre une décision dans un domaine concernant les intérêts représentés au sein du Comité, doit consulter
+                     ce dernier.<span style="color: blue">&lt;/HT&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/NEW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/AMEND&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/GR.AMEND&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/LIST.AMEND&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,634 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">INFO.CONSLEG</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Administrative data of a family</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The INFO.CONSLEG element is used to mark up the administrative data relating to a family (i.e. basic acts, modifying acts,
+         corrigenda).
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">INFO.CONSLEG</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">CONSLEG.REF</span>" <span style="color: red">type</span>="<span style="color: black">xd:string</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">CONSLEG.DATE</span>" <span style="color: red">type</span>="<span style="color: black">t_date</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">DATE.LAST.MOD</span>" <span style="color: red">type</span>="<span style="color: black">t_date</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">PROD.SEQ</span>" <span style="color: red">type</span>="<span style="color: black">xd:string</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">START.DATE</span>" <span style="color: red">type</span>="<span style="color: black">t_date</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">END.DATE</span>" <span style="color: red">type</span>="<span style="color: black">t_date</span>" <span style="color: red">default</span>="<span style="color: black">99999999</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">END</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">GIVEN</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">NEXT.VERS</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">REPEALED</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">NEW.MOD</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">NEW.COR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">NONE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">SOURCE.END</span>" <span style="color: red">type</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">EVENT.DATE</span>" <span style="color: red">type</span>="<span style="color: black">t_date</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">LEG.VAL</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DEC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DECDEL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DEC.EEA</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DEC.ECSC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DECIMP</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DIR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DIRDEL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DIRIMP</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">GENGUID</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">JOINT.ACT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">OTHER</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">PROC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">REC.ECSC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">REG</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">REGDEL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">REGIMP</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">TREATY</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">CONS.ACT CONS.OTH </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The content of the element is empty. The information is encoded within attributes.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The CONSLEG.REF attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The CONSLEG.REF attribute is mandatory and is used to define the name of the consolidation family. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">In general, this name is deduced from the Celex reference. In these cases, the reference must be in the format 'YYYYTNNNN'.
+         The first two positions 'YY' specify the hundreds of years, '19' or '20'. The other positions correspond to positions 2 to
+         8 of the Celex reference. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The CONSLEG.DATE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The CONSLEG.DATE attribute is used to define the date of consolidation. This attribute is only used for old, consolidated
+         documents.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The date must be presented in the format ISO 2014-1976: YYYYMMDD, where: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">YYYY represents the year (four digits), </li>
+            <li style="text-align: justify; margin-left: 3em">MM represents the month (two digits), </li>
+            <li style="text-align: justify; margin-left: 3em">DD represents the day (two digits).</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The DATE.LAST.MOD attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The DATE.LAST.MOD attribute is mandatory and is used to define the date of publication of the last modifying act or the last
+         corrigendum included in the record. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The date must be presented in the format ISO 2014-1976: YYYYMMDD, where: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">YYYY represents the year (four digits), </li>
+            <li style="text-align: justify; margin-left: 3em">MM represents the month (two digits), </li>
+            <li style="text-align: justify; margin-left: 3em">DD represents the day (two digits).</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The PROD.SEQ attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The PROD.SEQ attribute is mandatory and is used to define a serial number for production. Each production sequence represents
+         a specific historical layer. The serial number is used to identify the historical layer. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The format of the value of the PROD.SEQ attribute is 'xxx.nnn.e'. A production sequence is mainly determined by the start
+         date (START.DATE). It represents the consolidated text validated from this date on. This sequence is represented by the value
+         'xxx'. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The value attributed to 'nnn' is used to define the <span style="font-weight: bold">version</span>. In most cases, only one version is created. However, it may happen that it becomes necessary to reproduce a new version
+         for a production sequence that has already been produced. This new version, then, replaces the preceding ones.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The production of a new version may be necessary in the following cases: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">technical corrections have been made, </li>
+            <li style="text-align: justify; margin-left: 3em">a new corrigendum has been published, which start date is the start date (START.DATE) of the version already produced, </li>
+            <li style="text-align: justify; margin-left: 3em">a new modifying act has been published, which start date (START.DATE) is the start date of the version already produced.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The value assigned to the very first version is '000.001.0'. This is the version of the basic act, with the modifications
+         that have the same start date (START.DATE) as the basic act. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The values assigned to 'xxx' and 'nnn' must always be represented by three digits. If necessary, the leading positions must
+         be filled with zeros. The indication 'e' occupies only one position.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The START.DATE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The START.DATE attribute is mandatory and is used to define the date of the start of validity of the historical layer. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The definition of dates is always the result of a legal analysis. Several factors must be taken into account. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">When one is dealing with a consolidated version, the start date corresponds to the date of applicability of the modifications
+         which are at the base of the historical layer. If the date of applicability cannot be determined, for example because it is
+         subject to a condition, the date of entry into force must be used. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The date must be presented in the format ISO 2014-1976: YYYYMMDD, where: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">YYYY represents the year (four digits), </li>
+            <li style="text-align: justify; margin-left: 3em">MM represents the month (two digits), </li>
+            <li style="text-align: justify; margin-left: 3em">DD represents the day (two digits).</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The END.DATE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The END.DATE attribute is used to define the end date of validity of the historical layer. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The value of the end date is determined by the following conditions: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">the end date is indeterminate, 
+            								
+            <ul type="dash">
+                  <li style="text-align: justify">when there is no indication of the end of validity in the text taken into account by this historical layer, and </li>
+                  <li style="text-align: justify">when the conditions described in the following items are not applicable. The value is then '99999999' (default value).</li>
+               </ul>
+            </li>
+            <li style="text-align: justify; margin-left: 3em">When there is an indication of the end of validity in the text taken into account by this historical layer, the end date corresponds
+            to this date. This date may originate in the basic act or in a modifying act. 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">When there is a historical layer with a later start date, the value of the END.DATE attribute is the 'value - 1' of the START.DATE
+            attribute ('day - 1') of the layer with the later start date. 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the preceding rule also applies when the layer with the later start date has not yet been produced. </li>
+            <li style="text-align: justify; margin-left: 3em">When all of the family has been repealed, the value of the END.DATE attribute of the last historical layer is the date of
+            repeal.
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The date must be presented in the format ISO 2014-1976: YYYYMMDD, where: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">YYYY represents the year (four digits), </li>
+            <li style="text-align: justify; margin-left: 3em">MM represents the month (two digits), </li>
+            <li style="text-align: justify; margin-left: 3em">DD represents the day (two digits).</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The END attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The END attribute is mandatory and is used to include supplementary information relating to the end date (END.DATE). There
+         is a direct relationship between the value attributed and the conditions set out in the context of the attribute END.DATE.
+         
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The following values are permitted: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">NONE: the end date is 99999999 (Condition 1); </li>
+            <li style="text-align: justify; margin-left: 3em">GIVEN: the date of end of validity is mentioned in the text taken into account by this historical layer (Condition 2); </li>
+            <li style="text-align: justify; margin-left: 3em">NEXT.VERS: a more recent historical layer exists (Condition 3); </li>
+            <li style="text-align: justify; margin-left: 3em">NEW.MOD: a more recent modifying act exists, but the modifications have not yet been dealt with (Condition 4); </li>
+            <li style="text-align: justify; margin-left: 3em">NEW.COR: a more recent corrigendum exists, but the modifications have not yet been dealt with (Condition 5); </li>
+            <li style="text-align: justify; margin-left: 3em">REPEALED: the family has been repealed (Condition 6).</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The SOURCE.END attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The SOURCE.END attribute is used to specify supplementary information relating to the END and END.DATE attributes.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The value of the SOURCE.END attribute corresponds to the Celex reference of the document that is at the source of the value
+         of the END.DATE attribute.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Only determined end dates are taken into account; i.e when the value of the END attribute is NONE, the use of the SOURCE.END
+         attribute is prohibited.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">If various documents have to be referenced, each CELEX number is integrated in this value, separated by a space.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The EVENT.DATE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The EVENT.DATE attribute is used to indicate the time at which the value of the END.DATE, END, and/or SOURCE.END attributes
+         was updated. This attribute may only be used when the value of the END attribute is equal to one of the following values:
+      </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">NEXT.VERS</li>
+            <li style="text-align: justify; margin-left: 3em">NEW.MOD</li>
+            <li style="text-align: justify; margin-left: 3em">NEW.COR</li>
+            <li style="text-align: justify; margin-left: 3em">REPEALED</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The date must be in the format ISO 2014-1976: YYYYMMDD, where:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">YYYY represents the year (four digits),</li>
+            <li style="text-align: justify; margin-left: 3em">MM represents the month (two digits), </li>
+            <li style="text-align: justify; margin-left: 3em">DD represents the day (two digits).</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The LEG.VAL attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The LEG.VAL attribute is mandatory and is used to indicate the legal value of the basic act.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The legal forms used must correspond to one of the codes in the following list: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">DEC (decision), </li>
+            <li style="text-align: justify; margin-left: 3em">DECDEL (delegated decision), </li>
+            <li style="text-align: justify; margin-left: 3em">DEC.EEA (EEA decision), </li>
+            <li style="text-align: justify; margin-left: 3em">DEC.ECSC (ECSC decision), </li>
+            <li style="text-align: justify; margin-left: 3em">DECIMP (implementing decision), </li>
+            <li style="text-align: justify; margin-left: 3em">DIR (directive), </li>
+            <li style="text-align: justify; margin-left: 3em">DIRDEL (delegated directive), </li>
+            <li style="text-align: justify; margin-left: 3em">DIRIMP (implementing directive), </li>
+            <li style="text-align: justify; margin-left: 3em">GENGUID (general guidelines), </li>
+            <li style="text-align: justify; margin-left: 3em">JOINT.ACT (joint actions), </li>
+            <li style="text-align: justify; margin-left: 3em">OTHER (other).</li>
+            <li style="text-align: justify; margin-left: 3em">PROC (rules of procedure).</li>
+            <li style="text-align: justify; margin-left: 3em">REC.ECSC (ECSC recommendation), </li>
+            <li style="text-align: justify; margin-left: 3em">REG (regulation), </li>
+            <li style="text-align: justify; margin-left: 3em">REGDEL (delegated regulation), </li>
+            <li style="text-align: justify; margin-left: 3em">REGIMP (implementing regulation), </li>
+            <li style="text-align: justify; margin-left: 3em">TREATY (treaty), </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">In exceptional cases the value OTHER has to be used, but only with the prior approval of the Publications Office.</p>
+      </div>
+   </body>
+</html>

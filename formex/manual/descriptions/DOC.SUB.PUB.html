@@ -1,0 +1,471 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">DOC.SUB.PUB</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Secondary document</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The DOC.SUB.PUB element is used to mark-up information concerning secondary documents. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">A distinction is made between two types of secondary documents: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">annexes,</li>
+            <li style="text-align: justify; margin-left: 3em">related documents.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">DOC.SUB.PUB</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">LG.DOC</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">LEGAL.VALUE</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">NO.CELEX</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DATE</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.FIRST</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.LAST</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.TOTAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.SEQ</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.PHYS</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DOC.SUB.PUB</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">LINK.OJ</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">NO.SEQ</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:pattern <span style="color: red">value</span>="<span style="color: black">\d{4}(\.\d{4})+</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">SYNOPTISM</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:pattern <span style="color: red">value</span>="<span style="color: black">D\d{4}(\.\d{4})+</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">TYPE</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">ANNEX</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">ASSOCIATION</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">IN.SUMMARY</span>" <span style="color: red">default</span>="<span style="color: black">NO</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">NO</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">YES</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">DOC.SUB.PUB FMX FMX </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The DOC.SUB.PUB element can contain the following information, provided that it is available: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">the language version of the document, if it differs from that of the hierarchical parent (<a href="#LG.DOC">LG.DOC</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the legal value or type of the document (<a href="#LEGAL.VALUE">LEGAL.VALUE</a>), if it differs from that of the hierarchical parent,
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the CELEX number (<a href="#NO.CELEX">NO.CELEX</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the date of the document (<a href="#DATE">DATE</a>) if it is different from the hierarchical parent document,
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the number of the first page of the document (<a href="#PAGE.FIRST">PAGE.FIRST</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the number of the last page of the document (<a href="#PAGE.LAST">PAGE.LAST</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the total number of pages in the document (<a href="#PAGE.TOTAL">PAGE.TOTAL</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the sequence number of the document on the first page (<a href="#PAGE.SEQ">PAGE.SEQ</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the name of the file containing the text of the document (<a href="#REF.PHYS">REF.PHYS</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the link(s) to other OJ document(s) or publication(s) (<a href="#LINK.OJ">LINK.OJ</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">one or more lower-level secondary documents (for example: one or more annexes relating to the related document), marked up
+            using DOC.SUB.PUB tags.
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The <a href="#LG.DOC">LG.DOC</a> element is obligatory to the extent that the language of the document differs from that of the publication. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The elements :</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#LEGAL.VALUE">LEGAL.VALUE</a>
+            </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#NO.CELEX">NO.CELEX</a>
+            </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#DATE">DATE</a>
+            </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">are mandatory to the extent that their content differs from the content of the same elements in the corresponding <a href="#DOC.MAIN.PUB">DOC.MAIN.PUB</a> element.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The NO.SEQ attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The NO.SEQ attribute is mandatory and is used to indicate a sequence number. This number is used to identify: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">the level of the document; </li>
+            <li style="text-align: justify; margin-left: 3em">the position of the document within its level; </li>
+            <li style="text-align: justify; margin-left: 3em">the position of the higher-level document to which the document in question relates.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The level and sequence are always represented by a series of four digits separated by a dot. If necessary, empty places should
+         be filled with zeros. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The value of the NO.SEQ attribute of a secondary document must comply with the format 'xxxx.yyyy': </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">'xxxx': numerical value corresponding to the sequence number of the primary document to which the secondary document relates;
+            
+         </li>
+            <li style="text-align: justify; margin-left: 3em">a dot; </li>
+            <li style="text-align: justify; margin-left: 3em">'yyyy': numerical value representing the sequence number of the secondary document. This number is calculated on the basis
+            of the relative position of the secondary document within the document.
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">For example, the value attributed to the first annex of the second document in a publication will be '0002.0001'. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The use of the NO.SEQ attribute is illustrated below in a fictitious example, which is so complicated that there is virtually
+         no probability of encountering such a situation in reality. It concerns a document which is in the first position and which
+         consists of the following: 
+      </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">the text of the act, </li>
+            <li style="text-align: justify; margin-left: 3em">an agreement related to the act, </li>
+            <li style="text-align: justify; margin-left: 3em">two annexes related to the agreement, </li>
+            <li style="text-align: justify; margin-left: 3em">an appendix related to the second annex of the agreement, </li>
+            <li style="text-align: justify; margin-left: 3em">an annex related to the act.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The values attributed to NO.SEQ are therefore the following: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">'0001' for the text of the act, </li>
+            <li style="text-align: justify; margin-left: 3em">'0001.0001' for the agreement related to the act, </li>
+            <li style="text-align: justify; margin-left: 3em">'0001.0001.0001' for the first annex of the agreement, </li>
+            <li style="text-align: justify; margin-left: 3em">'0001.0001.0002' for the second annex of the agreement, </li>
+            <li style="text-align: justify; margin-left: 3em">'0001.0001.0002.0001' for the appendix related to the second annex of the agreement, </li>
+            <li style="text-align: justify; margin-left: 3em">'0001.0002' for the annex related to the act.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The SYNOPTISM attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The attribute is mandatory and is used to define the synoptic correspondences between different language versions. The identification
+         consists of the value of the same attribute on the <a href="#DOC.MAIN.PUB">DOC.MAIN.PUB</a> level which is completed recursively by a dot and four digits.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The example shows a document with two annexes in English, but only one annex in French, the first one of the English version
+         being absent. As the English annex II corresponds to the sole annex in French, both have the same attribute value.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The TYPE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The attribute is mandatory and is used to indicate the type of the document.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The attribute can have two values:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">
+               <p style="text-align: justify">'ANNEX': if the secondary document is:</p>
+               <p>
+                  <ul type="dash">
+                     <li style="text-align: justify">an annex,</li>
+                     <li style="text-align: justify">an addendum,</li>
+                     <li style="text-align: justify">an appendix or subappendix,</li>
+                     <li style="text-align: justify">a list of annexes,</li>
+                     <li style="text-align: justify">a synoptic table of annexes,</li>
+                     <li style="text-align: justify">etc.</li>
+                  </ul>
+               </p>
+            </li>
+            <li style="text-align: justify; margin-left: 3em">'ASSOCIATION': if the secondary document is a related document.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The IN.SUMMARY attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">For sub-documents or associated documents it is not always evident if they are referenced by an entry in the table of contents
+         of the publication. This attribute indicates whether the title of the document appears (value 'YES') in the summary or not
+         (value 'NO', default).
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;DOC.SUB.PUB <span style="color: red">NO.SEQ</span>="<span style="color: black">0001.0001</span>" <span style="color: red">TYPE</span>="<span style="color: black">ANNEX</span>"&gt;</span>
+                        <br/>  <span style="color: blue">&lt;LG.DOC&gt;</span>EN<span style="color: blue">&lt;/LG.DOC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.FIRST&gt;</span>2<span style="color: blue">&lt;/PAGE.FIRST&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.LAST&gt;</span>2<span style="color: blue">&lt;/PAGE.LAST&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.TOTAL&gt;</span>1<span style="color: blue">&lt;/PAGE.TOTAL&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.SEQ&gt;</span>1<span style="color: blue">&lt;/PAGE.SEQ&gt;<br/>
+                        </span>  <span style="color: blue">&lt;REF.PHYS <span style="color: red">FILE</span>="<span style="color: black">L_2002073EN.01000201.xml</span>" <span style="color: red">TYPE</span>="<span style="color: black">DOC.XML</span>"&gt;</span>  <span style="color: blue">&lt;/REF.PHYS&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/DOC.SUB.PUB&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,242 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">ROW</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Row of a table</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The ROW element is used to mark up the information corresponding to a specific row in a table. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The Formex approach is to consider a table as a series of rows. This approach is in a way similar to the HTML one.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Each row is composed of one to several cells.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">A row may have a specific role, such as header to the following rows.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">ROW</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">MARGIN</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CELL</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">TYPE</span>" <span style="color: red">default</span>="<span style="color: black">NORMAL</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">ALIAS</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">HEADER</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">NORMAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">NOTCOL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">TOTAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">BLK CORPUS </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">If all the cells in a row are empty, it's nevertheless necessary to use as much <a href="#CELL">CELL</a> elements as needed, which will then contain the explicit empty element (<a href="#IE">IE</a>).
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">An optional <a href="#MARGIN">MARGIN</a> element may also be used in order to mark up an annotation in the margin of the document.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The TYPE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The TYPE attribute indicates the specific role of the row in the table. The allowed values are:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">ALIAS : if the row contains aliases. Such references may be used when the table is included on several pages of a publication.
+            The references are associated to column headers on the first page and are repeated on subsequent pages.
+         </li>
+            <li style="text-align: justify; margin-left: 3em">HEADER : if the row contains cells which may be considered as a column header. This generally occurs for the first row of
+            a table.
+         </li>
+            <li style="text-align: justify; margin-left: 3em">NORMAL : if most of the cells of the row contain 'simple' or 'normal' data. This is the default value. </li>
+            <li style="text-align: justify; margin-left: 3em">NOTCOL : if the cells of the row contain units of measure relating to subsequent rows.</li>
+            <li style="text-align: justify; margin-left: 3em">TOTAL : if the row contains data which could be considered as 'totals'.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Note that this TYPE attribute is also provided for the cells (<a href="#CELL">CELL</a>), which could be used to override the value defined for the row. On the other hand, 'NORMAL' is the default value, so it
+         is necessary to specify the TYPE attribute value in each cell of a row which has a specific type in order to avoid the default
+         overriding (see the first row of the example below).
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;CORPUS&gt;</span>
+                        <br/>  <span style="color: blue">&lt;ROW <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>Code<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>Catalogue No<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>Title<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">4</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>Date adopted by the Commission<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">5</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>Date forwarded to the Council<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">6</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>Number of pages<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>  <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>COM(94) 654<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>CBCO94672ENC<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>Amended proposal for a Council Regulation (EC) concerning a Community programme providing financial support for the promotion
+                     of European energy technology 1995-1998 (<br/>      <span style="color: blue">&lt;QUOT.START <span style="color: red">ID</span>="<span style="color: black">QS0001</span>" <span style="color: red">REF.END</span>="<span style="color: black">QE0001</span>" <span style="color: red">CODE</span>="<span style="color: black">2018</span>"&gt;</span>      <span style="color: blue">&lt;/QUOT.START&gt;</span>Thermie      <span style="color: blue">&lt;QUOT.END <span style="color: red">ID</span>="<span style="color: black">QE0001</span>" <span style="color: red">REF.START</span>="<span style="color: black">QS0001</span>" <span style="color: red">CODE</span>="<span style="color: black">2019</span>"&gt;</span>      <span style="color: blue">&lt;/QUOT.END&gt;</span>)      <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.REF</span>="<span style="color: black">E0002</span>"&gt;</span>      <span style="color: blue">&lt;/NOTE&gt;<br/>
+                        </span>      <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.REF</span>="<span style="color: black">E0003</span>"&gt;</span>      <span style="color: blue">&lt;/NOTE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">4</span>"&gt;</span>23. 1. 1995<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">5</span>"&gt;</span>23. 1. 1995<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">6</span>"&gt;</span>45<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>  <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>COM(94) 655<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>CBCO94673ENC<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>Opinion of the Commission pursuant to Article 189 b (2) (d) of the EC Treaty on the European Parliament's amendments to the
+                     Council's common position regarding the proposal for a European Parliament and Council Directive amending Directive 86/662/EEC
+                     on the limitation of noise emitted by earthmoving machinery<br/>      <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.REF</span>="<span style="color: black">E0003</span>"&gt;</span>      <span style="color: blue">&lt;/NOTE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">4</span>"&gt;</span>23. 1. 1995<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">5</span>"&gt;</span>23. 1. 1995<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">6</span>"&gt;</span>6<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/CORPUS&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

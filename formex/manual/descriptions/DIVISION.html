@@ -1,0 +1,191 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">DIVISION</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Group of legal articles within the enacting terms division</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The DIVISION element is used to mark-up a group of legal articles within the enacting terms, when the articles are grouped
+         together and introduced by a title. Generally the titles are numbered or lettered.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">As legal articles may be grouped on various levels, with regards to the hierarchy the author wishes to use, the content model
+         of the DIVISION element provides a recursive structure.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">DIVISION</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TITLE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ARTICLE</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DIVISION</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">t_btx t_btx.ecr t_btx.struct DIVISION ENACTING.TERMS GR.SEQ QUOT.S </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">A group of legal articles must contain a title (<a href="#TITLE">TITLE</a>).
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Depending on the structure of the group of legal articles, we may have:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">one or more articles (<a href="#ARTICLE">ARTICLE</a>), and/or
+         </li>
+            <li style="text-align: justify; margin-left: 3em">one or more second-level groups of articles (recursive use of the <a href="#DIVISION">DIVISION</a> element).
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">
+            <p style="margin-left: 3em; text-align: justify">This example shows a part of enacting terms structured with nested DIVISION elements.</p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1" width="100%" align="center" src="img/division.gif"/>
+               </div>
+            </p>
+         </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;DIVISION&gt;</span>
+                        <br/>  <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>TITLE V<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;STI&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>PRINCIPLES AND TECHNICAL INSTRUMENTS FOR PRUDENTIAL SUPERVISION<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/STI&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DIVISION&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>CHAPTER 1<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>      <span style="color: blue">&lt;STI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>PRINCIPLES OF PRUDENTIAL SUPERVISION<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/STI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ARTICLE <span style="color: red">IDENTIFIER</span>="<span style="color: black">026</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI.ART&gt;</span>Article 26<span style="color: blue">&lt;/TI.ART&gt;<br/>
+                        </span>      <span style="color: blue">&lt;STI.ART&gt;</span>Competence of control of the home Member State<span style="color: blue">&lt;/STI.ART&gt;<br/>
+                        </span>      <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">026.001</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;NO.PARAG&gt;</span>1.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>        <span style="color: blue">&lt;ALINEA&gt;</span>The prudential supervision of a credit institution...<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ARTICLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/DIVISION&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/DIVISION&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

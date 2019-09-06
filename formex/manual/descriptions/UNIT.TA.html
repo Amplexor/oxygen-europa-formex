@@ -1,0 +1,287 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">UNIT.TA</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Data associated with goods (Taric)</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The UNIT.TA element is used to mark up data associated with goods.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">UNIT.TA</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CN.CODE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SH.TARIC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">POS.TARIC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DESC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SUP.UNIT</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">IMPORT</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">EXPORT</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:sequence <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TA.CODE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">THIRD.RATE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SPG</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">OPREF</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">FORMAT</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">CN</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">HS</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">TA</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">LEVEL</span>" <span style="color: red">type</span>="<span style="color: black">xd:nonNegativeInteger</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">TARIC </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">This element may contain the following information:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">the CN code (<a href="#CN.CODE">CN.CODE</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the Taric subheading (<a href="#SH.TARIC">SH.TARIC</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the Taric position (<a href="#POS.TARIC">POS.TARIC</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the description of the goods (<a href="#DESC">DESC</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the supplementary unit (<a href="#SUP.UNIT">SUP.UNIT</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">remarks concerning imports (<a href="#IMPORT">IMPORT</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">remarks concerning exports (<a href="#EXPORT">EXPORT</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the Taric code (<a href="#TA.CODE">TA.CODE</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the rates of duties of third countries (<a href="#THIRD.RATE">THIRD.RATE</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the rates of particular duties (<a href="#SPG">SPG</a> and <a href="#OPREF">OPREF</a>).
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Only the <a href="#CN.CODE">CN.CODE</a>, <a href="#SH.TARIC">SH.TARIC</a>, <a href="#POS.TARIC">POS.TARIC</a> and <a href="#DESC">DESC</a> elements are mandatory.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The SH.TARIC and POS.TARIC elements appear in the column entitled 'Taric subheading', in the English language version. The
+         two codes are separated by a slash. This separating character is not included in the electronic file.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The FORMAT attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">This mandatory attribute is used within the UNIT.TA element in order to identify the origin of the position. There are three
+         possible values: 
+      </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">HS: the unit comes from the harmonised system; in this case the description appears in bold type.</li>
+            <li style="text-align: justify; margin-left: 3em">TA: the unit comes from Taric; in this case the description is given in italics.</li>
+            <li style="text-align: justify; margin-left: 3em">CN: the unit comes from the 'combined nomenclature'; in this case the description appears in normal type.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The LEVEL attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">This mandatory attribute is used within the UNIT.TA element in order to identify the level of the unit. This level is represented
+         by the number of dashes which appear before the description of the goods. If there are no dashes, the value of the LEVEL attribute
+         is equal to "0" (zero).
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;UNIT.TA <span style="color: red">FORMAT</span>="<span style="color: black">HS</span>" <span style="color: red">LEVEL</span>="<span style="color: black">0</span>"&gt;</span>
+                        <br/>  <span style="color: blue">&lt;CN.CODE&gt;</span>01010000<span style="color: blue">&lt;/CN.CODE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;SH.TARIC&gt;</span>00<span style="color: blue">&lt;/SH.TARIC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;POS.TARIC&gt;</span>80<span style="color: blue">&lt;/POS.TARIC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DESC&gt;</span>Live horses, asses, mules and hinnies:<span style="color: blue">&lt;/DESC&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/UNIT.TA&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;UNIT.TA <span style="color: red">FORMAT</span>="<span style="color: black">HS</span>" <span style="color: red">LEVEL</span>="<span style="color: black">1</span>"&gt;</span>
+                        <br/>  <span style="color: blue">&lt;CN.CODE&gt;</span>01011000<span style="color: blue">&lt;/CN.CODE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;SH.TARIC&gt;</span>00<span style="color: blue">&lt;/SH.TARIC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;POS.TARIC&gt;</span>80<span style="color: blue">&lt;/POS.TARIC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DESC&gt;</span>Pure-bred breeding animals<br/>    <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.REF</span>="<span style="color: black">E00116</span>"&gt;</span>    <span style="color: blue">&lt;/NOTE&gt;</span>:<span style="color: blue">&lt;/DESC&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/UNIT.TA&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;UNIT.TA <span style="color: red">FORMAT</span>="<span style="color: black">CN</span>" <span style="color: red">LEVEL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>  <span style="color: blue">&lt;CN.CODE&gt;</span>01011010<span style="color: blue">&lt;/CN.CODE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;SH.TARIC&gt;</span>00<span style="color: blue">&lt;/SH.TARIC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;POS.TARIC&gt;</span>80<span style="color: blue">&lt;/POS.TARIC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DESC&gt;</span>Horses<span style="color: blue">&lt;/DESC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;SUP.UNIT&gt;</span>p/st<span style="color: blue">&lt;/SUP.UNIT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;IMPORT&gt;</span>PRO-<br/>    <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>IQ<span style="color: blue">&lt;/HT&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/IMPORT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;EXPORT&gt;</span>PRX-<br/>    <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>IQ<span style="color: blue">&lt;/HT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.REF</span>="<span style="color: black">E00121</span>"&gt;</span>    <span style="color: blue">&lt;/NOTE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/EXPORT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;TA.CODE&gt;</span>0101101000<span style="color: blue">&lt;/TA.CODE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;THIRD.RATE&gt;</span>0<span style="color: blue">&lt;/THIRD.RATE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;SPG&gt;</span>-<span style="color: blue">&lt;/SPG&gt;<br/>
+                        </span>  <span style="color: blue">&lt;OPREF&gt;</span>-<span style="color: blue">&lt;/OPREF&gt;<br/>
+                        </span>  <span style="color: blue">&lt;OPREF&gt;</span>-<span style="color: blue">&lt;/OPREF&gt;<br/>
+                        </span>  <span style="color: blue">&lt;OPREF&gt;</span>-<span style="color: blue">&lt;/OPREF&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/UNIT.TA&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

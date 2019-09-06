@@ -1,0 +1,400 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">ARTICLE</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Legal article</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">In the context of European legal texts, a legal article is the basic component of the enacting terms. Articles are easily
+         distinguishable by their standardized title, which consists of the expression "Article" followed by a sequential number.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The title (<a href="#TI.ART">TI.ART</a> element) is mandatory, and from a layout point of view, it's printed centered above the contents of the article. The subtitle,
+         when present, has to be encoded with the <a href="#STI.ART">STI.ART</a> element.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Depending on the complexity, the content consists of one of the following structures:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#ALINEA">ALINEA</a>: one or more legal alineas (non-numbered physical paragraphs)
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#PARAG">PARAG</a>: one or more legal paragraphs (numbered physical paragraphs)
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#SUBDIV">SUBDIV</a>: one or more legal subdivisions (a long article may be subdivided into sections)
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Additionally, on all levels, optional comments (<a href="#COMMENT">COMMENT</a>) may be inserted.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">ARTICLE</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TI.ART</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">STI.ART</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:choice <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ALINEA</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:choice <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>            <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ALINEA</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>            <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">COMMENT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>            <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">QUOT.S</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PARAG</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:choice <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>            <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">COMMENT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>            <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PARAG</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:sequence <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SUBDIV</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:choice <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">COMMENT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SUBDIV</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">IDENTIFIER</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:pattern <span style="color: red">value</span>="<span style="color: black">\d{3}(\-\d{3})?[A-Z]*</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">t_btx t_btx.ecr t_btx.struct DIVISION ENACTING.TERMS GR.SEQ QUOT.S </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">An article may contain various general structures, such as physical paragraphs, lists, tables etc. However, they have to be
+         encapsulated in an allowed child element of the ARTICLE tag, namely <a href="#ALINEA">ALINEA</a>, <a href="#PARAG">PARAG</a> or <a href="#SUBDIV">SUBDIV</a>. For example, if an article contains a list, the corresponding LIST element must be encapsulated in an <a href="#ALINEA">ALINEA</a> element.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The IDENTIFIER attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The IDENTIFIER attribute of the ARTICLE element is used to identify the legal sequence number of the current article within
+         the enacting terms. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Basically, its value must be deduced from the article title.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">It must at least correspond to the following format: 'xxx'. If necessary, the initial positions must be filled with zeros.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">For example, the article which has the title "<span style="font-style: italic">Article 4</span>", gets '004' as IDENTIFIER attribute value.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">For the articles which have specific numbering such as <span style="font-style: italic">bis</span> (<span style="font-style: italic">ter</span>, <span style="font-style: italic">quater</span>, <span style="font-style: italic">ter bis</span> etc.), the 'xxx' value is extended with uppercase letters 'A' (respectively 'B', 'C', etc.).
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">For example, the IDENTIFIER attribute value of legal '<span style="font-style: italic">Article 1</span>bis' will be '001A' ('001B' for <span style="font-style: italic">'Article 1ter'</span>,...).
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">For a quoted legal article, the same rules have to be applied, with respects to the title of the quoted article. For example,
+         if the <span style="font-style: italic">'Article 1'</span> quotes in its contents the <span style="font-style: italic">'Article 5'</span> of a previously published legal act, the IDENTIFIER attribute value of the quoted article is '005'.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The IDENTIFER attribute of a single article always has the value '001'.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The use of this attribute is mandatory.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">
+            <p style="margin-left: 3em; text-align: justify">The enacting terms below contain articles which follow two different structures. The first article consists of five legal
+            paragraphs, while the fourth one is subdivided into two alineas.
+         </p>
+         </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;ENACTING.TERMS&gt;</span>
+                        <br/>  <span style="color: blue">&lt;ARTICLE <span style="color: red">IDENTIFIER</span>="<span style="color: black">001</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TI.ART&gt;</span>Article 1<span style="color: blue">&lt;/TI.ART&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">001.001</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NO.PARAG&gt;</span>1.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ALINEA&gt;</span>A provisional anti-dumping duty is hereby imposed on imports of tube and pipe fittings (other than cast fittings, flanges
+                     and threaded fittings), of iron or steel ...
+                     				<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">001.002</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NO.PARAG&gt;</span>2.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ALINEA&gt;</span>....<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">001.003</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NO.PARAG&gt;</span>3.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ALINEA&gt;</span>Notwithstanding paragraph 1, the provisional anti-dumping duty shall not apply to imports released into free circulation in
+                     accordance with Article 2.<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">001.004</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NO.PARAG&gt;</span>4.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ALINEA&gt;</span>The release for free circulation in the Community of the product referred to in paragraph 1 shall be subject to the provision
+                     of a security, equivalent to the amount of the provisional duty.<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">001.005</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NO.PARAG&gt;</span>5.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ALINEA&gt;</span>Unless otherwise specified, the provisions in force concerning customs duties shall apply.<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/ARTICLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;ARTICLE <span style="color: red">IDENTIFIER</span>="<span style="color: black">002</span>"&gt;</span>...<span style="color: blue">&lt;/ARTICLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;ARTICLE <span style="color: red">IDENTIFIER</span>="<span style="color: black">003</span>"&gt;</span>...<span style="color: blue">&lt;/ARTICLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;ARTICLE <span style="color: red">IDENTIFIER</span>="<span style="color: black">004</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TI.ART&gt;</span>Article 4<span style="color: blue">&lt;/TI.ART&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ALINEA&gt;</span>This Regulation shall enter into force on the day following that of its publication in the <br/>      <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>Official Journal of the European Communities<span style="color: blue">&lt;/HT&gt;</span>.<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ALINEA&gt;</span>Article 1 of this Regulation shall apply for a period of six months.<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/ARTICLE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/ENACTING.TERMS&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">
+            <p style="margin-left: 3em; text-align: justify">The two articles below have both a subtitle. The list in the second paragraph of the second article, as well as its introductory
+            sentence, are encapsulated in an ALINEA tag.
+         </p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1"
+                       width="100%"
+                       align="center"
+                       src="img/article_subtitle.gif"/>
+               </div>
+            </p>
+         </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;ENACTING.TERMS&gt;</span>
+                        <br/>  <span style="color: blue">&lt;ARTICLE <span style="color: red">IDENTIFIER</span>="<span style="color: black">001</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TI.ART&gt;</span>Article 1<span style="color: blue">&lt;/TI.ART&gt;<br/>
+                        </span>    <span style="color: blue">&lt;STI.ART&gt;</span>Purpose<span style="color: blue">&lt;/STI.ART&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ALINEA&gt;</span>The purpose of this Regulation is to establish an accelerated phasing-in scheme for the application of the double hull or
+                     equivalent design requirements of the MARPOL 73/78 Convention to single hull oil tankers.<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/ARTICLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;ARTICLE <span style="color: red">IDENTIFIER</span>="<span style="color: black">002</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TI.ART&gt;</span>Article 2<span style="color: blue">&lt;/TI.ART&gt;<br/>
+                        </span>    <span style="color: blue">&lt;STI.ART&gt;</span>Scope<span style="color: blue">&lt;/STI.ART&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">002.001</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NO.PARAG&gt;</span>1.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ALINEA&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>This Regulation shall apply to oil tankers of <br/>          <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">NUMBER</span>"&gt;</span>5000<span style="color: blue">&lt;/FT&gt;</span> tons deadweight and above:<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;LIST <span style="color: red">TYPE</span>="<span style="color: black">DASH</span>"&gt;</span>
+                        <br/>          <span style="color: blue">&lt;ITEM&gt;</span>
+                        <br/>            <span style="color: blue">&lt;P&gt;</span>entering into a port or offshore terminal under the jurisdiction of a Member State, irrespective of their flag, or<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>          <span style="color: blue">&lt;/ITEM&gt;<br/>
+                        </span>          <span style="color: blue">&lt;ITEM&gt;</span>
+                        <br/>            <span style="color: blue">&lt;P&gt;</span>flying the flag of a Member State.<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>          <span style="color: blue">&lt;/ITEM&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/LIST&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">002.002</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NO.PARAG&gt;</span>2.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ALINEA&gt;</span>This Regulation shall not apply to any warship, naval auxiliary or other ship, owned or operated by a State and used, for
+                     the time being, only on government non-commercial service. Member States shall, so far as is reasonable and practicable, endeavour
+                     to respect this Regulation for the ships referred to in this paragraph.<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/ARTICLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;ARTICLE&gt;</span>....<span style="color: blue">&lt;/ARTICLE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/ENACTING.TERMS&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,372 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">CASE</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Metadata for a juridical case</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The CASE element is used to mark up the metadata for describing a dossier of a juridical case.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">CASE</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">BIB.CASE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CURR.TITLE</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TITLE</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PARTIES</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SUBJECT</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PRELIM.RULING</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">INDEX</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">JOINED.CASES</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">P</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:choice <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DECISION</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">OBJECT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.CONCLUSION</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.CORRIG.ECR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.DECISION.ECR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.JUDGMENT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.JUDGMENT.NP</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.OPINION</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.ORDER</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.ORDER.NP</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.REPORT.HEARING</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.RULING</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.SUMMARY.JUDGMENT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SUMMARY</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PDF.ECR</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify"/>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">It contains the following sub-elements:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#BIB.CASE">BIB.CASE</a>: contains the metadata for this dossier level;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#CURR.TITLE">CURR.TITLE</a>: container for running titles;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#TITLE">TITLE</a>: describes a title page (in particular necessary for older issues); the element is optional;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#PARTIES">PARTIES</a>: encapsulates the conflicting parties;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#SUBJECT">SUBJECT</a>: contains the subject of the case;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#PRELIM.RULING">PRELIM.RULING</a>: describes preliminary rulings; the element is optional;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#INDEX">INDEX</a>: contains the <a href="#KEYWORD">KEYWORDs</a> describing the case;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#JOINED.CASES">JOINED.CASES</a>: contains the references to cases joined to the present one; the element is optional;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#P">P</a>: contains any additional information;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#DECISION">DECISION</a>: contains a court decision;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#OBJECT">OBJECT</a>: contains the object;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.CONCLUSION">REF.CONCLUSION</a>: refers to the conclusion; the element is optional;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.CORRIG.ECR">REF.CORRIG.ECR</a>: contains the reference to a corrigendum;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.DECISION.ECR">REF.DECISION.ECR</a>: contains the reference to a Court decision;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.JUDGMENT">REF.JUDGMENT</a>: reference to a judgment; the element is optional;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.JUDGMENT.NP">REF.JUDGMENT.NP</a>: reference to a not published judgment; the element is optional;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.OPINION">REF.OPINION</a>: refers to an opinion of the Court;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.ORDER">REF.ORDER</a>: refers to an order; the element is optional;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.ORDER.NP">REF.ORDER.NP</a>: refers to a not published order; the element is optional;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.REPORT.HEARING">REF.REPORT.HEARING</a>: contains the reference to the report of a hearing;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.RULING">REF.RULING</a>: contains a reference to the ruling of a case;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.SUMMARY.JUDGMENT">REF.SUMMARY.JUDGMENT</a>: contains the reference to a summarised judgment;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#SUMMARY">SUMMARY</a>: contains an optional summary;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#PDF.ECR">PDF.ECR</a>: contains references to the PDF instances which have been created for the case.
+            					
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The order of the elements REF.CONCLUSION, REF.JUDGMENT, REF.ORDER, REF.OPINION and SUMMARY is free. They may also be combined
+         in any order.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;CASE&gt;</span>
+                        <br/>  <span style="color: blue">&lt;BIB.CASE&gt;</span>
+                        <br/>    <span style="color: blue">&lt;REF.ECR <span style="color: red">FILE</span>="<span style="color: black">ECR2005FR1.01.xml</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;YEAR&gt;</span>2005<span style="color: blue">&lt;/YEAR&gt;<br/>
+                        </span>      <span style="color: blue">&lt;VOLUME.ECR&gt;</span>1<span style="color: blue">&lt;/VOLUME.ECR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/REF.ECR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;LG.DOC&gt;</span>FR<span style="color: blue">&lt;/LG.DOC&gt;<br/>
+                        </span>    <span style="color: blue">&lt;LG.CASE&gt;</span>DE<span style="color: blue">&lt;/LG.CASE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20050120</span>"&gt;</span>20050120<span style="color: blue">&lt;/DATE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;YEAR&gt;</span>2001<span style="color: blue">&lt;/YEAR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;NO.CASE&gt;</span>C-464/01<span style="color: blue">&lt;/NO.CASE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;TYPE.CASE&gt;</span>JUDGMENT-C<span style="color: blue">&lt;/TYPE.CASE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;NO.CELEX&gt;</span>62001J0464<span style="color: blue">&lt;/NO.CELEX&gt;<br/>
+                        </span>    <span style="color: blue">&lt;NO.SEQ&gt;</span>0014<span style="color: blue">&lt;/NO.SEQ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.FIRST&gt;</span>439<span style="color: blue">&lt;/PAGE.FIRST&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.SEQ&gt;</span>1<span style="color: blue">&lt;/PAGE.SEQ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.LAST&gt;</span>480<span style="color: blue">&lt;/PAGE.LAST&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.TOTAL&gt;</span>42<span style="color: blue">&lt;/PAGE.TOTAL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;AUTHOR&gt;</span>CJ<span style="color: blue">&lt;/AUTHOR&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/BIB.CASE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>Affaire C-464/01<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PARTIES&gt;</span>
+                        <br/>    <span style="color: blue">&lt;PLAINTIFS&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>Johann Gruber<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/PLAINTIFS&gt;<br/>
+                        </span>    <span style="color: blue">&lt;AGAINST&gt;</span>contre<span style="color: blue">&lt;/AGAINST&gt;<br/>
+                        </span>    <span style="color: blue">&lt;DEFENDANTS&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>Bay Wa AG<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/DEFENDANTS&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/PARTIES&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PRELIM.RULING&gt;</span>
+                        <br/>    <span style="color: blue">&lt;P&gt;</span>demande de décision préjudicielle, introduite par l'Oberster Gerichtshof (Autriche)<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/PRELIM.RULING&gt;<br/>
+                        </span>  <span style="color: blue">&lt;INDEX&gt;</span>
+                        <br/>    <span style="color: blue">&lt;KEYWORD&gt;</span>Convention de Bruxelles<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>    <span style="color: blue">&lt;KEYWORD&gt;</span>Article 13, premier alinéa<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>    <span style="color: blue">&lt;KEYWORD&gt;</span>Conditions d’application<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>    <span style="color: blue">&lt;KEYWORD&gt;</span>Notion de ‘contrat conclu par un consommateur ’<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>    <span style="color: blue">&lt;KEYWORD&gt;</span>Achat de tuiles par un agriculteur pour la couverture d’une ferme à usage en partie privé et en partie professionnel<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/INDEX&gt;<br/>
+                        </span>  <span style="color: blue">&lt;SUMMARY&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>Sommaire de l’arrêt<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;SUBJECTS&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>
+                        <br/>        <span style="color: blue">&lt;KEYWORD&gt;</span>Convention concernant la compétence judiciaire et l’exécution des décisions<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>        <span style="color: blue">&lt;KEYWORD&gt;</span>Compétence en matière de contrats conclus par les consommateurs<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>        <span style="color: blue">&lt;KEYWORD&gt;</span>Notion de «contrat conclu par un consommateur<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>        <span style="color: blue">&lt;KEYWORD&gt;</span>Contrat portant sur un bien destiné à un usage en partie professionnel et en partie privé<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>        <span style="color: blue">&lt;KEYWORD&gt;</span>Exclusion sauf en cas d’usage professionnel marginal<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>        <span style="color: blue">&lt;KEYWORD&gt;</span>Appréciation par le juge national<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>        <span style="color: blue">&lt;KEYWORD&gt;</span>Critères<span style="color: blue">&lt;/KEYWORD&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;P&gt;</span>(Convention du <br/>        <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">19680927</span>"&gt;</span>27 septembre 1968<span style="color: blue">&lt;/DATE&gt;</span>, art. 13 à 15)<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/SUBJECTS&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ABSTRACT&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>Les règles de compétence énoncées par la convention du <br/>        <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">19680927</span>"&gt;</span>27 septembre 1968<span style="color: blue">&lt;/DATE&gt;</span> concernant la compétence judiciaire et l’exécution des décisions en matière civile et commerciale, telle que modifiée par
+                     la convention du         <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">19781009</span>"&gt;</span>9 octobre 1978<span style="color: blue">&lt;/DATE&gt;</span> relative à l’adhésion du royaume de Danemark, de l’Irlande et du Royaume-Uni de Grande-Bretagne et d’Irlande du Nord, par
+                     la convention du         <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">19821025</span>"&gt;</span>25 octobre 1982<span style="color: blue">&lt;/DATE&gt;</span> relative à l’adhésion de la République hellénique, par la convention du         <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">19890526</span>"&gt;</span>26 mai 1989<span style="color: blue">&lt;/DATE&gt;</span> relative à l’adhésion du royaume d’Espagne et de la République portugaise et par la convention du         <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">19961129</span>"&gt;</span>29 novembre 1996<span style="color: blue">&lt;/DATE&gt;</span> relative à l’adhésion de la république d’Autriche, de la république de Finlande et du royaume de Suède, doivent être interprétées
+                     de la manière suivante:<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;LIST <span style="color: red">TYPE</span>="<span style="color: black">DASH</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;ITEM&gt;</span>
+                        <br/>          <span style="color: blue">&lt;P&gt;</span>une personne qui a conclu un contrat portant sur un bien destiné à un usage en partie professionnel et en partie étranger
+                     à son activité professionnelle n’est pas en droit de se prévaloir du bénéfice des règles de compétence spécifiques prévues
+                     aux articles 13 à 15 de ladite convention, sauf si l’usage professionnel est marginal au point d’avoir un rôle négligeable
+                     dans le contexte global de l’opération en cause, le fait que l’aspect extraprofessionnel prédomine étant sans incidence à
+                     cet égard;<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/ITEM&gt;<br/>
+                        </span>        <span style="color: blue">&lt;ITEM&gt;</span>
+                        <br/>          <span style="color: blue">&lt;P&gt;</span>il appartient à la juridiction saisie de décider si le contrat en cause a été conclu pour couvrir, dans une mesure non négligeable,
+                     des besoins relevant de l’activité professionnelle de la personne concernée ou si, au contraire, l’usage professionnel ne
+                     revêtait qu’un rôle insignifiant; <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/ITEM&gt;<br/>
+                        </span>        <span style="color: blue">&lt;ITEM&gt;</span>
+                        <br/>          <span style="color: blue">&lt;P&gt;</span>à cet effet, il y a lieu pour ladite juridiction de prendre en considération l’ensemble des éléments de fait pertinents résultant
+                     objectivement du dossier; en revanche, il ne convient pas de tenir compte de circonstances ou d’éléments dont le cocontractant
+                     aurait pu avoir connaissance lors de la conclusion du contrat, sauf si la personne qui invoque la qualité de consommateur
+                     s’est comportée de manière telle qu’elle a légitimement pu faire naître l’impression, dans le chef de l’autre partie au contrat,
+                     qu’elle agissait à des fins professionnelles. <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>          <span style="color: blue">&lt;P&gt;</span>(cf. point 54 et disp.)<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/ITEM&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/LIST&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ABSTRACT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/SUMMARY&gt;<br/>
+                        </span>  <span style="color: blue">&lt;REF.CONCLUSION&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>Conclusions de l’avocat général M. F. G. Jacobs, présentées le <br/>          <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20040916</span>"&gt;</span>16 septembre 2004<span style="color: blue">&lt;/DATE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;REF.ECR.DOC <span style="color: red">FILE</span>="<span style="color: black">ECR2005FR1.001044101.xml</span>" <span style="color: red">NO.SEQ</span>="<span style="color: black">0014.0001</span>"&gt;</span>I-441<span style="color: blue">&lt;/REF.ECR.DOC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/REF.CONCLUSION&gt;<br/>
+                        </span>  <span style="color: blue">&lt;REF.JUDGMENT&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>Arrêt de la Cour (deuxième chambre) du <br/>          <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20050120</span>"&gt;</span>20 janvier 2005<span style="color: blue">&lt;/DATE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;REF.ECR.DOC <span style="color: red">FILE</span>="<span style="color: black">ECR2005FR1.010045801.xml</span>" <span style="color: red">NO.SEQ</span>="<span style="color: black">0014.0002</span>"&gt;</span>I-458<span style="color: blue">&lt;/REF.ECR.DOC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/REF.JUDGMENT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PDF.ECR&gt;</span>
+                        <br/>    <span style="color: blue">&lt;REF.PDF.ECR <span style="color: red">TYPE</span>="<span style="color: black">SUMMARY</span>" <span style="color: red">PAGE.FIRST</span>="<span style="color: black">00439</span>" <span style="color: red">PAGE.LAST</span>="<span style="color: black">00440</span>"&gt;</span>//filename//<span style="color: blue">&lt;/REF.PDF.ECR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;REF.PDF.ECR <span style="color: red">TYPE</span>="<span style="color: black">CONCLUSION</span>" <span style="color: red">PAGE.FIRST</span>="<span style="color: black">00441</span>" <span style="color: red">PAGE.LAST</span>="<span style="color: black">00457</span>"&gt;</span>//filename//<span style="color: blue">&lt;/REF.PDF.ECR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;REF.PDF.ECR <span style="color: red">TYPE</span>="<span style="color: black">CASE</span>" <span style="color: red">PAGE.FIRST</span>="<span style="color: black">00458</span>" <span style="color: red">PAGE.LAST</span>="<span style="color: black">00480</span>"&gt;</span>//filename//<span style="color: blue">&lt;/REF.PDF.ECR&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/PDF.ECR&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/CASE&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

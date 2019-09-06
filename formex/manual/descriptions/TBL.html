@@ -1,0 +1,361 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">TBL</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Structure of a table</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The TBL element is used to mark up a Formex table, which actually contains text structured in columns with related data.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">TBL</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TITLE</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.SEQ</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.NOTES</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CORPUS</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">NO.SEQ</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:pattern <span style="color: red">value</span>="<span style="color: black">\d{4}(\.\d{4})*</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">CLASS</span>" <span style="color: red">type</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">COLS</span>" <span style="color: red">type</span>="<span style="color: black">xd:positiveInteger</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">PAGE.SIZE</span>" <span style="color: red">default</span>="<span style="color: black">SINGLE.PORTRAIT</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DOUBLE.LANDSCAPE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DOUBLE.PORTRAIT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">SINGLE.LANDSCAPE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">SINGLE.PORTRAIT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">t_btx t_btx.ecr t_btx.seq t_btx.struct DIV.CONSID GR.CONSID GR.NOTES GR.SEQ GR.TBL IMG.CNT NP.ECR QUOT.S </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">A table usually contains the following information:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">an optional title (<a href="#TITLE">TITLE</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">one or more structured text blocks (<a href="#GR.SEQ">GR.SEQ</a>) in order to mark up optional explanatory information about the table content, located between the title of the table and
+            the table itself,
+         </li>
+            <li style="text-align: justify; margin-left: 3em">optionally a group of notes called in the table (<a href="#GR.NOTES">GR.NOTES</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the corpus of the table (<a href="#CORPUS">CORPUS</a>).
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The NO.SEQ attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">This mandatory attribute provides a sequence number to the table. This number represents the order in which the table appears
+         in the document.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The value of the NO.SEQ attribute has the format 'xxxx.nnnn':</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">'xxxx' represents the sequence number of the table,</li>
+            <li style="text-align: justify; margin-left: 3em">'xnnn' represents the sequence number of any subtable in the table.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The 'xxxx' part of the NO.SEQ attribute is mandatory.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The 'nnnn' part is used to number any subtable. It may not be used to characterise the main tables. By definition, a subtable
+         may only be found in one single cell in the main table.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Given the recursive nature of the model, when a subtable depends on another subtable, the format of the NO.SEQ attribute is
+         'xxxx.nnnn.mmmm', etc...
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">To avoid confusion, when a table is part of a group (<a href="#GR.TBL">GR.TBL</a>), only the 'xxxx' part is used and the numbering must be continuous as regards the document. For example, if the first table
+         in a group is the third table in a document, the value of 'xxxx' will be '0003', and the 'xxxx' value for the second table
+         in the group will be '0004'.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The CLASS attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The CLASS attribute is mandatory and is used to specify the type of data contained in the table. The allowed values are:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">GEN: if the table contains general data (default value),</li>
+            <li style="text-align: justify; margin-left: 3em">SCHEDULE: if it is a schedule,</li>
+            <li style="text-align: justify; margin-left: 3em">RECAP: if it is a synoptic table.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">These two last values are only used for documents related to the general budget.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The COLS attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">This mandatory attribute provides the actual number of columns of the table.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The PAGE.SIZE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The PAGE.SIZE attribute takes one of these values:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">DOUBLE.LANDSCAPE: table on two A4 pages forming an A3 landscape page,</li>
+            <li style="text-align: justify; margin-left: 3em">DOUBLE.PORTRAIT: table on two A4 pages forming an A3 portrait page,</li>
+            <li style="text-align: justify; margin-left: 3em">SINGLE.LANDSCAPE: table on a single A4 page in landscape,</li>
+            <li style="text-align: justify; margin-left: 3em">SINGLE.PORTRAIT: table on a single A4 page in portrait (default).</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;TBL <span style="color: red">COLS</span>="<span style="color: black">4</span>" <span style="color: red">NO.SEQ</span>="<span style="color: black">0001</span>"&gt;</span>
+                        <br/>  <span style="color: blue">&lt;GR.NOTES&gt;</span>
+                        <br/>    <span style="color: blue">&lt;NOTE <span style="color: red">ID</span>="<span style="color: black">E0002</span>" <span style="color: red">TYPE</span>="<span style="color: black">TABLE</span>" <span style="color: red">NUMBERING</span>="<span style="color: black">ARAB</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>        <span style="color: blue">&lt;NO.P&gt;</span>
+                     										( 
+                     										<br/>          <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">SUP</span>"&gt;</span>2<span style="color: blue">&lt;/HT&gt;</span>)
+                     									<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;TXT&gt;</span>
+                        <br/>          <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>Source:<span style="color: blue">&lt;/HT&gt;</span> Commission.<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/NOTE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/GR.NOTES&gt;<br/>
+                        </span>  <span style="color: blue">&lt;CORPUS&gt;</span>
+                        <br/>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">ROWSPAN</span>="<span style="color: black">12</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">BOLD</span>"&gt;</span>1 euro<span style="color: blue">&lt;/HT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>=<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>7,4317<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">4</span>"&gt;</span>Danish krone<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>=<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>9,04<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">4</span>"&gt;</span>Swedish krona<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>=<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>9,7813<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">4</span>"&gt;</span>South African rand<br/>        <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.REF</span>="<span style="color: black">E0002</span>"&gt;</span>        <span style="color: blue">&lt;/NOTE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/CORPUS&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/TBL&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,354 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">BIB.INSTANCE</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">References of the publication</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The BIB.INSTANCE element is used to mark up the references which unambiguously identify a document within the publication.
+         
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">BIB.INSTANCE</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DOCUMENT.REF</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SPEC.ED</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">EEA</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DATE</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">LG.DOC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">NO.SEQ</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.FIRST</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.SEQ</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.LAST</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.TOTAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">INCLUSIONS</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">NO.DOC</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">ACT AGR ANNEX CJT COMPETITION CONS.DOC CONS.OTH.DOC CORR GENERAL </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">This element contains a sequence of these sub-elements:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">the reference to the document instance (<a href="#DOCUMENT.REF">DOCUMENT.REF</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">an optional reference to a secondary legislation publication (<a href="#SPEC.ED">SPEC.ED</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">an indication to EEA relevance (<a href="#EEA">EEA</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the date of the document (<a href="#DATE">DATE</a>) as it can be found in the title; in some cases various dates are indicated; they must be tagged separately,
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the language in which the document is published (<a href="#LG.DOC">LG.DOC</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the position of the document on the page indicated as the starting page (<a href="#NO.SEQ">NO.SEQ</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the page number on which the document begins (<a href="#PAGE.FIRST">PAGE.FIRST</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the sequence number of the document on the first page (<a href="#PAGE.SEQ">PAGE.SEQ</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the page number on which the document ends (<a href="#PAGE.LAST">PAGE.LAST</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the total number of pages of the document (<a href="#PAGE.TOTAL">PAGE.TOTAL</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the list of included elements (<a href="#INCLUSIONS">INCLUSIONS</a>),
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the document number(s) (<a href="#NO.DOC">NO.DOC</a>).
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">All elements are mandatory except SPEC.ED, EEA, NO.SEQ, INCLUSIONS and NO.DOC.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">The two examples below concern documents published in the OJ L collection for the first one, and in the OJ C collection for
+         the second one. Note the differences about the NO.DOC element:
+      </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;BIB.INSTANCE&gt;</span>
+                        <br/>  <span style="color: blue">&lt;DOCUMENT.REF <span style="color: red">FILE</span>="<span style="color: black">L_2002020EN.01000101.doc.xml</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;COLL&gt;</span>L<span style="color: blue">&lt;/COLL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;NO.OJ&gt;</span>020<span style="color: blue">&lt;/NO.OJ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;YEAR&gt;</span>2002<span style="color: blue">&lt;/YEAR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;LG.OJ&gt;</span>EN<span style="color: blue">&lt;/LG.OJ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.FIRST&gt;</span>1<span style="color: blue">&lt;/PAGE.FIRST&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.SEQ&gt;</span>1<span style="color: blue">&lt;/PAGE.SEQ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;VOLUME.REF&gt;</span>01<span style="color: blue">&lt;/VOLUME.REF&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/DOCUMENT.REF&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20020122</span>"&gt;</span>20020122<span style="color: blue">&lt;/DATE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;LG.DOC&gt;</span>EN<span style="color: blue">&lt;/LG.DOC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;NO.SEQ&gt;</span>0001<span style="color: blue">&lt;/NO.SEQ&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.FIRST&gt;</span>1<span style="color: blue">&lt;/PAGE.FIRST&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.SEQ&gt;</span>1<span style="color: blue">&lt;/PAGE.SEQ&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.LAST&gt;</span>1<span style="color: blue">&lt;/PAGE.LAST&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.TOTAL&gt;</span>1<span style="color: blue">&lt;/PAGE.TOTAL&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DOC.TYPE&gt;</span>COMMON.POSITION<span style="color: blue">&lt;/DOC.TYPE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;NO.DOC <span style="color: red">FORMAT</span>="<span style="color: black">YN</span>" <span style="color: red">TYPE</span>="<span style="color: black">INTERNAL</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;NO.CURRENT&gt;</span>56<span style="color: blue">&lt;/NO.CURRENT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;YEAR&gt;</span>2001<span style="color: blue">&lt;/YEAR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;COM&gt;</span>CFSP<span style="color: blue">&lt;/COM&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/NO.DOC&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/BIB.INSTANCE&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;BIB.INSTANCE&gt;</span>
+                        <br/>  <span style="color: blue">&lt;DOCUMENT.REF <span style="color: red">FILE</span>="<span style="color: black">C_2002004EN.01000101.doc.xml</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;COLL&gt;</span>C<span style="color: blue">&lt;/COLL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;NO.OJ&gt;</span>004<span style="color: blue">&lt;/NO.OJ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;YEAR&gt;</span>2002<span style="color: blue">&lt;/YEAR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;LG.OJ&gt;</span>EN<span style="color: blue">&lt;/LG.OJ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.FIRST&gt;</span>1<span style="color: blue">&lt;/PAGE.FIRST&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.SEQ&gt;</span>1<span style="color: blue">&lt;/PAGE.SEQ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;VOLUME.REF&gt;</span>01<span style="color: blue">&lt;/VOLUME.REF&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/DOCUMENT.REF&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20020107</span>"&gt;</span>20020107<span style="color: blue">&lt;/DATE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;LG.DOC&gt;</span>EN<span style="color: blue">&lt;/LG.DOC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;NO.SEQ&gt;</span>0001.0002<span style="color: blue">&lt;/NO.SEQ&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.FIRST&gt;</span>12<span style="color: blue">&lt;/PAGE.FIRST&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.SEQ&gt;</span>1<span style="color: blue">&lt;/PAGE.SEQ&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.LAST&gt;</span>12<span style="color: blue">&lt;/PAGE.LAST&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.TOTAL&gt;</span>1<span style="color: blue">&lt;/PAGE.TOTAL&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DOC.TYPE&gt;</span>ANNEX<span style="color: blue">&lt;/DOC.TYPE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/BIB.INSTANCE&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">The example below deals with an agreement in the form of an exchange of letters. The objects listed in the INCLUSIONS tag
+         are the image files of the handling signings. Note the NO.SEQ value, which means that the document is an associated one.
+      </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;BIB.INSTANCE&gt;</span>
+                        <br/>  <span style="color: blue">&lt;DOCUMENT.REF <span style="color: red">FILE</span>="<span style="color: black">L_2002071EN.01000101.doc.xml</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;COLL&gt;</span>L<span style="color: blue">&lt;/COLL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;NO.OJ&gt;</span>071<span style="color: blue">&lt;/NO.OJ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;YEAR&gt;</span>2002<span style="color: blue">&lt;/YEAR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;LG.OJ&gt;</span>EN<span style="color: blue">&lt;/LG.OJ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.FIRST&gt;</span>1<span style="color: blue">&lt;/PAGE.FIRST&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PAGE.SEQ&gt;</span>1<span style="color: blue">&lt;/PAGE.SEQ&gt;<br/>
+                        </span>    <span style="color: blue">&lt;VOLUME.REF&gt;</span>01<span style="color: blue">&lt;/VOLUME.REF&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/DOCUMENT.REF&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20020313</span>"&gt;</span>20020313<span style="color: blue">&lt;/DATE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;LG.DOC&gt;</span>EN<span style="color: blue">&lt;/LG.DOC&gt;<br/>
+                        </span>  <span style="color: blue">&lt;NO.SEQ&gt;</span>0001.0003<span style="color: blue">&lt;/NO.SEQ&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.FIRST&gt;</span>10<span style="color: blue">&lt;/PAGE.FIRST&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.SEQ&gt;</span>1<span style="color: blue">&lt;/PAGE.SEQ&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.LAST&gt;</span>31<span style="color: blue">&lt;/PAGE.LAST&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.TOTAL&gt;</span>22<span style="color: blue">&lt;/PAGE.TOTAL&gt;<br/>
+                        </span>  <span style="color: blue">&lt;INCLUSIONS&gt;</span>
+                        <br/>    <span style="color: blue">&lt;INCL.ELEMENT <span style="color: red">TYPE</span>="<span style="color: black">TIFF</span>" <span style="color: red">FILEREF</span>="<span style="color: black">L_2002071EN.01001501</span>"&gt;</span>    <span style="color: blue">&lt;/INCL.ELEMENT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;INCL.ELEMENT <span style="color: red">TYPE</span>="<span style="color: black">TIFF</span>" <span style="color: red">FILEREF</span>="<span style="color: black">L_2002071EN.01001502</span>"&gt;</span>    <span style="color: blue">&lt;/INCL.ELEMENT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;INCL.ELEMENT <span style="color: red">TYPE</span>="<span style="color: black">TIFF</span>" <span style="color: red">FILEREF</span>="<span style="color: black">L_2002071EN.01002001</span>"&gt;</span>    <span style="color: blue">&lt;/INCL.ELEMENT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;INCL.ELEMENT <span style="color: red">TYPE</span>="<span style="color: black">TIFF</span>" <span style="color: red">FILEREF</span>="<span style="color: black">L_2002071EN.01002002</span>"&gt;</span>    <span style="color: blue">&lt;/INCL.ELEMENT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;INCL.ELEMENT <span style="color: red">TYPE</span>="<span style="color: black">TIFF</span>" <span style="color: red">FILEREF</span>="<span style="color: black">L_2002071EN.01002501</span>"&gt;</span>    <span style="color: blue">&lt;/INCL.ELEMENT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;INCL.ELEMENT <span style="color: red">TYPE</span>="<span style="color: black">TIFF</span>" <span style="color: red">FILEREF</span>="<span style="color: black">L_2002071EN.01002502</span>"&gt;</span>    <span style="color: blue">&lt;/INCL.ELEMENT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;INCL.ELEMENT <span style="color: red">TYPE</span>="<span style="color: black">TIFF</span>" <span style="color: red">FILEREF</span>="<span style="color: black">L_2002071EN.01003001</span>"&gt;</span>    <span style="color: blue">&lt;/INCL.ELEMENT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;INCL.ELEMENT <span style="color: red">TYPE</span>="<span style="color: black">TIFF</span>" <span style="color: red">FILEREF</span>="<span style="color: black">L_2002071EN.01003002</span>"&gt;</span>    <span style="color: blue">&lt;/INCL.ELEMENT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/INCLUSIONS&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/BIB.INSTANCE&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Specific rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">In the context of consolidated acts, this element has to be used for the bibliographic information on the consolidated act
+         itself. Only the following components have to be used:
+      </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">the reference to the DOC instance (<a href="#DOCUMENT.REF">DOCUMENT.REF</a>)
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the element <a href="#DATE">DATE</a>, which contains a copy of the date for the basic act
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the language of the document (<a href="#LG.DOC">LG.DOC</a>)
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the first page (<a href="#PAGE.FIRST">PAGE.FIRST</a>) of the consolidated act; in general, this is the value 1
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the sequence on the page (<a href="#PAGE.SEQ">PAGE.SEQ</a>) which generally is also 1
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the last page (<a href="#PAGE.LAST">PAGE.LAST</a>)
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the total number of pages (<a href="#PAGE.TOTAL">PAGE.TOTAL</a>).
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">All other values are optional.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">This element must not be confused with <a href="#BIB.INSTANCE.CONS">BIB.INSTANCE.CONS</a> which is used to describe the members of the consolidated family, such as the basic act and modifiers.
+      </p>
+      </div>
+   </body>
+</html>

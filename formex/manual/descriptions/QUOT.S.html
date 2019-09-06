@@ -1,0 +1,501 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">QUOT.S</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Quotation</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The QUOT.S element is used to mark up structured quotations. A quotation is considered to be a part of text surrounded by
+         quotation marks and it: 
+      </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">either constitutes one or more complete paragraphs, </li>
+            <li style="text-align: justify; margin-left: 3em">or is included within the current text.</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The QUOT.S element is only used in the first case, when the quotation includes text which consists of a Formex structural
+         element. The QUOT.S element contains the whole structure of a quotation, while the <a href="#QUOT.START">QUOT.START</a> and the <a href="#QUOT.END">QUOT.END</a> elements indicate the actual locations of the opening and closing quotation marks.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">This means that, if the quotation consists of one or more <a href="#t_btx.struct">Formex structural elements</a>, the use of the QUOT.S element is mandatory.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">In the other cases, if the quotation appears 'inline' in the current text, only the <a href="#QUOT.START">QUOT.START</a> and the <a href="#QUOT.END">QUOT.END</a> elements are used to mark it up.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">QUOT.S</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:choice <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ACT.GEN</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ADDR.S</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ALINEA</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ANNOTATION</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ARTICLE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CAT.PLANT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CAT.VEGET</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CN</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">COLL.LETTERS</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">COMPETITION.INIT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CONS.ANNEX</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CONSID</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CONTENTS</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CONTENTS.CORR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DIV.CONSID</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DIVISION</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DLIST</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DLIST.ITEM</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ENACTING.TERMS</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ENACTING.TERMS.CJT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">FINAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">FORMULA</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">FULL.POWER</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">FULL.POWER.FINAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">FULL.POWER.INIT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.AMEND</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.ANNOTATION</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.CONSID</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.CONSID.INIT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.NOTES</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.SEQ</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.TBL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.VISA</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.VISA.INIT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">INCL.ELEMENT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">LETTER</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">LIST</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">LIST.AMEND</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">LV</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">NOTE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">NP</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">P</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PARAG</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PL.DATE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PLENIPOTENTIARY</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PREAMBLE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PREAMBLE.FINAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PREAMBLE.GEN</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PREAMBLE.INIT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">QUOT.END</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">QUOT.S</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">QUOT.START</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SIGNATORY</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SIGNATURE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">STI.ART</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">SUBDIV</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TARIC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TBL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TI.ART</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TI.CJT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TITLE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TOC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">VISA</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">LEVEL</span>" <span style="color: red">type</span>="<span style="color: black">xd:positiveInteger</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">t_btx t_btx.ecr t_btx.seq t_btx.struct ARTICLE GR.SEQ LIST NP.ECR PARAG PREAMBLE.GEN QUOT.S SUBDIV </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The QUOT.S element indicates a quotation containing a structural object.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The <a href="#QUOT.START">QUOT.START</a> element  is used to mark up the beginning of the quotation and the end is marked up with the <a href="#QUOT.END">QUOT.END</a> element.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">If for example the opening quotation mark (<a href="#QUOT.START">QUOT.START</a>) is to be found in the first call of a table body, the complete table structure has to be incorporated in a QUOT.S element.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The LEVEL attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The LEVEL attribute is used to indicate the nesting level of a quotation contained within another quotation. Highest-level
+         quotations must have the LEVEL attribute set to '1', and the LEVEL attribute must be increased according to the nesting level.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">
+            <p style="margin-left: 3em; text-align: justify">The item below quotes a legal article. The ARTICLE element is nested in the QUOT.S tag:</p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1"
+                       width="100%"
+                       align="center"
+                       src="img/quot_article.gif"/>
+               </div>
+            </p>
+         </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>  <span style="color: blue">&lt;NO.P&gt;</span>3.<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>  <span style="color: blue">&lt;TXT&gt;</span>Article 2 is replaced by the following:<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;P&gt;</span>
+                        <br/>    <span style="color: blue">&lt;QUOT.S <span style="color: red">LEVEL</span>="<span style="color: black">1</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;ARTICLE <span style="color: red">IDENTIFIER</span>="<span style="color: black">002</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;TI.ART&gt;</span>
+                        <br/>          <span style="color: blue">&lt;QUOT.START <span style="color: red">ID</span>="<span style="color: black">QS0004</span>" <span style="color: red">REF.END</span>="<span style="color: black">QE0004</span>" <span style="color: red">CODE</span>="<span style="color: black">2018</span>"&gt;</span>          <span style="color: blue">&lt;/QUOT.START&gt;</span>Article 2<span style="color: blue">&lt;/TI.ART&gt;<br/>
+                        </span>        <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">002.001</span>"&gt;</span>
+                        <br/>          <span style="color: blue">&lt;NO.PARAG&gt;</span>1.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>          <span style="color: blue">&lt;ALINEA&gt;</span>The accounting information referred to in Article 4(1)(c) of Regulation (EC) No 1663/95 shall be used by the Commission for
+                     the sole purposes of:<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>          <span style="color: blue">&lt;ALINEA&gt;</span>
+                        <br/>            <span style="color: blue">&lt;LIST <span style="color: red">TYPE</span>="<span style="color: black">alpha</span>"&gt;</span>
+                        <br/>              <span style="color: blue">&lt;ITEM&gt;</span>
+                        <br/>                <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>                  <span style="color: blue">&lt;NO.P&gt;</span>(a)<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>                  <span style="color: blue">&lt;TXT&gt;</span>carrying out its functions in the context of the clearance of the EAGGF Guarantee section accounts pursuant to Regulation
+                     (EC) No 1258/1999;<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>                <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/ITEM&gt;<br/>
+                        </span>              <span style="color: blue">&lt;ITEM&gt;</span>
+                        <br/>                <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>                  <span style="color: blue">&lt;NO.P&gt;</span>(b)<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>                  <span style="color: blue">&lt;TXT&gt;</span>monitoring developments and providing forecasts in the agricultural sector.<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>                <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/ITEM&gt;<br/>
+                        </span>            <span style="color: blue">&lt;/LIST&gt;<br/>
+                        </span>          <span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>        <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">002.002</span>"&gt;</span>
+                        <br/>          <span style="color: blue">&lt;NO.PARAG&gt;</span>2.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>          <span style="color: blue">&lt;ALINEA&gt;</span>If the accounting information referred to in paragraph 1 includes personal data protected by Regulation (EC) No 45/2001 of
+                     the European Parliament and the Council<br/>            <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.ID</span>="<span style="color: black">E0005</span>" <span style="color: red">NUMBERING</span>="<span style="color: black">STAR</span>"&gt;</span>
+                        <br/>              <span style="color: blue">&lt;P&gt;</span>
+                        <br/>                <span style="color: blue">&lt;REF.DOC.OJ <span style="color: red">COLL</span>="<span style="color: black">L</span>" <span style="color: red">NO.OJ</span>="<span style="color: black">008</span>" <span style="color: red">DATE.PUB</span>="<span style="color: black">20010112</span>" <span style="color: red">PAGE.FIRST</span>="<span style="color: black">1</span>"&gt;</span>OJ L 8, 12.1.2001, p. 1<span style="color: blue">&lt;/REF.DOC.OJ&gt;</span>.<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>            <span style="color: blue">&lt;/NOTE&gt;</span>, the Commission shall lay down the necessary safeguards required under that Regulation. In particular, if accounting information
+                     is used by the Commission for the purpose referred to in paragraph 1(b), the Commission shall make such data anonymous and
+                     process it in aggregated form only.<span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>        <span style="color: blue">&lt;PARAG <span style="color: red">IDENTIFIER</span>="<span style="color: black">002.003</span>"&gt;</span>
+                        <br/>          <span style="color: blue">&lt;NO.PARAG&gt;</span>3.<span style="color: blue">&lt;/NO.PARAG&gt;<br/>
+                        </span>          <span style="color: blue">&lt;ALINEA&gt;</span>The Commission shall ensure that the accounting information referred to in paragraph 1 is kept confidential and secure.<br/>            <span style="color: blue">&lt;QUOT.END <span style="color: red">ID</span>="<span style="color: black">QE0004</span>" <span style="color: red">REF.START</span>="<span style="color: black">QS0004</span>" <span style="color: red">CODE</span>="<span style="color: black">2019</span>"&gt;</span>            <span style="color: blue">&lt;/QUOT.END&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/ALINEA&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/PARAG&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ARTICLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/QUOT.S&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">
+            <p style="margin-left: 3em; text-align: justify">The following example consists of a quoted table. The QUOT.S element encompasses the relevant structure, while the <a href="#QUOT.START">QUOT.START</a> and <a href="#QUOT.END">QUOT.END</a> indicate the actual locations of the opening (in the first cell)  and closing marks:
+         </p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1"
+                       width="100%"
+                       align="center"
+                       src="img/quot_table_intro.gif"/>
+               </div>
+            </p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1" width="100%" align="center" src="img/quot_table.gif"/>
+               </div>
+            </p>
+         </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;ITEM&gt;</span>
+                        <br/>  <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>    <span style="color: blue">&lt;NO.P&gt;</span>(a)<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;TXT&gt;</span>the table of basic monthly salaries in Article 66 of the Staff Regulations shall be replaced by the following:<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;P&gt;</span>
+                        <br/>      <span style="color: blue">&lt;QUOT.S <span style="color: red">LEVEL</span>="<span style="color: black">1</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;TBL <span style="color: red">COLS</span>="<span style="color: black">9</span>" <span style="color: red">NO.SEQ</span>="<span style="color: black">0001</span>"&gt;</span>
+                        <br/>          <span style="color: blue">&lt;CORPUS&gt;</span>
+                        <br/>            <span style="color: blue">&lt;ROW <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>
+                        <br/>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">ROWSPAN</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;QUOT.START <span style="color: red">ID</span>="<span style="color: black">QS0009</span>" <span style="color: red">REF.END</span>="<span style="color: black">QE0009</span>" <span style="color: red">CODE</span>="<span style="color: black">2018</span>"&gt;</span>                <span style="color: blue">&lt;/QUOT.START&gt;</span>Grade<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">2</span>" <span style="color: red">COLSPAN</span>="<span style="color: black">8</span>"&gt;</span>Step<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>            <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>            <span style="color: blue">&lt;ROW <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>
+                        <br/>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>1<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>2<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">4</span>"&gt;</span>3<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">5</span>"&gt;</span>4<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">6</span>"&gt;</span>5<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">7</span>"&gt;</span>6<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">8</span>"&gt;</span>7<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>" <span style="color: red">COL</span>="<span style="color: black">9</span>"&gt;</span>8<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>            <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>            <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>A 1<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>11940,71<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>12575,01<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">4</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>13209,31<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">5</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>13843,61<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">6</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>14477,91<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">7</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>15112,21<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">8</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;IE&gt;</span>                <span style="color: blue">&lt;/IE&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">9</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;IE&gt;</span>                <span style="color: blue">&lt;/IE&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>            <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>            <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>D 4<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>2058,62<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>2143,04<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">4</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>2227,46<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">5</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>2311,88
+                     												<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>                <span style="color: blue">&lt;QUOT.END <span style="color: red">ID</span>="<span style="color: black">QE0009</span>" <span style="color: red">REF.START</span>="<span style="color: black">QS0009</span>" <span style="color: red">CODE</span>="<span style="color: black">2019</span>"&gt;</span>                <span style="color: blue">&lt;/QUOT.END&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">6</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;IE&gt;</span>                <span style="color: blue">&lt;/IE&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">7</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;IE&gt;</span>                <span style="color: blue">&lt;/IE&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">8</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;IE&gt;</span>                <span style="color: blue">&lt;/IE&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>              <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">9</span>"&gt;</span>
+                        <br/>                <span style="color: blue">&lt;IE&gt;</span>                <span style="color: blue">&lt;/IE&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>            <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>          <span style="color: blue">&lt;/CORPUS&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/TBL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/QUOT.S&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/ITEM&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

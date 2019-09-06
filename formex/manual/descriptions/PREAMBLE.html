@@ -1,0 +1,221 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">PREAMBLE</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Preamble with regular structure</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The PREAMBLE element is used in legal texts in order to mark up the preamble which follows a regular structure. It usually
+         contains: 
+      </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">the introductory phrase (<a href="#PREAMBLE.INIT">PREAMBLE.INIT</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the group of quotations - references to the basic documents (<a href="#GR.VISA">GR.VISA</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">the recitals group - reasons (<a href="#GR.CONSID">GR.CONSID</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">and the closing phrase (<a href="#PREAMBLE.FINAL">PREAMBLE.FINAL</a>).
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">There are two exceptions to this regular structure:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">In some cases, the preamble may not present a regular structure. The document clearly constitutes a legal act document, but
+            quotations and recitals are uneasily identifiable;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">If the document is an agreement, between the reasons for the agreement and the closing phrase of the preamble, there may be
+            a part which describes the plenipotentiaries.
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">PREAMBLE</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PREAMBLE.INIT</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:choice</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.VISA</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:sequence <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>            <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.CONSID</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>            <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.VISA</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>          <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">P</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">FULL.POWER</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PREAMBLE.FINAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">t_btx t_btx.ecr t_btx.struct ACT AGR CONS.DOC CONS.DOC.GEN DECISION.ECR GR.SEQ JUDGMENT QUOT.S </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The most frequent possibilities for a regular structure are:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">a <a href="#GR.VISA">VISA group</a>, without any other components, 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">a <a href="#GR.VISA">VISA group</a> followed by a <a href="#GR.CONSID">CONSID group</a>,
+         </li>
+            <li style="text-align: justify; margin-left: 3em">a series of groups comprising a <a href="#GR.VISA">VISA group</a>, a <a href="#GR.CONSID">CONSID group</a> and a second <a href="#GR.VISA">VISA group</a>.
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">If the preamble does not follow a regular structure, the <a href="#P">P</a> element is used to mark up each physical paragraph.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">In the case of an agreement, the part describing the plenipotentiaries is nested in a <a href="#FULL.POWER">FULL.POWER</a> element.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;PREAMBLE&gt;</span>
+                        <br/>  <span style="color: blue">&lt;PREAMBLE.INIT&gt;</span>THE COMMISSION OF THE EUROPEAN COMMUNITIES,<span style="color: blue">&lt;/PREAMBLE.INIT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;GR.VISA&gt;</span>
+                        <br/>    <span style="color: blue">&lt;VISA&gt;</span>Having regard to the Treaty establishing the European Community,<span style="color: blue">&lt;/VISA&gt;<br/>
+                        </span>    <span style="color: blue">&lt;VISA&gt;</span>Having regard to Commission Regulation (EC) No 1095/2001 of <br/>      <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20010605</span>"&gt;</span>5 June 2001<span style="color: blue">&lt;/DATE&gt;</span> opening and providing for the administration of an import tariff quota for young male bovine animals for fattening (      <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20010701</span>"&gt;</span>1 July 2001<span style="color: blue">&lt;/DATE&gt;</span> to       <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20020630</span>"&gt;</span>30 June 2002<span style="color: blue">&lt;/DATE&gt;</span>)      <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.ID</span>="<span style="color: black">E0001</span>" <span style="color: red">NUMBERING</span>="<span style="color: black">ARAB</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>
+                        <br/>          <span style="color: blue">&lt;REF.DOC.OJ <span style="color: red">COLL</span>="<span style="color: black">L</span>" <span style="color: red">NO.OJ</span>="<span style="color: black">150</span>" <span style="color: red">DATE.PUB</span>="<span style="color: black">20010606</span>" <span style="color: red">PAGE.FIRST</span>="<span style="color: black">25</span>"&gt;</span>OJ L 150, 6.6.2001, p. 25<span style="color: blue">&lt;/REF.DOC.OJ&gt;</span>.<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/NOTE&gt;</span>, and in particular Article 9(3) thereof,<span style="color: blue">&lt;/VISA&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/GR.VISA&gt;<br/>
+                        </span>  <span style="color: blue">&lt;GR.CONSID&gt;</span>
+                        <br/>    <span style="color: blue">&lt;GR.CONSID.INIT&gt;</span>Whereas:<span style="color: blue">&lt;/GR.CONSID.INIT&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CONSID&gt;</span>Article 1 of Regulation (EC) No 1095/2001 provides for the opening for the period <br/>      <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20010701</span>"&gt;</span>1 July 2001<span style="color: blue">&lt;/DATE&gt;</span> to       <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20020630</span>"&gt;</span>30 June 2002<span style="color: blue">&lt;/DATE&gt;</span> of a tariff quota of       <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">NUMBER</span>"&gt;</span>169000<span style="color: blue">&lt;/FT&gt;</span> young male bovine animals of a weight not exceeding 300 kilograms and intended for fattening. Article 9 of that Regulation
+                     provides for a further allocation of quantities not covered by import licence applications by 22 February 2002,<span style="color: blue">&lt;/CONSID&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/GR.CONSID&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PREAMBLE.FINAL&gt;</span>HAS ADOPTED THIS REGULATION:<span style="color: blue">&lt;/PREAMBLE.FINAL&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/PREAMBLE&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

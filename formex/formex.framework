@@ -15,7 +15,9 @@
 						<null/>
 					</field>
 					<field name="classpath">
-						<String-array/>
+						<String-array>
+							<String>${framework}/manual/</String>
+						</String-array>
 					</field>
 					<field name="parentClassLoaderID">
 						<null/>
@@ -153,6 +155,7 @@
 					<field name="xmlCatalogs">
 						<String-array>
 							<String>${framework}/schema/catalog-formex.xml</String>
+							<String>${framework}/manual/catalog-completion.xml</String>
 						</String-array>
 					</field>
 					<field name="description">

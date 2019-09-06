@@ -1,0 +1,437 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">FT</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Formatted text</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The FT element is used to mark-up the semantic meaning of parts of text, such as decimal and non-decimal numbers, codes related
+         to European nomenclatures, etc.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">In general, these semantic concepts have a specific layout.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">FT</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType <span style="color: red">mixed</span>="<span style="color: black">true</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:complexContent <span style="color: red">mixed</span>="<span style="color: black">true</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:extension <span style="color: red">base</span>="<span style="color: black">t_btx.seq</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:attribute <span style="color: red">name</span>="<span style="color: black">TYPE</span>" <span style="color: red">use</span>="<span style="color: black">required</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>          <span style="color: blue">&lt;xd:simpleType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>            <span style="color: blue">&lt;xd:restriction <span style="color: red">base</span>="<span style="color: black">xd:string</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>              <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">CN</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>              <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">CODE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>              <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">DECIMAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>              <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">NUMBER</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>              <span style="color: blue">&lt;xd:enumeration <span style="color: red">value</span>="<span style="color: black">TARIC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>            <span style="color: blue">&lt;/xd:restriction&gt;</span>
+            <br/>          <span style="color: blue">&lt;/xd:simpleType&gt;</span>
+            <br/>        <span style="color: blue">&lt;/xd:attribute&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:extension&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:complexContent&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">t_btx t_btx.ecr t_btx.seq KEYWORD </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The FT element contains the TYPE attribute which is used to identify the semantic meaning of a text (which may lead to a specific
+         layout). The following values can be attributed:
+      </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">CN: a code from the combined nomenclature</li>
+            <li style="text-align: justify; margin-left: 3em">CODE: any sequence representing a code different from CN and TARIC</li>
+            <li style="text-align: justify; margin-left: 3em">DECIMAL: a decimal value</li>
+            <li style="text-align: justify; margin-left: 3em">TARIC: a code from TARIC</li>
+            <li style="text-align: justify; margin-left: 3em">NUMBER: a number which needs a specific presentation</li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The CN and TARIC values of the TYPE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The CN and TARIC values are provided to format codes from the combined nomenclature (CN) and from Taric. A code identified
+         by an FT tag cannot contain separators such as spaces or full stops.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">However, the asterisk which appears in some Taric codes must be included in the tag. Since 1 January 1996 the TARIC codes
+         no longer contain any asterisks. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">For example, the CN code '0810 30 10' must be marked up as &lt;FT TYPE=CN&gt;08103010&lt;/FT&gt;</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The NUMBER value of the TYPE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The NUMBER value is used to identify numbers, irrespective of their presentation (which may vary depending on the language).
+         A number identified using an FT tag cannot contain any spaces. 
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">For example: &lt;FT TYPE=NUM&gt;1000000&lt;/FT&gt;</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The CODE value of the TYPE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The CODE value is used to mark up text parts related to various codification systems different from the CN or Taric ones.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Attributes</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; letter-spacing: 1pt; text-align: left">The DECIMAL value of the TYPE attribute</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Like the NUMBER value, the DECIMAL value is used to identify numbers which have a decimal part. It cannot contain any space.
+         The comma must be given no matter the language.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">
+            <p style="margin-left: 3em; text-align: justify">This table contains CN and country codes, and decimal values. They are marked up using the FT element:</p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1" width="100%" align="center" src="img/ft.gif"/>
+               </div>
+            </p>
+         </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;TBL <span style="color: red">COLS</span>="<span style="color: black">3</span>" <span style="color: red">NO.SEQ</span>="<span style="color: black">0001</span>"&gt;</span>
+                        <br/>  <span style="color: blue">&lt;GR.NOTES&gt;</span>
+                        <br/>    <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.ID</span>="<span style="color: black">E0001</span>" <span style="color: red">NUMBERING</span>="<span style="color: black">ARAB</span>" <span style="color: red">TYPE</span>="<span style="color: black">TABLE</span>"&gt;</span>    <span style="color: blue">&lt;/NOTE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/GR.NOTES&gt;<br/>
+                        </span>  <span style="color: blue">&lt;CORPUS&gt;</span>
+                        <br/>    <span style="color: blue">&lt;ROW <span style="color: red">TYPE</span>="<span style="color: black">NOTCOL</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">COLSPAN</span>="<span style="color: black">3</span>"&gt;</span>(EUR/100 kg)<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>CN code<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>Third country code <br/>        <span style="color: blue">&lt;NOTE <span style="color: red">NOTE.REF</span>="<span style="color: black">E001</span>"&gt;</span>        <span style="color: blue">&lt;/NOTE&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>Standard import value<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">ROWSPAN</span>="<span style="color: black">5</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>07020000<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>052<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>65,8<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>204<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>96,0<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>212<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>121,5<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>624<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>242,6<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>999<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>131,5<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">ROWSPAN</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>07070005<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>052<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>158,3<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>628<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>191,7<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>999<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>175,0<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">ROWSPAN</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>07099070<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>052<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>151,0<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>204<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>323,4<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>999<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>237,2<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">ROWSPAN</span>="<span style="color: black">6</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>08051010<span style="color: blue">&lt;/FT&gt;</span>,         <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>08051030<span style="color: blue">&lt;/FT&gt;</span>,         <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>08051050<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>052<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>55,9<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>204<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>57,7<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>212<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>44,5<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>220<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>51,9<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>508<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>13,4<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CODE</span>"&gt;</span>999<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">3</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">DECIMAL</span>"&gt;</span>44,7<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/CORPUS&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/TBL&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

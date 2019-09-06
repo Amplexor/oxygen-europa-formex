@@ -1,0 +1,293 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">DIV.CONSID</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">A subsection of recitals</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The DIV.CONSID element is used to gather topic related recitals.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">From a layout point of view, such a recitals group is introduced by a title, which is generally centered.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">As recitals may be grouped on various levels, with regards to the hierarchy the author wishes to use, the DIV.CONSID model
+         provides a recursive structure.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">DIV.CONSID</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TITLE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:choice <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">LIST</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TBL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">CONSID</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">DIV.CONSID</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>" <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">t_btx t_btx.ecr t_btx.struct DIV.CONSID GR.CONSID GR.SEQ QUOT.S </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The <a href="#TITLE">TITLE</a> element is used to mark up the mandatory title. This title may consist of various structures: simple text, numbered text,
+         number etc.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">Optionally a <a href="#LIST">LIST</a> or a <a href="#TBL">TBL</a> element may be introduced between the title and the recitals (<a href="#CONSID">CONSID</a>) or other subsections.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">
+            <p style="margin-left: 3em; text-align: justify">The following recitals group consists of several subdivisions, where each subdivision title consists of a number:</p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1" width="100%" align="center" src="img/div.consid.gif"/>
+               </div>
+            </p>
+         </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;GR.CONSID&gt;</span>
+                        <br/>  <span style="color: blue">&lt;GR.CONSID.INIT&gt;</span>Whereas:<span style="color: blue">&lt;/GR.CONSID.INIT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DIV.CONSID&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>I<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CONSID&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>        <span style="color: blue">&lt;NO.P&gt;</span>(1)<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;TXT&gt;</span>By letter of 22 November 2000, Germany notified the Commission, in accordance with Article 9(1) of Decision No 3632/93/ECSC,
+                     of the financial measures it intended to take for the coal industry in 2002.<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/CONSID&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CONSID&gt;</span>
+                        <br/>      <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>        <span style="color: blue">&lt;NO.P&gt;</span>(2)<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;TXT&gt;</span>Decision No 3632/93/ECSC expires on <br/>          <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20020723</span>"&gt;</span>23 July 2002<span style="color: blue">&lt;/DATE&gt;</span>. Accordingly, the Commission can, in accordance with the aforementioned Decision, only decide on aid to be granted to the
+                     coal industry up to           <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20020723</span>"&gt;</span>23 July 2002<span style="color: blue">&lt;/DATE&gt;</span>. Consequently, by letter of           <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20010130</span>"&gt;</span>30 January 2001<span style="color: blue">&lt;/DATE&gt;</span> the Commission asked Germany to specify the amounts for each type of aid to be granted in the period from 1 January to           <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20020723</span>"&gt;</span>23 July 2002<span style="color: blue">&lt;/DATE&gt;</span>.<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/CONSID&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/DIV.CONSID&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/GR.CONSID&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">
+            <p style="margin-left: 3em; text-align: justify">The following example shows a more complex recitals group, where DIV.CONSID elements are structured with a four level hierarchy.
+            The first three levels have title and subtitle, while the lowest one just consists of a title followed by the CONSID elements:
+         </p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1"
+                       width="100%"
+                       align="center"
+                       src="img/div.consid2.gif"/>
+               </div>
+            </p>
+         </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;GR.CONSID&gt;</span>
+                        <br/>  <span style="color: blue">&lt;GR.CONSID.INIT&gt;</span>considérant ce qui suit:<span style="color: blue">&lt;/GR.CONSID.INIT&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DIV.CONSID&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>PARTIE I<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>      <span style="color: blue">&lt;STI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>LES FAITS<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/STI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;DIV.CONSID&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>        <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>          <span style="color: blue">&lt;P&gt;</span>SECTION I<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>        <span style="color: blue">&lt;STI&gt;</span>
+                        <br/>          <span style="color: blue">&lt;P&gt;</span>LA PROCEDURE<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/STI&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>      <span style="color: blue">&lt;DIV.CONSID&gt;</span>
+                        <br/>        <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>          <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>            <span style="color: blue">&lt;P&gt;</span>CHAPITRE 1<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>          <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>          <span style="color: blue">&lt;STI&gt;</span>
+                        <br/>            <span style="color: blue">&lt;P&gt;</span>La procédure de l'enquête et la procédure après la communication des griefs<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>          <span style="color: blue">&lt;/STI&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>        <span style="color: blue">&lt;DIV.CONSID&gt;</span>
+                        <br/>          <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>            <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>              <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>                <span style="color: blue">&lt;NO.P&gt;</span>1.<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>                <span style="color: blue">&lt;TXT&gt;</span>Introduction<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>            <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>          <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>          <span style="color: blue">&lt;CONSID&gt;</span>La présente décision fait suite à ...<span style="color: blue">&lt;/CONSID&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/DIV.CONSID&gt;<br/>
+                        </span>        <span style="color: blue">&lt;DIV.CONSID&gt;</span>
+                        <br/>          <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>            <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>              <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>                <span style="color: blue">&lt;NO.P&gt;</span>2.<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>                <span style="color: blue">&lt;TXT&gt;</span>L'engagement de la procédure et la communication des griefs et les recours devant le TPI<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>            <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>          <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>          <span style="color: blue">&lt;CONSID&gt;</span>
+                        <br/>            <span style="color: blue">&lt;NP&gt;</span>
+                        <br/>              <span style="color: blue">&lt;NO.P&gt;</span>(1)<span style="color: blue">&lt;/NO.P&gt;<br/>
+                        </span>              <span style="color: blue">&lt;TXT&gt;</span>Le 12 Novembre 1991, la Commission a engagé la procédure...<span style="color: blue">&lt;/TXT&gt;<br/>
+                        </span>              <span style="color: blue">&lt;P&gt;</span>Par lettre du 25 novembre 1991, les griefs ont été...<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>            <span style="color: blue">&lt;/NP&gt;<br/>
+                        </span>          <span style="color: blue">&lt;/CONSID&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/DIV.CONSID&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/DIV.CONSID&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/DIV.CONSID&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/DIV.CONSID&gt;<br/>
+                        </span>  <span style="color: blue">&lt;DIV.CONSID&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>Partie II<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;CONSID&gt;</span>...<span style="color: blue">&lt;/CONSID&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/DIV.CONSID&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/GR.CONSID&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

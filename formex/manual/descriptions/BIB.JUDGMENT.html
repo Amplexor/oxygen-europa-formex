@@ -1,0 +1,195 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">BIB.JUDGMENT</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Metadata for a judgment</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The element defines the metadata for describing a judgment within a case. It contains a sequence of these sub-elements:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.CASE.F1">REF.CASE.F1</a>: creates a reference to the case which the judgment belongs to in the context of part I ECR documents;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.CASE">REF.CASE</a>: creates a reference to the case which the judgment belongs to;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#NO.CELEX">NO.CELEX</a>: specifies the identifier under which the Court decision can be found in EUR-Lex, the European legal database system;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#NO.ECLI">NO.ECLI</a>: the European Case Law Identifier (optional);
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#NO.SEQ">NO.SEQ</a>: contains the sequence number related to the position under which the judgment is published in a given volume;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#PAGE.FIRST.ECR">PAGE.FIRST.ECR</a>: mentions the first page of the judgment in the publication;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#PAGE.SEQ">PAGE.SEQ</a>: indicates the sequence of the judgment on the page;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#PAGE.LAST.ECR">PAGE.LAST.ECR</a>: mentions the last page of the judgment in the publication;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#PAGE.TOTAL">PAGE.TOTAL</a>: indicates the total number of pages taken by the judgment in the publication;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#AUTHOR">AUTHOR</a>: the author of the judgment;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">optionally a reference to the correponding core metadata instance (<a href="#REF.CORE.METADATA">REF.CORE.METADATA</a>;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">optionally a reference to an instance containing metadata other than core metadata (<a href="#REF.BIB.RECORD">REF.BIB.RECORD</a>.
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">BIB.JUDGMENT</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.CASE.F1</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.CASE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">NO.CELEX</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">NO.ECLI</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">NO.SEQ</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.FIRST.ECR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.SEQ</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.LAST.ECR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">PAGE.TOTAL</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">AUTHOR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.CORE.METADATA</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.BIB.RECORD</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">JUDGMENT JUDGMENT.NP </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">All elements, except REF.CASE.F1, are mandatory. For technical reasons the NO.CELEX element is declared as optional; its use,
+         however, is compulsory.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;BIB.JUDGMENT&gt;</span>
+                        <br/>  <span style="color: blue">&lt;REF.CASE <span style="color: red">FILE</span>="<span style="color: black">ECR1972FR.060060101.case.xml</span>"&gt;</span>
+                        <br/>    <span style="color: blue">&lt;NO.CASE&gt;</span>53-70<span style="color: blue">&lt;/NO.CASE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/REF.CASE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;NO.CELEX&gt;</span>61970J0053<span style="color: blue">&lt;/NO.CELEX&gt;<br/>
+                        </span>  <span style="color: blue">&lt;NO.SEQ&gt;</span>0001.0001<span style="color: blue">&lt;/NO.SEQ&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.FIRST.ECR&gt;</span>602<span style="color: blue">&lt;/PAGE.FIRST.ECR&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.SEQ&gt;</span>1<span style="color: blue">&lt;/PAGE.SEQ&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.LAST.ECR&gt;</span>610<span style="color: blue">&lt;/PAGE.LAST.ECR&gt;<br/>
+                        </span>  <span style="color: blue">&lt;PAGE.TOTAL&gt;</span>9<span style="color: blue">&lt;/PAGE.TOTAL&gt;<br/>
+                        </span>  <span style="color: blue">&lt;AUTHOR&gt;</span>CJ<span style="color: blue">&lt;/AUTHOR&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/BIB.JUDGMENT&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

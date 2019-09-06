@@ -1,0 +1,249 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">BLK</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Block of rows</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The BLK element is used to mark up information relating to blocks of rows. A block of rows is characterised by: </p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">an optional title (<a href="#TI.BLK">TI.BLK</a>) and subtitle (<a href="#STI.BLK">STI.BLK</a>), 
+         </li>
+            <li style="text-align: justify; margin-left: 3em">any combination of rows (<a href="#ROW">ROW</a>) and block of rows (<a href="#BLK">BLK</a>).
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">BLK</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:sequence <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TI.BLK</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">STI.BLK</span>" <span style="color: red">minOccurs</span>="<span style="color: black">0</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:choice <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">ROW</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">BLK</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">BLK CORPUS </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">If a block of rows is introduced by a title, the use of the BLK element is mandatory. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">As a block of rows may contain other lower-level blocks of rows, the model of the BLK element is recursive. </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">In some cases, the markup of a table requires the simultaneous use of ASSV or ROWSPAN attributes of the <a href="#CELL">CELL</a> element with BLK elements. In this case, the BLK element and especially its title must be taken into account to compute the
+         value of these attributes.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 2em; text-align: justify">
+            <p style="margin-left: 3em; text-align: justify">This table contains lines which are logically grouped together in a BLK element:</p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1" width="100%" align="center" src="img/tbl_ti.blk.gif"/>
+               </div>
+            </p>
+            <p style="margin-left: 3em; text-align: justify">This one also contains a BLK element, but an analysis of the context is necessary in so far as few presentation straightforward
+            cues are available:
+         </p>
+            <p style="margin-left: 3em; text-align: justify">
+               <div style="margin-left: 2em; margin-right: 2em">
+                  <img border="1" width="100%" align="center" src="img/table.gif"/>
+               </div>
+            </p>
+         </p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;TBL <span style="color: red">COLS</span>="<span style="color: black">2</span>" <span style="color: red">NO.SEQ</span>="<span style="color: black">0001</span>"&gt;</span>
+                        <br/>  <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>List of products covered by the specific supply arrangements under Title I for the smaller Aegean islands<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;CORPUS&gt;</span>
+                        <br/>    <span style="color: blue">&lt;ROW <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>Description<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>" <span style="color: red">TYPE</span>="<span style="color: black">HEADER</span>"&gt;</span>CN code<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>Wheat flour<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>        <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>1101<span style="color: blue">&lt;/FT&gt;</span> and         <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>1102<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>Durum wheat<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>10011000<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>Wheat of bread-making quality<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>10019099<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;BLK&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI.BLK <span style="color: red">COL.START</span>="<span style="color: black">1</span>" <span style="color: red">COL.END</span>="<span style="color: black">1</span>"&gt;</span>Feedingstuffs<span style="color: blue">&lt;/TI.BLK&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— cereals<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— wheat<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>1001<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— rye<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>1002<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— barley<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>1003<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— oats<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>1004<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— maize<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>1005<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— cotton seeds<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>12072090<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— alfalfa and fodder<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>1214<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— food industry wastes and residues<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>
+                        <br/>          <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>2302<span style="color: blue">&lt;/FT&gt;</span> to           <span style="color: blue">&lt;FT <span style="color: red">TYPE</span>="<span style="color: black">CN</span>"&gt;</span>2308<span style="color: blue">&lt;/FT&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>      <span style="color: blue">&lt;ROW&gt;</span>
+                        <br/>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">1</span>"&gt;</span>— preparations of a kind used in animal fee<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>        <span style="color: blue">&lt;CELL <span style="color: red">COL</span>="<span style="color: black">2</span>"&gt;</span>230990<span style="color: blue">&lt;/CELL&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/ROW&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/BLK&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/CORPUS&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/TBL&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

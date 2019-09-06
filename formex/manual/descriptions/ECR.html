@@ -1,0 +1,252 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+   </head>
+   <body>
+      <div>
+         <table xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xd="http://www.w3.org/2001/XMLSchema"
+                xmlns:fmx="http://publications.europa.eu"
+                xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+                xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+                width="100%"
+                border="0"
+                cellpadding="0"
+                cellspacing="0">
+            <tr>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 16pt; font-weight: bold; text-align: left; color: #007aac">ECR</p>
+               </td>
+               <td width="50%" valign="bottom">
+                  <p style="font-size: 10pt; font-weight: bold; text-align: right">[element]</p>
+               </td>
+            </tr>
+         </table>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Description of ECR documents</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The ECR element is used to mark up the European Court Report documents, which are published in volumes (fascicles). Therefore
+         it mainly consists of a table of contents, i.e. the titles of the cases as well as links to the case files.
+      </p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Model</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="font-family: 'Courier New'; margin-left: 3em">
+            <span style="color: blue">&lt;xd:element <span style="color: red">name</span>="<span style="color: black">ECR</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>  <span style="color: blue">&lt;xd:complexType</span>
+            <span style="color: blue">&gt;</span>
+            <br/>    <span style="color: blue">&lt;xd:sequence</span>
+            <span style="color: blue">&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">BIB.ECR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TITLE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;xd:choice <span style="color: red">maxOccurs</span>="<span style="color: black">unbounded</span>"</span>
+            <span style="color: blue">&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">GR.SEQ</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.NOTICE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">TOC</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.APPEAL.TABLE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.CHRON.TABLE</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.CHRON.TABLE.NP</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>        <span style="color: blue">&lt;xd:element <span style="color: red">ref</span>="<span style="color: black">REF.PDF.ECR</span>"</span>
+            <span style="color: blue">/&gt;</span>
+            <br/>      <span style="color: blue">&lt;/xd:choice&gt;</span>
+            <br/>    <span style="color: blue">&lt;/xd:sequence&gt;</span>
+            <br/>  <span style="color: blue">&lt;/xd:complexType&gt;</span>
+            <br/>
+            <span style="color: blue">&lt;/xd:element&gt;</span>
+            <br/>
+         </div>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold">Used by</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify"/>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">General rules</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; font-style: italic">Element</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">It contains the following sub-elements:</p>
+         <ul xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xd="http://www.w3.org/2001/XMLSchema"
+             xmlns:fmx="http://publications.europa.eu"
+             xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+             xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+             type="dash">
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#BIB.ECR">BIB.ECR</a>: contains the metadata of the publication;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#TITLE">TITLE</a>: contains the title of the volume;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#GR.SEQ">GR.SEQ</a>: contains any additional text published on the cover page(s);
+            				
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.NOTICE">REF.NOTICE</a>: reference to a notice;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#TOC">TOC</a>: contains the table of contents and the references to the cases;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.APPEAL.TABLE">REF.APPEAL.TABLE</a>: references a list of appeals;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.CHRON.TABLE">REF.CHRON.TABLE</a>: references a chronological list of judgments, orders etc.;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.CHRON.TABLE.NP">REF.CHRON.TABLE.NP</a>: references a chronological list of unpublished judgments and orders;
+         </li>
+            <li style="text-align: justify; margin-left: 3em">
+               <a href="#REF.PDF.ECR">REF.PDF.ECR</a>: contains a reference to the PDF instance of the European Court Report document;
+         </li>
+         </ul>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">All sub-elements except the GR.SEQ element are mandatory.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="margin-left: 3em; text-align: justify">The elements GR.SEQ and REF.NOTICE may be repeated according to the needs and constraints.</p>
+         <p xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xd="http://www.w3.org/2001/XMLSchema"
+            xmlns:fmx="http://publications.europa.eu"
+            xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+            xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+            style="font-weight: bold; text-align: left">Example</p>
+         <div xmlns:fmxdoc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xd="http://www.w3.org/2001/XMLSchema"
+              xmlns:fmx="http://publications.europa.eu"
+              xmlns:doc="http://www.eur-op.eu.int/fmxdoc"
+              xmlns:xmp="http://www.eur-op.eu.int/fmx-xmp"
+              style="margin-left: 2em; margin-right: 2em">
+            <table width="95%" border="0" cellpadding="3" cellspacing="3">
+               <tr>
+                  <td width="100%" bgcolor="#EEEEEE" style="border: 0.5pt solid black">
+                     <div style="font-family: 'Courier New'; font-size: 9pt">
+                        <span style="color: blue">&lt;ECR&gt;</span>
+                        <br/>  <span style="color: blue">&lt;BIB.ECR&gt;</span>
+                        <br/>    <span style="color: blue">&lt;YEAR&gt;</span>2003<span style="color: blue">&lt;/YEAR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;NO.FASCICLE&gt;</span>10<span style="color: blue">&lt;/NO.FASCICLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;PART.ECR&gt;</span>I<span style="color: blue">&lt;/PART.ECR&gt;<br/>
+                        </span>    <span style="color: blue">&lt;LG.PUB&gt;</span>FR<span style="color: blue">&lt;/LG.PUB&gt;<br/>
+                        </span>    <span style="color: blue">&lt;NO.ISSN&gt;</span>10193170<span style="color: blue">&lt;/NO.ISSN&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/BIB.ECR&gt;<br/>
+                        </span>  <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>Recueil<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;P&gt;</span>de la<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;P&gt;</span>Jurisprudence<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;P&gt;</span>de la Cour ce justice<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;P&gt;</span>et<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;P&gt;</span>du Tribunal de première instance<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;STI&gt;</span>
+                        <br/>      <span style="color: blue">&lt;P&gt;</span>Partie I<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;P&gt;</span>Cour de justice<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/STI&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;REF.NOTICE&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>        <span style="color: blue">&lt;P&gt;</span>
+                        <br/>          <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">UC</span>"&gt;</span>Note informative sur la citation des articles des Traités dans les textes de la Cour et du Tribunal<span style="color: blue">&lt;/HT&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/P&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>    <span style="color: blue">&lt;REF.PHYS <span style="color: red">FILE</span>="<span style="color: black">ECR2003FR.10.notice.xml</span>" <span style="color: red">TYPE</span>="<span style="color: black">DOC.XML</span>"&gt;</span>    <span style="color: blue">&lt;/REF.PHYS&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/REF.NOTICE&gt;<br/>
+                        </span>  <span style="color: blue">&lt;TOC&gt;</span>
+                        <br/>    <span style="color: blue">&lt;TOC.BLK&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>        <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>          <span style="color: blue">&lt;P&gt;</span>Actes des institutions<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>      <span style="color: blue">&lt;TOC.ITEM&gt;</span>
+                        <br/>        <span style="color: blue">&lt;ITEM.CONT&gt;</span>Règlements — Règlements de base et règlements d’exécution — Compétences d’exécution réservées par le Conseil — Conditions
+                     — Cas spécifiques et motivés — Mesures d’exécution des modalités d’application des règles relatives au franchissement des
+                     frontières extérieures et aux visas: arrêt du <br/>          <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20050118</span>"&gt;</span>18 janvier 2005<span style="color: blue">&lt;/DATE&gt;</span> (          <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>Commission/Conseil<span style="color: blue">&lt;/HT&gt;</span>, C-257/01)<span style="color: blue">&lt;/ITEM.CONT&gt;<br/>
+                        </span>        <span style="color: blue">&lt;ITEM.REF&gt;</span>ECR2005FR.010034501.case.xml<span style="color: blue">&lt;/ITEM.REF&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TOC.ITEM&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TOC.BLK&gt;<br/>
+                        </span>    <span style="color: blue">&lt;TOC.BLK&gt;</span>
+                        <br/>      <span style="color: blue">&lt;TITLE&gt;</span>
+                        <br/>        <span style="color: blue">&lt;TI&gt;</span>
+                        <br/>          <span style="color: blue">&lt;P&gt;</span>Agriculture<span style="color: blue">&lt;/P&gt;<br/>
+                        </span>        <span style="color: blue">&lt;/TI&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TITLE&gt;<br/>
+                        </span>      <span style="color: blue">&lt;TOC.ITEM&gt;</span>
+                        <br/>        <span style="color: blue">&lt;ITEM.CONT&gt;</span>Organisation commune des marchés — Céréales — Régime des importations — Contingent tarifaire — Orge — Contingent visant uniquement
+                     l’orge de qualité supérieure — Violation du principe de nondiscrimination — Absence: arrêt du <br/>          <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20050113</span>"&gt;</span>13 janvier 2005<span style="color: blue">&lt;/DATE&gt;</span> (          <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>Heineken Brouwerijen<span style="color: blue">&lt;/HT&gt;</span>, C-126/04)<span style="color: blue">&lt;/ITEM.CONT&gt;<br/>
+                        </span>        <span style="color: blue">&lt;ITEM.REF&gt;</span>ECR2005FR.010033101.case.xml<span style="color: blue">&lt;/ITEM.REF&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TOC.ITEM&gt;<br/>
+                        </span>      <span style="color: blue">&lt;TOC.ITEM&gt;</span>
+                        <br/>        <span style="color: blue">&lt;ITEM.CONT&gt;</span>Rapprochement des législations — Additifs dans l’alimentation des animaux — Directive 70/524 — Teneur en vitamines — Réglementation
+                     nationale interdisant la commercialisation d’un aliment complémentaire produit conformément à la règle générale mais présentant
+                     une teneur en vitamine D dépassant celle autorisée dans l’État membre concerné — Inadmissibilité: arrêt du <br/>          <span style="color: blue">&lt;DATE <span style="color: red">ISO</span>="<span style="color: black">20050113</span>"&gt;</span>13 janvier 2005<span style="color: blue">&lt;/DATE&gt;</span> (          <span style="color: blue">&lt;HT <span style="color: red">TYPE</span>="<span style="color: black">ITALIC</span>"&gt;</span>Denkavit<span style="color: blue">&lt;/HT&gt;</span>, C-145/02)<span style="color: blue">&lt;/ITEM.CONT&gt;<br/>
+                        </span>        <span style="color: blue">&lt;ITEM.REF&gt;</span>ECR2005FR.01005101.case.xml<span style="color: blue">&lt;/ITEM.REF&gt;<br/>
+                        </span>      <span style="color: blue">&lt;/TOC.ITEM&gt;<br/>
+                        </span>    <span style="color: blue">&lt;/TOC.BLK&gt;<br/>
+                        </span>  <span style="color: blue">&lt;/TOC&gt;<br/>
+                        </span>
+                        <span style="color: blue">&lt;/ECR&gt;<br/>
+                        </span>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>
