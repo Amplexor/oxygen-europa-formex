@@ -35,7 +35,7 @@ This framework currently supports **authoring** for Formex 4.0 schemas sets. Pub
 
 ## Warranty
 
-No warranty of any kind is provided. You can however open issues in the [Europa Formex GitHub project](https://github.com/Amplexor/europa-formex) to report errors, suggest enhancements or evolutions, ask questions.
+No warranty of any kind is provided. You can however open issues in the [Europa Formex GitHub project](https://github.com/Amplexor/oxygen-europa-formex) to report errors, suggest enhancements or evolutions, ask questions.
 
 # Copyright and licence
 
